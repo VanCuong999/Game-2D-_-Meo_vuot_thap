@@ -423,7 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d84f6588a146645b06afc6f81715bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerGold: 100
+  playerGold: 1000
   goldDrop: 10
   upgradeCost: 50
   goldIncreasePerUpgrade: 5
@@ -647,7 +647,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 290081699}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2038150462}
+        m_TargetAssemblyTypeName: damage, Assembly-CSharp
+        m_MethodName: UpgradeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &290081699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1678,8 +1690,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -339, y: 363}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -309.22, y: 363}
+  m_SizeDelta: {x: 259.55, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1603543792
 GameObject:
@@ -1714,6 +1726,7 @@ RectTransform:
   m_Children:
   - {fileID: 290081697}
   - {fileID: 1104922309}
+  - {fileID: 2038150461}
   m_Father: {fileID: 54142838}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2097,6 +2110,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2038150460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038150461}
+  - component: {fileID: 2038150462}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2038150461
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038150460}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -475.8848, y: 31.80413, z: -9961.154}
+  m_LocalScale: {x: 89.400314, y: 81.919815, z: 108}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1603543793}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2038150462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038150460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c9b4e61afc5694eaab24df0d8873b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dama: 10
+  upgradeCost: 100
+  damageIncrease: 15
+  playerGold: 1000
+  playerGoldText: {fileID: 1408266648}
+  upgradeCostText: {fileID: 490891017}
+  damageIncreaseText: {fileID: 1104922310}
+  upgradeButton: {fileID: 290081698}
 --- !u!1 &2113749086
 GameObject:
   m_ObjectHideFlags: 0
