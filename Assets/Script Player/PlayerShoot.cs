@@ -22,6 +22,7 @@ public class PlayerShoot : MonoBehaviour
     public void CreateBullets()
     {
         Character.Intance.KichHoatChieuThuc();
+        Character.Intance.KichHoatChieuThuc();
         for (int i = 0; i < 10; i++)
         {
             float angle = (i * 2 * Mathf.PI) / 10;

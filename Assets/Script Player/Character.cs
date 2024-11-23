@@ -71,7 +71,7 @@ public class Character : MonoBehaviour
     }
     public void KichHoatChieuThuc()
     {
-        anim.SetTrigger("attack2");
+        anim.SetTrigger("chieuthuc");
     }
     public void DeletePlayer()
     {
