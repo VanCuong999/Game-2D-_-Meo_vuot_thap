@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4206988837633759445}
   - component: {fileID: 4538425085806191520}
   - component: {fileID: 5524446707166222706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Group 87
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,6 +116,7 @@ MonoBehaviour:
   Speed: 1
   _rotationSpeed: 100
   _ScreenBoder: -30
+  health: 100
 --- !u!50 &4538425085806191520
 Rigidbody2D:
   serializedVersion: 4

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float _ScreenBoder;
 
+
+    public int health = 100;
     private Rigidbody2D _rigidbody;
 
     private playControler _playControler;
@@ -93,4 +95,32 @@ public class Enemy : MonoBehaviour
             _rigidbody.velocity = transform.up * Speed;
         
     }
+    public void TakeDamage()
+    {
+        Debug.Log(gameObject.name + " is taking damage!");
+        health -= 50;
+
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Debug.Log(gameObject.name + " has died!");
+        Destroy(gameObject); 
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            HeathPlayer playerHealth = collision.gameObject.GetComponent<HeathPlayer>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeHeath(10);
+            }
+        }
+    }
+
+
 }
