@@ -103,6 +103,7 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            Exp.Intance.TakeExp(Exp.Intance.exp);
         }
     }
     void Die()
@@ -114,11 +115,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            HeathPlayer playerHealth = collision.gameObject.GetComponent<HeathPlayer>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeHeath(10);
-            }
+            HeathPlayer.Intance.TakeHeath(10);
         }
     }
 

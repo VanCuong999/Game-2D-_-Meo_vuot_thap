@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Exp : MonoBehaviour
 {
+    public static Exp Intance;
     public float ExpStart;
     public float ExpEnd;
     public float exp;
@@ -13,6 +14,11 @@ public class Exp : MonoBehaviour
     [SerializeField] private TextMeshProUGUI expStartText;
     [SerializeField] private TextMeshProUGUI expEndText;
     [SerializeField] private Image  expImage;
+
+    private void Awake() 
+    {
+        Intance = this;    
+    }
     void Start()
     {
         
@@ -21,10 +27,6 @@ public class Exp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            TakeExp(exp);
-        }
         expImage.fillAmount = Mathf.Lerp(expImage.fillAmount,ExpStart/ExpEnd,10 * Time.deltaTime);
 
         expStartText.text = $"{ExpStart}";

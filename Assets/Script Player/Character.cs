@@ -73,6 +73,10 @@ public class Character : MonoBehaviour
     {
         anim.SetTrigger("chieuthuc");
     }
+    public void ZeroVelocity()
+    {
+        rb.velocity = new Vector2(0,0);
+    }
     public void DeletePlayer()
     {
         Destroy(gameObject);

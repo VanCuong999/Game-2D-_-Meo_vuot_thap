@@ -40,8 +40,15 @@ public class HeathPlayer : MonoBehaviour
 
         if (minHeath <= 0)
         {
+            Character.Intance.ZeroVelocity();
             Character.Intance.KichHoatDie();
+            
         }
+        else if(minHeath < 0)
+        {
+            minHeath = 0;
+        }
+        
     }
 
     public void HoiMau(float heath)
