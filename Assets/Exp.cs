@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class Exp : MonoBehaviour
 {
+    public static Exp Intance;
     public float ExpStart;
     public float ExpEnd;
     public float exp;
@@ -13,6 +14,11 @@ public class Exp : MonoBehaviour
     [SerializeField] private TextMeshProUGUI expStartText;
     [SerializeField] private TextMeshProUGUI expEndText;
     [SerializeField] private Image  expImage;
+
+    private void Awake() 
+    {
+        Intance = this;    
+    }
     void Start()
     {
         

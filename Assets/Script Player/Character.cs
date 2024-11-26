@@ -73,6 +73,10 @@ public class Character : MonoBehaviour
     {
         anim.SetTrigger("chieuthuc");
     }
+    public void ZeroVelocity()
+    {
+        rb.velocity = new Vector2(0,0);
+    }
     public void DeletePlayer()
     {
         Destroy(gameObject);
@@ -108,7 +112,8 @@ public class Character : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("We hit " + enemy.name);
-            
+            enemy.GetComponent<Enemy>()?.TakeDamage();
+
         }
     }
 
