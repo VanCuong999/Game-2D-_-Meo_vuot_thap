@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float _ScreenBoder;
 
-
+    private Animator anim;
     public int health = 100;
     private Rigidbody2D _rigidbody;
 
@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         _playControler = GetComponent<playControler>();
+        anim = GetComponent<Animator>();
         _targetDirection = transform.up;
         _camera = Camera.main;
     }
@@ -35,6 +36,8 @@ public class Enemy : MonoBehaviour
     {
         
     }
+   
+   
     private void HandleRamdom()
     {
       _changDirectionCoolDown -= Time.deltaTime;
@@ -102,9 +105,14 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            KichHoatDieEnemy();
+           
             Exp.Intance.TakeExp(Exp.Intance.exp);
         }
+    }
+    public void KichHoatDieEnemy()
+    {
+        anim.SetTrigger("Ondied");
     }
     void Die()
     {
@@ -119,5 +127,6 @@ public class Enemy : MonoBehaviour
         }
     }
 
+  
 
 }

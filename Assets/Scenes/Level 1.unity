@@ -7340,7 +7340,6 @@ GameObject:
   m_Component:
   - component: {fileID: 608724182}
   - component: {fileID: 608724183}
-  - component: {fileID: 608724184}
   m_Layer: 0
   m_Name: Group 55 (1)
   m_TagString: Untagged
@@ -7415,51 +7414,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &608724184
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 608724181}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.26106626, y: -1.1006845}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.47, y: 3.9}
-    newSize: {x: 2.47, y: 3.9}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.347984, y: 1.698631}
-  m_EdgeRadius: 0
 --- !u!1 &624335231
 GameObject:
   m_ObjectHideFlags: 0
@@ -11073,11 +11027,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872190953738909100, guid: 78618cb46a4f5ae40b11a5a2cdd0e0ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.45
+      value: -18.8
       objectReference: {fileID: 0}
     - target: {fileID: 7872190953738909100, guid: 78618cb46a4f5ae40b11a5a2cdd0e0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.14
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7872190953738909100, guid: 78618cb46a4f5ae40b11a5a2cdd0e0ff, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11130,11 +11084,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872190953738909100, guid: 78618cb46a4f5ae40b11a5a2cdd0e0ff, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.54
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7872190953738909100, guid: 78618cb46a4f5ae40b11a5a2cdd0e0ff, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.41
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 7872190953738909100, guid: 78618cb46a4f5ae40b11a5a2cdd0e0ff, type: 3}
       propertyPath: m_LocalPosition.z
