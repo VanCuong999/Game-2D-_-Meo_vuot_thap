@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+public class Character2 : MonoBehaviour
 {
-    public static Character Intance;
     [Header("Speed")]
     public float moveSpeed;
     private float xInput;
     private float yInput;
     private Rigidbody2D rb;
-    private Animator anim;
 
     [Header("Quay Đầu")]
     [HideInInspector] public float fasingDir = 1;
@@ -34,14 +32,10 @@ public class Character : MonoBehaviour
     public float attackRange;
     public LayerMask enemyLayer;
 
-    private void Awake() 
-    {
-        Intance = this;    
-    }
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        
     }
 
     private void Update()
@@ -50,28 +44,10 @@ public class Character : MonoBehaviour
         yInput = Input.GetAxisRaw("Vertical"); 
 
         FlipControler(xInput);
-        if(xInput != 0 || yInput!= 0)
-        {
-            anim.SetBool("move",true);
-        }else anim.SetBool("move",false);
-
 
         rb.velocity = new Vector2(xInput * moveSpeed, yInput * moveSpeed);
 
         
-    }
-
-    public void KichHoatTanCong()
-    {
-        anim.SetTrigger("attack");
-    }
-    public void KichHoatDie()
-    {
-        anim.SetTrigger("die");
-    }
-    public void KichHoatChieuThuc()
-    {
-        anim.SetTrigger("chieuthuc");
     }
     public void DeletePlayer()
     {

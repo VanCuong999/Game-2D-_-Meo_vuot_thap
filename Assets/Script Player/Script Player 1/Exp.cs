@@ -21,10 +21,6 @@ public class Exp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            TakeExp(exp);
-        }
         expImage.fillAmount = Mathf.Lerp(expImage.fillAmount,ExpStart/ExpEnd,10 * Time.deltaTime);
 
         expStartText.text = $"{ExpStart}";
