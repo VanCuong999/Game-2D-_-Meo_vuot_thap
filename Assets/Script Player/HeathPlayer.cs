@@ -14,6 +14,7 @@ public class HeathPlayer : MonoBehaviour
 
     [SerializeField] private Image heathImage;
     [SerializeField] private TextMeshProUGUI heathText;
+    [SerializeField] protected GameObject floatingTextPrefab;
     private void Awake() 
     {
         Intance = this;    
@@ -35,24 +36,20 @@ public class HeathPlayer : MonoBehaviour
 
     public void TakeHeath(float heath)
     {
+        ShowDamage(heath.ToString());
         Heath -= heath;
-        UPdateHeath(Heath,maxHeath);
-
         if (minHeath <= 0)
         {
             Character.Intance.ZeroVelocity();
             Character.Intance.KichHoatDie();
             
         }
-        else if(minHeath < 0)
-        {
-            minHeath = 0;
-        }
-        
+
     }
 
     public void HoiMau(float heath)
     {
+        ShowDamage(heath.ToString());
         Heath+= heath;
         UPdateHeath(Heath,maxHeath);
         if (Heath > maxHeath)
@@ -64,12 +61,24 @@ public class HeathPlayer : MonoBehaviour
     {
         minHeath += 30;
         maxHeath += 30;
+        UPdateHeath(Heath,maxHeath);
     }
 
     public void UPdateHeath(float minHeaths, float maxHeaths)
     {
         minHeath = minHeaths;
         maxHeath = maxHeaths;
+    }
+
+    public void ShowDamage(string text)
+    {
+        if (floatingTextPrefab)
+        {
+            GameObject prefab = Instantiate(floatingTextPrefab, Character.Intance.transform.position, Quaternion.identity);
+            prefab.GetComponentInChildren<TextMesh>().text = text;
+
+            Destroy(prefab, 1f);
+        }
     }
 
 }
