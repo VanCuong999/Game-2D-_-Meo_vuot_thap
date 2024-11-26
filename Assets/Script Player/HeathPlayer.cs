@@ -44,7 +44,7 @@ public class HeathPlayer : MonoBehaviour
             Character.Intance.KichHoatDie();
             
         }
-
+        UPdateHeath(Heath,maxHeath);
     }
 
     public void HoiMau(float heath)
