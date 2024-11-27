@@ -1288,6 +1288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ThanhTuu
       objectReference: {fileID: 0}
+    - target: {fileID: 8238884392008092799, guid: 580ed3aa779a9934992c917ffb6a857b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
