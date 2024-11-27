@@ -13,9 +13,7 @@ public class NPC : MonoBehaviour
 
     [Header("Dialogue Content")]
     public string[] dialogues = {
-        "Chào mừng, lữ khách! Ngươi có sẵn sàng cho một nhiệm vụ không?",
-        "Nhiệm vụ của ngươi là vào hầm ngục và lấy Vòng cổ Thời Gian.",
-        "Cẩn thận, hầm ngục đầy rẫy nguy hiểm. Chúc ngươi may mắn!"
+        
     };
     private int dialogueIndex = 0; // Vị trí hiện tại trong hội thoại
 
@@ -98,7 +96,7 @@ public class NPC : MonoBehaviour
         if (isPlayerNearby)
         {
             interactText.gameObject.SetActive(true);
-            interactText.text = "Nhấn E để đọc thông tin";
+            interactText.text = "E";
         }
     }
 
@@ -108,7 +106,7 @@ public class NPC : MonoBehaviour
         {
             isPlayerNearby = true;
             interactText.gameObject.SetActive(true);
-            interactText.text = "Nhấn E để đọc thông tin";
+            interactText.text = "E";
             Debug.Log("Nhấn E để nói chuyện với NPC.");
         }
     }
