@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-public class NewBehaviourScript : MonoBehaviour
+public class GoldManager : MonoBehaviour
 {
     public int playerGold = 1000; // Số vàng hiện tại của người chơi
     public int goldDrop = 10; // Số vàng rơi ra từ quái
@@ -14,19 +14,12 @@ public class NewBehaviourScript : MonoBehaviour
     public TextMeshProUGUI upgradeCostText; // UI hiển thị chi phí nâng cấp
     public TextMeshProUGUI goldDropText; // UI hiển thị số vàng rơi từ quái
     public Button upgradeButton; // Nút nâng cấp
-    // Start is called before the first frame update
+
     void Start()
     {
         UpdateUI();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    // Hàm nâng cấp số vàng rơi
     public void UpgradeGoldDrop()
     {
         if (playerGold >= upgradeCost)
@@ -43,7 +36,6 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
-    // Hàm cập nhật giao diện UI
     private void UpdateUI()
     {
         playerGoldText.text = $"{playerGold}";
