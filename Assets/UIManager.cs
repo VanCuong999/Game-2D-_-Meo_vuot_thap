@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+    public Staft staft;
     public static UIManager Intance;
     [SerializeField] private GameObject overbanner;
     [SerializeField] private GameObject victorybanner;
@@ -37,6 +39,8 @@ public class UIManager : MonoBehaviour
     }
     public void NextLevel()
     {
+        staft.unlocedLevel +=1;
         
+        SceneManager.LoadScene("Level SelecetMenu");
     }
 }
