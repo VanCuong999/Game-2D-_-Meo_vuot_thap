@@ -76,7 +76,6 @@ public class HeathPlayer : MonoBehaviour
         {
             GameObject prefab = Instantiate(floatingTextPrefab, Character.Intance.transform.position, Quaternion.identity);
             prefab.GetComponentInChildren<TextMesh>().text = text;
-
             Destroy(prefab, 1f);
         }
     }

@@ -171,4 +171,7 @@ public class Character : MonoBehaviour
         return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);    
     }
+    
+
 }
+

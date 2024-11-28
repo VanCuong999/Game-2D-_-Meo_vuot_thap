@@ -4,7 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-
+  - Ground
+  - Meteor
   layers:
   - Default
   - TransparentFX
@@ -12,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemy
+  - 
   - 
   - 
   - 
@@ -41,40 +42,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: tai
-    uniqueID: 2973472691
-    locked: 0
-  - name: tay phai
-    uniqueID: 2145957675
-    locked: 0
-  - name: vai right
-    uniqueID: 2607088349
-    locked: 0
-  - name: dau
-    uniqueID: 288510065
-    locked: 0
-  - name: mat
-    uniqueID: 1492551657
-    locked: 0
-  - name: than
-    uniqueID: 519790805
-    locked: 0
-  - name: chan left
-    uniqueID: 3085105873
-    locked: 0
-  - name: hong
-    uniqueID: 3471375937
-    locked: 0
-  - name: chan right
-    uniqueID: 3346974853
-    locked: 0
-  - name: kiem
-    uniqueID: 2405605913
-    locked: 0
-  - name: tay trai
-    uniqueID: 361063623
-    locked: 0
-  - name: vai trai
-    uniqueID: 1046237607
     locked: 0
