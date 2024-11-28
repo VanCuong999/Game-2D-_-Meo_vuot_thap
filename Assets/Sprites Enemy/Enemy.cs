@@ -104,6 +104,7 @@ public class Enemy : MonoBehaviour
         {
             Die();
             Exp.Intance.TakeExp(Exp.Intance.exp);
+            expPlayer.Intancs.GainExperience(10);
         }
     }
     void Die()

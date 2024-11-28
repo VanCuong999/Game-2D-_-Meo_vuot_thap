@@ -36,6 +36,10 @@ public class Exp : MonoBehaviour
     public void TakeExp(float expcong)
     {
         ExpStart += expcong;
+        if (ExpStart >= ExpEnd)
+        {
+            UIManager.Intance.ActiveVictory();
+        }
         UpdateExp(ExpStart,ExpEnd);
     }
 
