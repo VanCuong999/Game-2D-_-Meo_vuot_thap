@@ -108,6 +108,7 @@ public class Enemy : MonoBehaviour
             KichHoatDieEnemy();
            
             Exp.Intance.TakeExp(Exp.Intance.exp);
+            expPlayer.Intancs.GainExperience(10);
         }
     }
     public void KichHoatDieEnemy()

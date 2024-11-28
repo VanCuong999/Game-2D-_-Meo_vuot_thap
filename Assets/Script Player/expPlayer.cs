@@ -6,12 +6,17 @@ using UnityEngine.UI;
 
 public class expPlayer : MonoBehaviour
 {
+    public static expPlayer Intancs;
     public int level = 1;
     public int experience = 0;
     public int experienceToLevelUp = 100; // Điểm kinh nghiệm cần để lên cấp
     
     [SerializeField] private Image expPlayerImage;
     [SerializeField] private TextMeshProUGUI expPlayerText;
+    private void Awake() 
+    {
+        Intancs = this;   
+    }
     private void Update() 
     {
         if (Input.GetKeyDown(KeyCode.Y))

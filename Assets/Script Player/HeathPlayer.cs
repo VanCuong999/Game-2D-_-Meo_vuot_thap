@@ -38,12 +38,13 @@ public class HeathPlayer : MonoBehaviour
     {
         ShowDamage(heath.ToString());
         Heath -= heath;
-        if (minHeath <= 0)
+        if (Heath <= 0)
         {
             Character.Intance.ZeroVelocity();
             Character.Intance.KichHoatDie();
             
         }
+
         UPdateHeath(Heath,maxHeath);
     }
 
@@ -51,11 +52,13 @@ public class HeathPlayer : MonoBehaviour
     {
         ShowDamage(heath.ToString());
         Heath+= heath;
-        UPdateHeath(Heath,maxHeath);
+        
         if (Heath > maxHeath)
         {
             Heath = maxHeath;
         }
+
+        UPdateHeath(Heath,maxHeath);
     }
     public void UPLevelHeath()
     {

@@ -9,7 +9,7 @@ public class Character : MonoBehaviour
     public float moveSpeed;
     private float xInput;
     private float yInput;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Animator anim;
 
     [Header("Quay Đầu")]
@@ -33,6 +33,8 @@ public class Character : MonoBehaviour
     public Transform attackPoint;
     public float attackRange;
     public LayerMask enemyLayer;
+
+    public GameObject DiePrefabs;
 
     private void Awake() 
     {
@@ -67,7 +69,13 @@ public class Character : MonoBehaviour
     }
     public void KichHoatDie()
     {
-        anim.SetTrigger("die");
+        gameObject.SetActive(false);
+        GameObject dieeffect = Instantiate(DiePrefabs,transform.position,Quaternion.identity);
+        Destroy(dieeffect,1f);
+    }
+    public void ShowActiveOver()
+    {
+        UIManager.Intance.ActiveOver();
     }
     public void KichHoatChieuThuc()
     {
@@ -75,12 +83,12 @@ public class Character : MonoBehaviour
     }
     public void ZeroVelocity()
     {
-        rb.velocity = new Vector2(0,0);
+        rb.velocity = Vector2.zero;
     }
     public void DeletePlayer()
     {
         Destroy(gameObject);
-        UIManager.Intance.ActiveOver();
+        
     }
 
     public void Dash()
@@ -113,7 +121,7 @@ public class Character : MonoBehaviour
         {
             Debug.Log("We hit " + enemy.name);
             enemy.GetComponent<Enemy>()?.TakeDamage();
-
+            enemy.GetComponent<GolemEnemy>()?.TakeDangage(50);
         }
     }
 
