@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     private float _changDirectionCoolDown;
     private Camera _camera;
 
+    public EntityFX entityFX;
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -101,8 +102,13 @@ public class Enemy : MonoBehaviour
     public void TakeDamage()
     {
         Debug.Log(gameObject.name + " is taking damage!");
+        if (gameObject != null)
+        {
+            entityFX.StartCoroutine("FlashFX");
+        }
+        
         health -= 50;
-
+        
         if (health <= 0)
         {
             KichHoatDieEnemy();

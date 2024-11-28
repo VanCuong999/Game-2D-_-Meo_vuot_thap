@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ItemHeath
   - ItemSpeed
+  - EnemyDoi
+  - EnemyGolem
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,9 @@ TagManager:
   - Enemy
   - Water
   - UI
-
+  - Player
+  - 
+  - 
   - 
   - 
   - 
@@ -40,4 +44,40 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: tai
+    uniqueID: 3250827745
+    locked: 0
+  - name: tay phai
+    uniqueID: 3905529723
+    locked: 0
+  - name: vai phai
+    uniqueID: 1858524607
+    locked: 0
+  - name: dau
+    uniqueID: 3426833483
+    locked: 0
+  - name: mat
+    uniqueID: 2271854275
+    locked: 0
+  - name: than
+    uniqueID: 1301582927
+    locked: 0
+  - name: chan left
+    uniqueID: 512873837
+    locked: 0
+  - name: hong
+    uniqueID: 1863232585
+    locked: 0
+  - name: chan right
+    uniqueID: 3234654799
+    locked: 0
+  - name: kiem
+    uniqueID: 1701155949
+    locked: 0
+  - name: tay trai
+    uniqueID: 3262712613
+    locked: 0
+  - name: vai trai
+    uniqueID: 2659615721
     locked: 0
