@@ -5,7 +5,7 @@ using UnityEngine;
 public class trap : MonoBehaviour
 {
     public GameObject meteorPrefab; // Meteor prefab
-    public float spawnDuration = 10f; // Tổng thời gian rơi bom (10 giây)
+    public float spawnDuration = 15f; // Tổng thời gian rơi bom (10 giây)
     public float areaWidth = 5f; // Độ rộng khu vực rơi bom xung quanh người chơi
     public float areaHeight = 5f; // Độ cao khu vực rơi bom xung quanh người chơi
 
