@@ -6,6 +6,9 @@ TagManager:
   tags:
   - ItemHeath
   - ItemSpeed
+  - Enemy
+  - ItemVictory
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,9 @@ TagManager:
   - Enemy
   - Water
   - UI
-
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -40,4 +45,40 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: tai
+    uniqueID: 2783014409
+    locked: 0
+  - name: tay phai
+    uniqueID: 234974097
+    locked: 0
+  - name: vai phai
+    uniqueID: 3215730543
+    locked: 0
+  - name: dau
+    uniqueID: 4148021159
+    locked: 0
+  - name: 'mat '
+    uniqueID: 3600419715
+    locked: 0
+  - name: than
+    uniqueID: 2153203169
+    locked: 0
+  - name: chan left
+    uniqueID: 2320156983
+    locked: 0
+  - name: hong
+    uniqueID: 1812805539
+    locked: 0
+  - name: chan right
+    uniqueID: 1369114189
+    locked: 0
+  - name: kiem
+    uniqueID: 212891715
+    locked: 0
+  - name: tay trai
+    uniqueID: 3246657419
+    locked: 0
+  - name: vai trai
+    uniqueID: 1372385161
     locked: 0

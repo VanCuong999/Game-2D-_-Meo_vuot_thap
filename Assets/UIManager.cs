@@ -31,11 +31,12 @@ public class UIManager : MonoBehaviour
     }
     public void LoadScenes()
     {
-
+        Scene currentScene = SceneManager.GetActiveScene(); // Lấy Scene hiện tại
+        SceneManager.LoadScene(currentScene.name);
     }
     public void LoadHome()
     {
-
+        SceneManager.LoadScene(0);
     }
     public void NextLevel()
     {

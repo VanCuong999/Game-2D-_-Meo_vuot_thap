@@ -36,6 +36,10 @@ public class Character : MonoBehaviour
 
     public GameObject DiePrefabs;
 
+    [Header("Bullet")]
+    public GameObject arcBulletPrefab;
+    public Transform firePoint;
+
     private void Awake() 
     {
         Intance = this;    
@@ -125,6 +129,17 @@ public class Character : MonoBehaviour
         }
     }
 
+    public void Shoot()
+    {
+        anim.SetTrigger("shoot");
+        GameObject bullet = Instantiate(arcBulletPrefab, firePoint.position, Quaternion.identity);
+        ArcBulletController bulletController = bullet.GetComponent<ArcBulletController>();
+
+        // Tính toán hướng bắn dựa trên hướng của Player
+        Vector2 direction = FashingRight ? Vector2.right : Vector2.left; // Hướng đi tùy thuộc vào trạng thái của Player
+        bulletController.Initialize(direction);
+    }
+
     public void Flip()
     {
         fasingDir = fasingDir * -1;
@@ -170,7 +185,11 @@ public class Character : MonoBehaviour
         {
             HeathPlayer.Intance.HoiMau(20);
             Destroy(other.gameObject);
-        }   
+        }
+        if (other.CompareTag("ItemVictory"))
+        {
+            UIManager.Intance.ActiveVictory();
+        }    
     }
 
     void OnDrawGizmosSelected() 

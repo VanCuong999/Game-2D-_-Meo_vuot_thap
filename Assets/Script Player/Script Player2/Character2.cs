@@ -32,6 +32,9 @@ public class Character2 : MonoBehaviour
     public float attackRange;
     public LayerMask enemyLayer;
 
+    public GameObject arcBulletPrefab;
+    public Transform firePoint;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -47,7 +50,10 @@ public class Character2 : MonoBehaviour
 
         rb.velocity = new Vector2(xInput * moveSpeed, yInput * moveSpeed);
 
-        
+        if (Input.GetButtonDown("Fire1")) // Thay thế bằng input của bạn
+        {
+            Shoot();
+        }
     }
     public void DeletePlayer()
     {
@@ -99,6 +105,16 @@ public class Character2 : MonoBehaviour
             Flip();
         else if(x <0 && FashingRight)
             Flip();
+    }
+
+    void Shoot()
+    {
+        GameObject bullet = Instantiate(arcBulletPrefab, firePoint.position, Quaternion.identity);
+        ArcBulletController bulletController = bullet.GetComponent<ArcBulletController>();
+
+        // Tính toán hướng bắn dựa trên hướng của Player
+        Vector2 direction = FashingRight ? Vector2.right : Vector2.left; // Hướng đi tùy thuộc vào trạng thái của Player
+        bulletController.Initialize(direction);
     }
 
     // Phương thức để kích hoạt tăng tốc độ
