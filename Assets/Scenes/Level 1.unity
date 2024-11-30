@@ -224,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 67291231}
   - component: {fileID: 67291232}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: dau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -146946137
+
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 52d9884d3da5bb649aadd5a7cda7de2b, type: 3}
@@ -5594,7 +5594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181753964}
   - component: {fileID: 181753965}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: hong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5654,7 +5654,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1812805539
+
   m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1bb617e7c57095a4abcb18c39746683b, type: 3}
@@ -5678,7 +5678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192244146}
   - component: {fileID: 192244147}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: tay right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5738,7 +5738,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 234974097
+
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c761aadfe481dfc4cbfd88a5b3114555, type: 3}
@@ -6580,6 +6580,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+
 --- !u!1 &465613706
 GameObject:
   m_ObjectHideFlags: 3
@@ -7150,7 +7151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 624335232}
   - component: {fileID: 624335233}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: vai right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7210,7 +7211,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1079236753
+
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 19e7fa809ebe082438957299b9d28831, type: 3}
@@ -7234,7 +7235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 645002331}
   - component: {fileID: 645002332}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: tai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7294,7 +7295,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1511952887
+
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 644760b78ec18d54686c4d2acf4567d0, type: 3}
@@ -7452,7 +7453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 718115939}
   - component: {fileID: 718115940}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: vai left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7512,7 +7513,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1372385161
+
   m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 93017c54bfdd46847914f253f0d2bf0f, type: 3}
@@ -7699,7 +7700,7 @@ GameObject:
   - component: {fileID: 752504391}
   - component: {fileID: 752504393}
   - component: {fileID: 752504394}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -7809,10 +7810,7 @@ MonoBehaviour:
   attackRange: 1.3
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 0
-  DiePrefabs: {fileID: 0}
-  arcBulletPrefab: {fileID: 3227369016630010192, guid: 7a3e0b4343fc44b46a6861de779eaee5, type: 3}
-  firePoint: {fileID: 1783462119}
+
 --- !u!61 &752504393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8480,7 +8478,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985382065}
   - component: {fileID: 985382066}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: chan left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8540,7 +8538,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1974810313
+
   m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b347f92498517374780700a7f9663c3e, type: 3}
@@ -8650,6 +8648,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC
       objectReference: {fileID: 0}
+    - target: {fileID: 3492058347496946902, guid: 09d0c80e5a56d1841b6139d3b25f139d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -73
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492058347496946902, guid: 09d0c80e5a56d1841b6139d3b25f139d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3569417451464652167, guid: 09d0c80e5a56d1841b6139d3b25f139d, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.44483542
@@ -8746,7 +8752,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1116733270}
   - component: {fileID: 1116733271}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: canh ray trai
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8806,7 +8812,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1048309877
+
   m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0eba787489269224aba2150e307910a0, type: 3}
@@ -9341,7 +9347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1352155755}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: dashcheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9675,7 +9681,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1578141019}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9783,7 +9789,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1624836723}
   - component: {fileID: 1624836724}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: than
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9843,7 +9849,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2141764127
+
   m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5369c710a021b1b4d94e45a7e82892f4, type: 3}
@@ -10303,7 +10309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1783462119}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: attackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10698,7 +10704,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1837657261}
   - component: {fileID: 1837657262}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: kiem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10758,7 +10764,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 212891715
+
   m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 38c9d346840c5084fa6629141379b666, type: 3}
@@ -10900,7 +10906,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1965269312}
   - component: {fileID: 1965269313}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: chan right
   m_TagString: Untagged
   m_Icon: {fileID: 0}

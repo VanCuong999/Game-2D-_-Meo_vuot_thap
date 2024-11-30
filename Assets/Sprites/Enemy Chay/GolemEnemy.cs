@@ -47,6 +47,7 @@ public class GolemEnemy : MonoBehaviour
         {
             timer = 0;
             Debug.Log("da cham player");
+            if (player == null) return;
             anim.SetTrigger("attack");
         }else
         {
