@@ -8,6 +8,7 @@ TagManager:
   - ItemSpeed
   - EnemyDoi
   - EnemyGolem
+  - Ground
   layers:
   - Default
   - TransparentFX
