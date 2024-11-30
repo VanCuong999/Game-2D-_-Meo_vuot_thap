@@ -157,12 +157,7 @@ public class Character : MonoBehaviour
         {
             ActivateSpeedBoost();
             Destroy(other.gameObject);
-        }
-        if (other.CompareTag("ItemHeath"))
-        {
-            HeathPlayer.Intance.HoiMau(20);
-            Destroy(other.gameObject);
-        }   
+        } 
     }
 
     void OnDrawGizmosSelected() 
