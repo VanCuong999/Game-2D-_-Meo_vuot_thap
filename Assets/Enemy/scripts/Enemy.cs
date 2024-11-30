@@ -93,4 +93,20 @@ public class Enemy : MonoBehaviour
             _rigidbody.velocity = transform.up * Speed;
         
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth1 playerHealth = collision.gameObject.GetComponent<PlayerHealth1>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(10); // Gây 10 sát thýõng
+                Debug.Log("Player took damage.");
+            }
+            else
+            {
+                Debug.Log("PlayerHealth1 script not found on Player.");
+            }
+        }
+    }
 }

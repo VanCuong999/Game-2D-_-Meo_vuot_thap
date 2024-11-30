@@ -4,29 +4,37 @@ using UnityEngine;
 
 public class PlayerHealth1 : MonoBehaviour
 {
-    public int maxHealth = 100; // Máu tối đa
-    public int currentHealth; // Máu hiện tại
-
-    private void Start()
-    {
-        currentHealth = maxHealth; // Khởi tạo máu
-    }
+    public int currentHealth = 100;
 
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage; // Giảm máu
-        Debug.Log($"Player took damage: {damage}, Current Health: {currentHealth}");
+        currentHealth -= damage;
+        Debug.Log("Player took damage. Current health: " + currentHealth);
 
-        // Kiểm tra nếu máu về 0
         if (currentHealth <= 0)
         {
             Die();
         }
     }
 
-    private void Die()
+    void Die()
     {
         Debug.Log("Player died.");
-        // Xử lý khi Player chết
+        // Thêm logic chết (ví dụ: hiển thị màn hình thua)
     }
+  /*  private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("boss"))
+        {
+            // Lấy component PlayerHealth1 từ đối tượng Player
+            Gobinmau playerHealth = collision.gameObject.GetComponent<Gobinmau>();
+
+            // Kiểm tra nếu Player có script PlayerHealth1
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(10); // Trừ 10 máu mỗi lần va chạm
+                Debug.Log("gobin dame");
+            }
+        }
+    }*/
 }
