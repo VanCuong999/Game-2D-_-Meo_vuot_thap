@@ -102,7 +102,7 @@ public class GobinAI : MonoBehaviour
     {
         isAttacking = false;
     }
-   
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage; // Giảm máu
