@@ -69,7 +69,10 @@ public class GolemEnemy : MonoBehaviour
 
     public void TakeDangage(float damgae)
     {
-        entityFX.StartCoroutine("FlashFX");
+        if (gameObject != null)
+        {
+            entityFX.StartCoroutine("FlashFX");
+        }
         HeathGolem -= damgae;
 
         if(HeathGolem <= 0)

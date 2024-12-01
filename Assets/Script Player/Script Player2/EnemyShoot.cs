@@ -11,18 +11,18 @@ public class EnemyShoot : MonoBehaviour
 
     [SerializeField] private float Sice;
 
-    [SerializeField] private float HeathEnemy;
+    public float HeathEnemy;
     private Transform player;
 
     private float timer;
-    private void Awake() 
+    private void Awake()
     {
-        Instance = this;    
+        Instance = this;
     }
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        
+
     }
 
     // Update is called once per frame
@@ -47,10 +47,8 @@ public class EnemyShoot : MonoBehaviour
     public void TakeDamge(float damge)
     {
         HeathEnemy -= damge;
-        if (HeathEnemy <= 0)
-        {
-            Destroy(gameObject);
-        }
+        
+        UpdateHeathUFO(HeathEnemy);
     }
     private void OnDrawGizmosSelected()
     {
@@ -58,4 +56,8 @@ public class EnemyShoot : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Sice);
     }
 
+    public void UpdateHeathUFO(float health)
+    {
+        HeathEnemy = health;
+    }
 }
