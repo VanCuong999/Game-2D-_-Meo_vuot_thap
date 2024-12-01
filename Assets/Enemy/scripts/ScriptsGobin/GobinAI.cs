@@ -26,6 +26,7 @@ public class GobinAI : MonoBehaviour
     public Transform attackPoint;
     public float attackRange;
     public LayerMask PLayer;
+    public static GobinAI Intance;
 
     void Start()
     {
@@ -119,6 +120,24 @@ public class GobinAI : MonoBehaviour
         Debug.Log("Gobin died.");
         // Xử lý khi Boss chết
     }
+   /* public void AttackPlayer()
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, PLayer);
 
-    
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log("We hit " + enemy.name);
+            
+            
+        }
+    }*/
+  /*  private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth1.Intance.TakeHeath(10);
+        }
+    }*/
+
+
 }

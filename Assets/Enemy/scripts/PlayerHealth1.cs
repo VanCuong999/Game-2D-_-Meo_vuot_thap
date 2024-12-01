@@ -1,40 +1,96 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 public class PlayerHealth1 : MonoBehaviour
 {
-    public int currentHealth = 100;
 
+    private float currentHealth = 100f;
+    public static PlayerHealth1 Intance;
+    public float minHeath;
+    public float maxHeath;
+
+    private float Heath;
+
+    [SerializeField] private Image heathImage;
+    [SerializeField] private TextMeshProUGUI heathText;
+    [SerializeField] protected GameObject floatingTextPrefab;
+    private void Awake()
+    {
+        Intance = this;
+    }
+    private void Start()
+    {
+        Heath = minHeath;
+        UPdateHeath(Heath, maxHeath);
+    }
+    private void Update()
+    {
+      
+    }
+
+   /* public void TakeHeath(float heath)
+    {
+        ShowDamage(heath.ToString());
+        Heath -= heath;
+        if (Heath <= 0)
+        {
+            Debug.Log("player die");
+
+        }
+
+        UPdateHeath(Heath, maxHeath);
+    }*/
+
+    public void HoiMau(float heath)
+    {
+        ShowDamage(heath.ToString());
+        Heath += heath;
+
+        if (Heath > maxHeath)
+        {
+            Heath = maxHeath;
+        }
+
+        UPdateHeath(Heath, maxHeath);
+    }
+    public void UPLevelHeath()
+    {
+        minHeath += 30;
+        maxHeath += 30;
+        UPdateHeath(Heath, maxHeath);
+    }
+
+    public void UPdateHeath(float minHeaths, float maxHeaths)
+    {
+        minHeath = minHeaths;
+        maxHeath = maxHeaths;
+    }
+
+    public void ShowDamage(string text)
+    {
+        if (floatingTextPrefab)
+        {
+           
+        }
+    }
     public void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        Debug.Log("Player took damage. Current health: " + currentHealth);
+        currentHealth -= damage; // Giảm máu
+        Debug.Log($"Boss took damage: {damage}, Current Health: {currentHealth}");
 
+        // Nếu máu về 0, Boss chết
         if (currentHealth <= 0)
         {
             Die();
         }
     }
-
-    void Die()
+    private void Die()
     {
-        Debug.Log("Player died.");
-        // Thêm logic chết (ví dụ: hiển thị màn hình thua)
+        Debug.Log("Gobin died.");
+        // Xử lý khi Boss chết
     }
-  /*  private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("boss"))
-        {
-            // Lấy component PlayerHealth1 từ đối tượng Player
-            Gobinmau playerHealth = collision.gameObject.GetComponent<Gobinmau>();
-
-            // Kiểm tra nếu Player có script PlayerHealth1
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(10); // Trừ 10 máu mỗi lần va chạm
-                Debug.Log("gobin dame");
-            }
-        }
-    }*/
 }
