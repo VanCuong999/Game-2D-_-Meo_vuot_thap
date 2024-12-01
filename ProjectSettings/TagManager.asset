@@ -4,19 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - ItemHeath
-  - ItemSpeed
-  - Enemy
-  - Ground
-  - EnemyGolem
-  - EnemyDoi
-  - ItemVictory
-  - Groundd
+
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Enemy

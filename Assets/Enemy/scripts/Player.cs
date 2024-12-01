@@ -71,4 +71,5 @@ public class Player : MonoBehaviour
             _rigidbody.MoveRotation(rotation);
         }
     }
+    
 }
