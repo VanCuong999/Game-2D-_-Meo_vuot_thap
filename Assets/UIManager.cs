@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class UIManager : MonoBehaviour
     public static UIManager Intance;
     [SerializeField] private GameObject overbanner;
     [SerializeField] private GameObject victorybanner;
+
+    [SerializeField] private TextMeshProUGUI coinTMP;
+    [SerializeField] private TextMeshProUGUI huyhieuTMP;
 
     private void Awake() 
     {
@@ -19,7 +23,8 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        
+        coinTMP.text = "" + staft.Coin;
+        huyhieuTMP.text = "" + staft.HuyHieu;
     }
     public void ActiveOver()
     {
@@ -31,11 +36,12 @@ public class UIManager : MonoBehaviour
     }
     public void LoadScenes()
     {
-
+        Scene currentScene = SceneManager.GetActiveScene(); // Lấy Scene hiện tại
+        SceneManager.LoadScene(currentScene.name);
     }
     public void LoadHome()
     {
-
+        SceneManager.LoadScene(0);
     }
     public void NextLevel()
     {
