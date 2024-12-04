@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float _ScreenBoder;
-
+    public static Player Intance;
     private Vector2 _MovementInput;
     private Rigidbody2D _rigidbody;
     private Vector2 _SmootheMovementInput;
@@ -71,5 +71,6 @@ public class Player : MonoBehaviour
             _rigidbody.MoveRotation(rotation);
         }
     }
-    
+  
+
 }

@@ -4,54 +4,51 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 public class GobinAI : MonoBehaviour
-{
-    public int maxHealth = 100;    // Máu tối đa
-    public int currentHealth;      // Máu hiện tạ
-    public Transform player; // Đối tượng Player mà Boss sẽ đuổi theo
-    public float moveSpeed = 3f; // Tốc độ di chuyển của Boss
-    public float stopDistance = 1.5f; // Khoảng cách để Boss dừng di chuyển
-    public float attackDistance =  2f; // Khoảng cách để Boss bắt đầu tấn công
-    private int normalDamage = 10; // Sát thương bình thường
-    private int enragedDamage = 20; // Sát thương khi cuồng nộ
-    private bool isEnraged = false; // Trạng thái cuồng nộ
-    private float enragedSpeedMultiplier = 1.5f; // Tăng tốc độ khi cuồng nộ
+{   
+    public Transform player;       
+    public float moveSpeed = 2f;  
+    public float stopDistance = 1.5f; 
+    public float attackDistance = 10f; 
+    public Transform attackPoint;     
+    public float attackRange = 1f;   
+    public LayerMask playerLayer;     
+
 
     private Rigidbody2D rb;
     private Vector2 movement;
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-
+    
     private bool isAttacking = false;
 
-    public Transform attackPoint;
-    public float attackRange;
-    public LayerMask PLayer;
-    public static GobinAI Intance;
+    public int stompDamage = 20;        
+    public float stompRange = 20f;       
+    public float stompCooldown = 20f;   
+    public Camera mainCamera;          
+    private bool canStomp = true;     
 
     void Start()
     {
-        currentHealth = maxHealth;  // Khởi tạo máu
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>(); // Lấy Animator từ Boss
+        animator = GetComponent<Animator>(); 
+        if (mainCamera == null)
+        {
+            mainCamera = Camera.main;
+        }
     }
-   
+
     void Update()
     {
-       
         if (player == null) return;
-
-        // Tính toán khoảng cách tới Player
         Vector3 direction = player.position - transform.position;
         float distance = direction.magnitude;
-
-        // Nếu khoảng cách trong phạm vi tấn công, dừng di chuyển và tấn công
         if (distance <= attackDistance)
         {
             movement = Vector2.zero;
             if (!isAttacking) StartAttack();
         }
-        else if (distance > stopDistance) // Nếu xa hơn khoảng cách dừng, di chuyển
+        else if (distance > stopDistance) 
         {
             direction.Normalize();
             movement = direction;
@@ -59,11 +56,13 @@ public class GobinAI : MonoBehaviour
         }
         else
         {
-            movement = Vector2.zero; // Dừng khi gần nhưng không tấn công
+            movement = Vector2.zero; 
         }
-
-        // Lật mặt Boss theo hướng Player
         FlipSprite(direction.x);
+        if (canStomp && distance <= stompRange)
+        {
+            StartCoroutine(StompJump());
+        }
     }
 
     void FixedUpdate()
@@ -85,18 +84,18 @@ public class GobinAI : MonoBehaviour
     {
         if (directionX > 0)
         {
-            spriteRenderer.flipX = false; // Hướng phải
+            spriteRenderer.flipX = false;
         }
         else if (directionX < 0)
         {
-            spriteRenderer.flipX = true; // Hướng trái
+            spriteRenderer.flipX = true;
         }
     }
 
     void StartAttack()
     {
         isAttacking = true;
-        animator.SetTrigger("Attack"); // Kích hoạt animation tấn công
+        animator.SetTrigger("Attack"); 
     }
 
     void StopAttack()
@@ -104,40 +103,67 @@ public class GobinAI : MonoBehaviour
         isAttacking = false;
     }
 
-    public void TakeDamage(int damage)
+    IEnumerator StompJump()
     {
-        currentHealth -= damage; // Giảm máu
-        Debug.Log($"Boss took damage: {damage}, Current Health: {currentHealth}");
+        canStomp = false;
+        Debug.Log("Gobin is preparing for a Stomp!");
+        animator.SetTrigger("Stomp");
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Gobin executes Stomp!");
+        DamagePlayerInRange();
+        StartCoroutine(ScreenShake(0.2f, 0.3f));
+        yield return new WaitForSeconds(stompCooldown);
+        canStomp = true;
+    }
 
-        // Nếu máu về 0, Boss chết
-        if (currentHealth <= 0)
+    void DamagePlayerInRange()
+    {
+        Collider2D[] players = Physics2D.OverlapCircleAll(attackPoint.position, stompRange, playerLayer);
+        foreach (Collider2D playerCollider in players)
         {
-            Die();
+            PlayerHealth playerHealth = playerCollider.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(stompDamage);
+                Debug.Log($"Player bị trừ {stompDamage} máu.");
+            }
+            else
+            {
+                Debug.LogWarning("Không tìm thấy GobinHealth trên Player!");
+            }
         }
     }
-    private void Die()
+
+    IEnumerator ScreenShake(float duration, float magnitude)
     {
-        Debug.Log("Gobin died.");
-        // Xử lý khi Boss chết
+        Vector3 originalPosition = mainCamera.transform.localPosition;
+        float elapsed = 0.0f;
+
+        while (elapsed < duration)
+        {
+            float offsetX = Random.Range(-1f, 1f) * magnitude;
+            float offsetY = Random.Range(-1f, 1f) * magnitude;
+
+            mainCamera.transform.localPosition = new Vector3(
+                originalPosition.x + offsetX,
+                originalPosition.y + offsetY,
+                originalPosition.z
+            );
+
+            elapsed += Time.deltaTime;
+            yield return null; 
+        }
+
+        mainCamera.transform.localPosition = originalPosition;
     }
-   /* public void AttackPlayer()
+
+    void OnDrawGizmosSelected()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, PLayer);
-
-        foreach (Collider2D enemy in hitEnemies)
+        if (attackPoint != null)
         {
-            Debug.Log("We hit " + enemy.name);
-            
-            
+            Gizmos.color = Color.blue;
+            Gizmos.DrawWireSphere(attackPoint.position, stompRange);
         }
-    }*/
-  /*  private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerHealth1.Intance.TakeHeath(10);
-        }
-    }*/
-
-
+    }
+    
 }

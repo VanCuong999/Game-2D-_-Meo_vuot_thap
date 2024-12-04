@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1379973525860265705}
   - component: {fileID: 8123566333899509374}
-  - component: {fileID: 8057876003730294781}
   - component: {fileID: 8930908938398139298}
   - component: {fileID: 9200658787246800012}
   - component: {fileID: 384397971640237296}
   - component: {fileID: 2496949617079350582}
   - component: {fileID: 5471749180325526654}
+  - component: {fileID: 4383404757410920574}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: EnemyDoi
@@ -90,23 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8057876003730294781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1829928397042089653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3484ec4c530d67c44b139e339473b7d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 1
-  _rotationSpeed: 100
-  _ScreenBoder: -30
-  health: 100
-  entityFX: {fileID: 5471749180325526654}
 --- !u!114 &8930908938398139298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,3 +200,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 55c70c51c426cac4e8b39e81b607fb53, type: 2}
   flashDursion: 0.1
+--- !u!114 &4383404757410920574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829928397042089653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3484ec4c530d67c44b139e339473b7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  _rotationSpeed: 100
+  _ScreenBoder: -30
+  health: 100
+  entityFX: {fileID: 5471749180325526654}
