@@ -13,5 +13,15 @@ public class Staft : ScriptableObject
     [Header("Level")]
     public int totalLevel;
     public int unlocedLevel;
+    [Header("---------Shop---------")]
+    [Header("Coin")]
+    public float sovangkhoidau;
+    public float sovangtieptheo;
+    public float sovangnangcap;
+
+    [Header("Damgage")]
+    public float sodamgagekhoidau;
+    public float sodamgagetieptheo;
+    public float sodamgagenangcap;    
 
 }

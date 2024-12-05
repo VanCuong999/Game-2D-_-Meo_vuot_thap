@@ -12,19 +12,15 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject overbanner;
     [SerializeField] private GameObject victorybanner;
 
-    [SerializeField] private TextMeshProUGUI coinTMP;
-    [SerializeField] private TextMeshProUGUI huyhieuTMP;
 
-    private void Awake() 
     {
-        Intance = this;    
+        Intance = this;
     }
-    
+
 
     void Update()
     {
-        coinTMP.text = "" + staft.Coin;
-        huyhieuTMP.text = "" + staft.HuyHieu;
+
     }
     public void ActiveOver()
     {
@@ -45,8 +41,9 @@ public class UIManager : MonoBehaviour
     }
     public void NextLevel()
     {
-        staft.unlocedLevel +=1;
-        
+        staft.unlocedLevel += 1;
+
         SceneManager.LoadScene("Level SelecetMenu");
     }
+    
 }

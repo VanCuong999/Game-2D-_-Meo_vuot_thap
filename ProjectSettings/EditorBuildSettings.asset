@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levell 2.unity
     guid: 8f388840852328d4091ce2e472231a19
+  - enabled: 1
+    path: Assets/Scenes/Levell 3.unity
+    guid: 328ef531dfaa87746bda1fa47dba7cd6
+  - enabled: 1
+    path: Assets/Scenes/login.unity
+    guid: 24cd7fd191ced5244bc83385332931be
+  - enabled: 1
+    path: Assets/Scenes/register.unity
+    guid: abb60155b4a146746a7c311e62b6afcd
   m_configObjects: {}
