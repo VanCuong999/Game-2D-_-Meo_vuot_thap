@@ -1,0 +1,1126 @@
+fileFormatVersion: 2
+guid: aab53c9e713a1654e855614f1016ed30
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 19
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ca73396df6593749baa2ff7d66b97c0
+      internalID: -1984867145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48805c89146c6424aae40b741fb617ee
+      internalID: -1462142994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1535b379bba2ef47b9ff07761a53ee0
+      internalID: 1677347463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0511bd6901e7f724eab55f78aaeaa27e
+      internalID: -1489992836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f07dfa3f87a7c4e88b971a20119966
+      internalID: 318402879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81fd99b09559744db178649d5fc06a4
+      internalID: 827390629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0323a770000f412448befb8df8eaab47
+      internalID: -1192879061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_7
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d282c40947e0d254583e0d04a1debe19
+      internalID: 963410422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_8
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361b138bde169654787aead434b119bf
+      internalID: -376090526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_9
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a9e68886af5fe4ab899ff3067b5aca
+      internalID: -2066039076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60fa8621133a90d40b3c0eae60951b7a
+      internalID: 1341178593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_11
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02bfdb71df911da429047948aff0c717
+      internalID: -1446287915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_12
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b29607cf09b6e89489d895f9550f2919
+      internalID: 2135102202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_13
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ccbf477fe4dde46adc3695245ec93e
+      internalID: 1065489086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_14
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4910259e58771ec4e87d192bbf137604
+      internalID: -236280740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_15
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd547578327b4da468075ef6fa88fa86
+      internalID: 1477069713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_16
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8d8b158c1d856409c5890d2423d582
+      internalID: 1450741880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_17
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d7159d89711b14fbbbfc5841af493f
+      internalID: 2074062501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_18
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dc2cc6cc676a4e4fae5a2c0e2a79af2
+      internalID: -359479167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_19
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 58
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a57879c9b606464dbbf0ad259f5a39d
+      internalID: -1859153081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807404ca62103594cbdbe1fb66bbae98
+      internalID: 1438427812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_21
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649fc92de41581b49bc423c03d4fe405
+      internalID: -1424201610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_22
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544deea68cd2e7c4eb9fd8843fa9bde1
+      internalID: -179633156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_23
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5aabc8a85b9d7a409e778d6a816e11f
+      internalID: -1064652283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_24
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab3591e6e5801cb46af3aaf5f86eb691
+      internalID: 1782190173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_25
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ea984bcdf134a49a40019497700fab
+      internalID: 736913809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_26
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed76f8fe86d5d824fbd4cf3c30cffee7
+      internalID: -1143544490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_27
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6faa8cf1a570830449a57af0fef0f664
+      internalID: -33252433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_28
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9388ff55ddaccc4790fb3c5fcd53f59
+      internalID: 2092416778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_29
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 39
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff720b357044774d9a0e6cac392b761
+      internalID: 928902238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b76482a309fcffe4d81e093e7eb6f928
+      internalID: -427127951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_31
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045f25e3d5cc8d0498a2080882d9deba
+      internalID: 615562904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_32
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40271e8db24fa6c4ab2a61c801e6b004
+      internalID: -321381883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_33
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f62d1de6fab2ff4db650f71ded01071
+      internalID: -2069830790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_34
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88903a4f66faf9648bea6fb36ff64de5
+      internalID: 731165120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_35
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b1dcc0217f19d4aace11bb2c049ec2
+      internalID: -76444207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_36
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5401c58aba3b049bc83d874f418d7a
+      internalID: -868483138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_37
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5ebf1699d7f5e44a24692532cb9af7
+      internalID: -283229123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_38
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75968f3f992c5fe49bcab67dfce7ee93
+      internalID: -1206072936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_39
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 20
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af73d2735f8f954fa5d6b7f86811329
+      internalID: -1739103274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_40
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0c15fa335bf8849b68add40fab3b16
+      internalID: -2085176817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_41
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6d1b61a34809347932bfa14e64427e
+      internalID: 2072612236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_42
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21de87d6d54db33479b9e51103b90034
+      internalID: 1922041244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_43
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b95a9a0b09af0419d53568c8cd3b78
+      internalID: -473774671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_44
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320fa67d47554e54795307a9c1831482
+      internalID: -1831385700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: taiga_ [bridgeHorizontal]_45
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 1
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0478fde924029df478bbfb5fb16ce8be
+      internalID: 736050018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      taiga_ [bridgeHorizontal]_0: -1984867145
+      taiga_ [bridgeHorizontal]_1: -1462142994
+      taiga_ [bridgeHorizontal]_10: 1341178593
+      taiga_ [bridgeHorizontal]_11: -1446287915
+      taiga_ [bridgeHorizontal]_12: 2135102202
+      taiga_ [bridgeHorizontal]_13: 1065489086
+      taiga_ [bridgeHorizontal]_14: -236280740
+      taiga_ [bridgeHorizontal]_15: 1477069713
+      taiga_ [bridgeHorizontal]_16: 1450741880
+      taiga_ [bridgeHorizontal]_17: 2074062501
+      taiga_ [bridgeHorizontal]_18: -359479167
+      taiga_ [bridgeHorizontal]_19: -1859153081
+      taiga_ [bridgeHorizontal]_2: 1677347463
+      taiga_ [bridgeHorizontal]_20: 1438427812
+      taiga_ [bridgeHorizontal]_21: -1424201610
+      taiga_ [bridgeHorizontal]_22: -179633156
+      taiga_ [bridgeHorizontal]_23: -1064652283
+      taiga_ [bridgeHorizontal]_24: 1782190173
+      taiga_ [bridgeHorizontal]_25: 736913809
+      taiga_ [bridgeHorizontal]_26: -1143544490
+      taiga_ [bridgeHorizontal]_27: -33252433
+      taiga_ [bridgeHorizontal]_28: 2092416778
+      taiga_ [bridgeHorizontal]_29: 928902238
+      taiga_ [bridgeHorizontal]_3: -1489992836
+      taiga_ [bridgeHorizontal]_30: -427127951
+      taiga_ [bridgeHorizontal]_31: 615562904
+      taiga_ [bridgeHorizontal]_32: -321381883
+      taiga_ [bridgeHorizontal]_33: -2069830790
+      taiga_ [bridgeHorizontal]_34: 731165120
+      taiga_ [bridgeHorizontal]_35: -76444207
+      taiga_ [bridgeHorizontal]_36: -868483138
+      taiga_ [bridgeHorizontal]_37: -283229123
+      taiga_ [bridgeHorizontal]_38: -1206072936
+      taiga_ [bridgeHorizontal]_39: -1739103274
+      taiga_ [bridgeHorizontal]_4: 318402879
+      taiga_ [bridgeHorizontal]_40: -2085176817
+      taiga_ [bridgeHorizontal]_41: 2072612236
+      taiga_ [bridgeHorizontal]_42: 1922041244
+      taiga_ [bridgeHorizontal]_43: -473774671
+      taiga_ [bridgeHorizontal]_44: -1831385700
+      taiga_ [bridgeHorizontal]_45: 736050018
+      taiga_ [bridgeHorizontal]_5: 827390629
+      taiga_ [bridgeHorizontal]_6: -1192879061
+      taiga_ [bridgeHorizontal]_7: 963410422
+      taiga_ [bridgeHorizontal]_8: -376090526
+      taiga_ [bridgeHorizontal]_9: -2066039076
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,2402 @@
+fileFormatVersion: 2
+guid: 49b4f82200f11994f8c240b6812ef47d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 19
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Island_24x24_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf86d03892eb76847967564e4141d96d
+      internalID: 852406058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 644425e3bc145a0468b61ea21a44a905
+      internalID: -1927123718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2f4ec278e44934dac528279b906fd6
+      internalID: -1221092752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_3
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397bb8372d8e0f447b0c086aa13f3a46
+      internalID: 1203295684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_4
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648afc69ae2e44448989f17cb7ea5ce7
+      internalID: -1617450905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176dfabcbd7e213439949cec09328df3
+      internalID: -1280245239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_6
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0086e99a173312e498ba62ff4253ba46
+      internalID: 1841999104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_7
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446779c5c3028824b92e991299c674b6
+      internalID: -846070898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_8
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0df97701feef544bdb5b8e37d25e53
+      internalID: 333990573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_9
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f017d13095026144c8f5b76d276ec837
+      internalID: -1826363084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_10
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 173
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95aac1a6e6f4f5e4f8fdd9a1395b3652
+      internalID: 710860403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9f4a1bf893be5488d5495755ebf1fe
+      internalID: -495537251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_12
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 633c76daa75664749bb34becaa0728b8
+      internalID: -1671910205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5393f83fd791e4b41aace7e4ef7cef55
+      internalID: -1685386969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_14
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 942a53fd47d4f67419f8d92712debd9d
+      internalID: 1087040141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_15
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2451a6e90518714abbe137a736a99b1
+      internalID: 1386027507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_16
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 870a4bf6f960ef14681cdcaef61376a5
+      internalID: -1742777386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_17
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed49907411f615842b3d15e505029de3
+      internalID: -89382827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_18
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3554d805550d434d933d4cb449041f0
+      internalID: -2007931652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_19
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 003ade5fa49d631449dd9a7b14e6cb7f
+      internalID: 906594335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_20
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573eba370b7457a4d9b0b3c4831a85bc
+      internalID: -697954648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_21
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 154
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c64c1f8e3f1381468e0ff2b500caad6
+      internalID: -1964057054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251f7ffa922d7ad419a17f4727603264
+      internalID: 1957385676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_23
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39dcbee56f8a20140b0adcfa2b505ec1
+      internalID: 1389693483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_24
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0967726a0e9974e8f220e8a34aee22
+      internalID: -201952237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_25
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124b151e3d00e6b4bb9375c7b8586964
+      internalID: 855014578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_26
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 780ad081b0ae229409cf25af85bd51f3
+      internalID: -1723917608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_27
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54424dc562c93e64b9c2c9acba2341ee
+      internalID: 2020740299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_28
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f5b1f2651eef348a34ab05208d7608
+      internalID: 390279248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db023ff64be63d14aa9539f4737ce90e
+      internalID: 633511216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_30
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 323706ca29853924b9e4327979313af9
+      internalID: 53058005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_31
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65664c9889238184cb8b6890d43bc47a
+      internalID: 1906712391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_32
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 135
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e017ac9111fb34648ac98e0fabec0e0d
+      internalID: -1955666675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c3499b894c1354bb4fd4177031cd55
+      internalID: -1453681871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_34
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718d604283e665b4f97a4f409c1aa9ec
+      internalID: -1775445631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_35
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b23ec0024a251314f94d7bbb6d017b73
+      internalID: 548316038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_36
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9743074ac7f2f084a81de0882887fec9
+      internalID: 735857857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_37
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6166c8d50c2734bb45feb78ada2905
+      internalID: 1959577429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_38
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36ad561578c0414db1f98402dbd3785
+      internalID: -802925755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_39
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c21a53c950d344b960466c4fece5db
+      internalID: 2081993552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_40
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d289b08efd49481489f8bcb57b9561aa
+      internalID: 3653241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_41
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92fd0e4b6fd13834e8f6442a7aa2ae85
+      internalID: 134712914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_42
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5581996e8a5211d49b9fe8d4d105827f
+      internalID: 492917617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_43
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 116
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c5a0072c2463b479d74d1716fff629
+      internalID: -795108803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0643fe10c16e5ea4f8e137544e277943
+      internalID: -1823448317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_45
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f34e602f065d8b448d121225140f0db
+      internalID: -923010075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_46
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca81bd9c5c62214eb21c8b60fe06d1d
+      internalID: -608334471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_47
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe1d5ed127d4404ab806330f181747e
+      internalID: -2042652181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_48
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fd48a445fa5d048a8e34ffe26dcc7d
+      internalID: -1900093780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_49
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77172777b3b824f44b26a36b23eb59eb
+      internalID: -1034824890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_50
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9c20a43b18aec4fa3a87d758a5ab14
+      internalID: 1036178062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_51
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cc937aa7e258b4e8e91c0ff643b008
+      internalID: -113893077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_52
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8635e15bb92c844890844a7fc4ce5e
+      internalID: 1274712572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_53
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2025025c2ef91c449abcc5737977a8c5
+      internalID: -1630900374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_54
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 97
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc03d3dccbfaaf41b75b9bd57005c4d
+      internalID: -1137639270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2f875a62ee2aaa46adc7a698a1af0aa
+      internalID: -2090218106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_56
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ee4c7bdc0d2a341ac6931cf9f33b45
+      internalID: 319358662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_57
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3138ec40eaf37145b87a8d6b595b812
+      internalID: -818141532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_58
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6275d4b08d8a34eb19d7dbd47a0c0c
+      internalID: -14904236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_59
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f438514ee5c1347b74370fc6d1ad01
+      internalID: -991402488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_60
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0812ce991e9bec4ea26ba20f5f00888
+      internalID: -1232392222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_61
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583907047cf64c44989713842508871b
+      internalID: -1680255415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_62
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b16bf4b612532e4689be4e8af091d90
+      internalID: -657170073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_63
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 303a39e72c5c90d4a843f09a19726783
+      internalID: 2018465598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_64
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb60bd6e496975247bb24c311e68a245
+      internalID: 758379417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_65
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 78
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3d67efae41361429f653fa7817404b
+      internalID: -1339226399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa9a6442df327af4c833a653b4861309
+      internalID: 515220120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_67
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7268d4009582f9545bef4724dd7c7a62
+      internalID: 1699815582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_68
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f6f594e07072a64b90ace8167c0ae67
+      internalID: 1714871970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_69
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1e589619c8d934493f5fcc89185f12
+      internalID: 681014031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_70
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5410fa1a0c60cd74d813640f53315b1c
+      internalID: -2002330891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_71
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af42aedc0f77ee42b00d243c5493734
+      internalID: -390045590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_72
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4521a411395bfce44af107ce064df939
+      internalID: -568656285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_73
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 288c80d2c7a5f414d9283e4c49dd95e6
+      internalID: 978809219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_74
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bed56dd38323a042804850091220395
+      internalID: 637606001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_75
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52118b53e27777544ae39b0a8e318da7
+      internalID: 559764115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_76
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 59
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0a4a138eab8ed41ab8520f98be6458
+      internalID: -1404213590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a40c1bc204a38438261c08c98f08bb
+      internalID: -1419516651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_78
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e1df29e9138ac4bbac86e2e0c71d69
+      internalID: 886111095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_79
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31779fd0d0b83954ebb42762234fd829
+      internalID: 977512494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_80
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642686edc23abcd4e80714bf2cf6fab5
+      internalID: 631037158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_81
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23303b27c01963b4a888342dfb1938ca
+      internalID: -136212277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_82
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6472c5738212d174bab6a11a801e3fce
+      internalID: -256072567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_83
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04b521122edef4499089db0da6f2539
+      internalID: -1994456802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_84
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34da999004ca2043945a4796f5d9711
+      internalID: -986473688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_85
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca9ac6d6496fef546b6dd712c81298ce
+      internalID: 1553335850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_86
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f65b06fe0ac58b47b87d084f85ab22f
+      internalID: 132113746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_87
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 40
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb659cb9b994234ba9e70e385ec534e
+      internalID: 637504750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5986b5f90e76d47bd25c58c7dc2ec5
+      internalID: -602445393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_89
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421727e8ae1430a4eb2f53aa7160c5ae
+      internalID: 625702063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_90
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 361204a2f438f084d9de11aac3f9fa8a
+      internalID: 113751437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_91
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5082576b44d46bc499d2debc146c43de
+      internalID: -446510663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_92
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d18e87bf831b2e44a40fefae4badec4
+      internalID: 431821089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_93
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe927571afea294e880ec661641d501
+      internalID: 826742993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_94
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ac8746754c6a8947b92995a98964a8f
+      internalID: 2136379456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_95
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 279742ca1a8e1ea43ab925dcc05a8e34
+      internalID: -364809264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_96
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 21
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d66d668b5d70945afeecb3d2265600
+      internalID: -1702707629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_97
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe479ba72cb56a47adecc4fa7f46c9f
+      internalID: 1352157559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_98
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 2
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25de99204ab873d4592ee72d237be80f
+      internalID: 454778613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_99
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 2
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9adbb3c11674cf42bfaafa2b1ba60b5
+      internalID: 487058287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_100
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 2
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0045097a1a8d6ef46a766ded32d6c0a3
+      internalID: -905591252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_101
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 2
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa6c519f529b1d448a27d14b32a6d24
+      internalID: 755849437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_102
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 2
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30bd42d0d086ac74b8128e7760fdfcef
+      internalID: 1299486099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Island_24x24_103
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 2
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e80ab8c810616a4780ae96f848dd872
+      internalID: 1760443927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Island_24x24_0: 852406058
+      Island_24x24_1: -1927123718
+      Island_24x24_10: 710860403
+      Island_24x24_100: -905591252
+      Island_24x24_101: 755849437
+      Island_24x24_102: 1299486099
+      Island_24x24_103: 1760443927
+      Island_24x24_11: -495537251
+      Island_24x24_12: -1671910205
+      Island_24x24_13: -1685386969
+      Island_24x24_14: 1087040141
+      Island_24x24_15: 1386027507
+      Island_24x24_16: -1742777386
+      Island_24x24_17: -89382827
+      Island_24x24_18: -2007931652
+      Island_24x24_19: 906594335
+      Island_24x24_2: -1221092752
+      Island_24x24_20: -697954648
+      Island_24x24_21: -1964057054
+      Island_24x24_22: 1957385676
+      Island_24x24_23: 1389693483
+      Island_24x24_24: -201952237
+      Island_24x24_25: 855014578
+      Island_24x24_26: -1723917608
+      Island_24x24_27: 2020740299
+      Island_24x24_28: 390279248
+      Island_24x24_29: 633511216
+      Island_24x24_3: 1203295684
+      Island_24x24_30: 53058005
+      Island_24x24_31: 1906712391
+      Island_24x24_32: -1955666675
+      Island_24x24_33: -1453681871
+      Island_24x24_34: -1775445631
+      Island_24x24_35: 548316038
+      Island_24x24_36: 735857857
+      Island_24x24_37: 1959577429
+      Island_24x24_38: -802925755
+      Island_24x24_39: 2081993552
+      Island_24x24_4: -1617450905
+      Island_24x24_40: 3653241
+      Island_24x24_41: 134712914
+      Island_24x24_42: 492917617
+      Island_24x24_43: -795108803
+      Island_24x24_44: -1823448317
+      Island_24x24_45: -923010075
+      Island_24x24_46: -608334471
+      Island_24x24_47: -2042652181
+      Island_24x24_48: -1900093780
+      Island_24x24_49: -1034824890
+      Island_24x24_5: -1280245239
+      Island_24x24_50: 1036178062
+      Island_24x24_51: -113893077
+      Island_24x24_52: 1274712572
+      Island_24x24_53: -1630900374
+      Island_24x24_54: -1137639270
+      Island_24x24_55: -2090218106
+      Island_24x24_56: 319358662
+      Island_24x24_57: -818141532
+      Island_24x24_58: -14904236
+      Island_24x24_59: -991402488
+      Island_24x24_6: 1841999104
+      Island_24x24_60: -1232392222
+      Island_24x24_61: -1680255415
+      Island_24x24_62: -657170073
+      Island_24x24_63: 2018465598
+      Island_24x24_64: 758379417
+      Island_24x24_65: -1339226399
+      Island_24x24_66: 515220120
+      Island_24x24_67: 1699815582
+      Island_24x24_68: 1714871970
+      Island_24x24_69: 681014031
+      Island_24x24_7: -846070898
+      Island_24x24_70: -2002330891
+      Island_24x24_71: -390045590
+      Island_24x24_72: -568656285
+      Island_24x24_73: 978809219
+      Island_24x24_74: 637606001
+      Island_24x24_75: 559764115
+      Island_24x24_76: -1404213590
+      Island_24x24_77: -1419516651
+      Island_24x24_78: 886111095
+      Island_24x24_79: 977512494
+      Island_24x24_8: 333990573
+      Island_24x24_80: 631037158
+      Island_24x24_81: -136212277
+      Island_24x24_82: -256072567
+      Island_24x24_83: -1994456802
+      Island_24x24_84: -986473688
+      Island_24x24_85: 1553335850
+      Island_24x24_86: 132113746
+      Island_24x24_87: 637504750
+      Island_24x24_88: -602445393
+      Island_24x24_89: 625702063
+      Island_24x24_9: -1826363084
+      Island_24x24_90: 113751437
+      Island_24x24_91: -446510663
+      Island_24x24_92: 431821089
+      Island_24x24_93: 826742993
+      Island_24x24_94: 2136379456
+      Island_24x24_95: -364809264
+      Island_24x24_96: -1702707629
+      Island_24x24_97: 1352157559
+      Island_24x24_98: 454778613
+      Island_24x24_99: 487058287
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

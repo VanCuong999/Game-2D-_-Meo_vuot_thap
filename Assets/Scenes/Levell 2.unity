@@ -16418,7 +16418,7 @@ MonoBehaviour:
   attackRange: 1.3
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   DiePrefabs: {fileID: 994270528115976860, guid: d15bc74929acac940af96cc25384a0be, type: 3}
   arcBulletPrefab: {fileID: 3233344115005674967, guid: a32b37b3fa90a544d8dcc86c2a3fb9a8, type: 3}
   firePoint: {fileID: 9064019255236526721}

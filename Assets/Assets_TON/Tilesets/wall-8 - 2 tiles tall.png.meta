@@ -1,0 +1,2138 @@
+fileFormatVersion: 2
+guid: f89a5b3a7d4de814a87feaecbdf5637d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0081daff1da5464da445cbff83b0f2f
+      internalID: 1343978381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad299d4b4c715ef4c8b4d5fc9d1f7f24
+      internalID: -912945677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7928df9361ca7f74f81b20120d7db0fd
+      internalID: 726031054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_3
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1306ce737152140be515ad8de67a2a
+      internalID: 1762757134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_4
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16148914e31526644bc96bc912bbcdad
+      internalID: 154081670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_5
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2445d1f8901d5764bafed1a8a98be573
+      internalID: -539753482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339b3f3aeb6c6344989424cf2a802888
+      internalID: 215727694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_7
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fbdbf717946e5342a20702d312e9c1b
+      internalID: 658265193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_8
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d0369da67da0442b411d1462d46d6e
+      internalID: -307471516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_9
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 199
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803b956518c99454a9be646741da6cfa
+      internalID: 1894441239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ee2a52f520b85f40bbdc515f534ae8b
+      internalID: 2140876779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_11
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82981aac5baebea4cb18a45428c7c3fe
+      internalID: -801549725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8cc9e419d5906438d9947bfca46d73
+      internalID: -1530822508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_13
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b31499e603b4c84f9372b4acf85dbd1
+      internalID: -1884774746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_14
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebfbbf0a2206724bbe9e7f2f774c0be
+      internalID: 502980877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_15
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98752f84ae2c3dc448df691bcf03448b
+      internalID: 978034007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_16
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6423bf71aef2ff646a8523434e670cb4
+      internalID: 2068667118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_17
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b91fc7566fe5a249b75a666eec6c0c2
+      internalID: -1271295808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c95bfdb48b7cef84a865984a62ef2815
+      internalID: 250498640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_19
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e39c47f6af31e4b92c12a9ba53fa0d
+      internalID: -490480847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_20
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966d59552da9b994f94e244054fc334c
+      internalID: -1271787983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_21
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 174
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292bbe105e4d024438b7c90f03e373ff
+      internalID: 2129586032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa18c2e285866b74e961efd54e6d7303
+      internalID: 629743576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_23
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 084c3b28efe5fe844aa5dd701c1d79a3
+      internalID: -1854438373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_24
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92f52f1599f8aa4e971cbd49a81d241
+      internalID: 1078758739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_25
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d802d96cb9ea73438729fa47311b0c4
+      internalID: -1640548939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_26
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d53608199634544a3a2e6b482a3a98
+      internalID: -167639318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_27
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1cb20af83047f41ae211e1624af11b
+      internalID: -1634717367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_28
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b687b20c39e05b4a8bd1408c391d052
+      internalID: 984542946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_29
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e126c4033e54fc643b2dacd2a13c41bb
+      internalID: 10905072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_30
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd9a1b94875a4246aab8ff39a36d536
+      internalID: -608133246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_31
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00c3b3832169c684bb17ccb99d7b8b8e
+      internalID: -2090541500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_32
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027d89ea8d344ed4fb0fb09d6e99ebbf
+      internalID: 606093853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_33
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 149
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62120ae81a06024d9c5570ab4abc66e
+      internalID: -75341272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ddd36101f65a44791aa1785fd5ea46
+      internalID: 487592410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_35
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46bb6d05a0e71d43959d98575d89781
+      internalID: 32732244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_36
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baa475c46217bf4cb2e3f11afcb3a59
+      internalID: -246610593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_37
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4384fdd75f44e4689cce5a1a5f10f2
+      internalID: -129947256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_38
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5d8f0ea9b5dfe468337e7b75ae28bf
+      internalID: -812892290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_39
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9eeb4b82d9a28b468c1099ca61f2e22
+      internalID: 2064417929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_40
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae1af7f62627cb44fb104ba07699686f
+      internalID: 1500714708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_41
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0956cbec2a6bb86479a287889d550a62
+      internalID: -996393888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_42
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c2dca7affa37bc4ea21a45d1b1833be
+      internalID: -232981988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_43
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 908a9f61e0f851a4692f2adcd7ffd331
+      internalID: 1683527784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_44
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f92ba9eddd7d0e48bcf13e0684ee60f
+      internalID: -450082181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_45
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 124
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b14c5ef42be6e3468ccf41d69e6f0f6
+      internalID: -301250869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa22ca1c05e9d54394e7ac0a31707a4
+      internalID: 1662186088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_47
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73be8a5b2926e2841ae836cd15c6c286
+      internalID: -1309029499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_48
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea88cd332177e1841846abc802c967a1
+      internalID: 876831313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_49
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47aad0b8beddc94e9d4dc3962fb5498
+      internalID: -1932852626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_50
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d3d9a2fb6b096408e199a012d8f8f4
+      internalID: 1244635894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_51
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 843dea0f2564acc4da5b6d419b3ac9cb
+      internalID: 729689514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_52
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55da98b50bc7f84b8c006ab76df4491
+      internalID: 1317126215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_53
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ab83c228e873745a2cba581dcd3d1a
+      internalID: -141038778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_54
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61ce8c0a41de98478178df773e02948
+      internalID: 1221480180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_55
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ff5d2f05a3510498e0d0f603e23076
+      internalID: 1674673497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_56
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ac92760c761ef6499f699cce9e7a757
+      internalID: -862911422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_57
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 99
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38350e7d98a904449d8862109b76a3a
+      internalID: -1113613690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b45be572e5a35442b7f3138a10b5f1d
+      internalID: 360612315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_59
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ff26a9dbc759941b46971422982716
+      internalID: -2066588704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_60
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fee75bdffec3af4dbb99ad9486eed5d
+      internalID: -793535966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_61
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2dd72aa8c57294384573618c96a753
+      internalID: -918942248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_62
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4620b877aaa004f43bc46fdea6ead483
+      internalID: -1949556741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_63
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6517570d92e774bb2fff57591dceb0
+      internalID: -1517620014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_64
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8cfc7b35c640bf4aacafd25f9be654b
+      internalID: 1249218630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_65
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e72390ed8f06e4a4b8d410303ae1a590
+      internalID: -128602358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_66
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81fa23a7834dd3446b69cc35e600edf3
+      internalID: -881914800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_67
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3bfbb01976ff44eb5d01feebe7c643
+      internalID: 311845549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_68
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e34f107566e4d44a45830ad2c418ac
+      internalID: -1402605389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_69
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 74
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc4c160254033f4bafc9fd34154107f
+      internalID: 950667895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c65ad5cc8651364a818674395fe37e0
+      internalID: 1774475165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_71
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1c23e740ae57534a93fc70d825d7ad0
+      internalID: 1116882941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_72
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fdc57171c0198f49b95410593850a8e
+      internalID: -1272563443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_73
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b05f13972f683c488e07237d551641a
+      internalID: 896250714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_74
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f4020987d4fba4fa52f03bf9bb5cbc
+      internalID: -368297882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_75
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a33d91f59172654e8cf1381bd6ab709
+      internalID: 1690148485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_76
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659d1e04a0a395942b0d6f8d5636928b
+      internalID: 136598555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_77
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c5e408ee45ea841a7d96ad9d540180
+      internalID: -163828596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_78
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c25b4fb41ff9942855a0b73b4b7262
+      internalID: -1610015123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_79
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5a16a822858a247ac42b7c96a19659
+      internalID: -4517229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_80
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efcc3963121b7b44ae49d4a92f7ed49
+      internalID: 1135108656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_81
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 49
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb753a432411e0d46aa3f797ffc10d91
+      internalID: -1803577745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_82
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbe897538dff2a1439e8d8e1e0bbad06
+      internalID: 767274568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_83
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801985d0bcca7d44db10808e582f6cc2
+      internalID: 1286831031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_84
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68184203ebf0f304b88fc95ca2921c07
+      internalID: -111874475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_85
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bcd9ab40492854cbecb7932dfe8bb0
+      internalID: -39606980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_86
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefd01f9f7527ee46aab922c2753fc96
+      internalID: 957584255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_87
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0af05af694a6b4c9537713c8e23dc1
+      internalID: -238748136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_88
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995c2c275cde05440833bcba015cc1d9
+      internalID: -1980202224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_89
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3606a9da0ea619428687126cb158309
+      internalID: 1985982190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_90
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e5434367830cb4981ca7e6b18ae306
+      internalID: -1587896489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: wall-8 - 2 tiles tall_91
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72bbdf533ed56d41949c028862fe137
+      internalID: -1678347019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      wall-8 - 2 tiles tall_0: 1343978381
+      wall-8 - 2 tiles tall_1: -912945677
+      wall-8 - 2 tiles tall_10: 2140876779
+      wall-8 - 2 tiles tall_11: -801549725
+      wall-8 - 2 tiles tall_12: -1530822508
+      wall-8 - 2 tiles tall_13: -1884774746
+      wall-8 - 2 tiles tall_14: 502980877
+      wall-8 - 2 tiles tall_15: 978034007
+      wall-8 - 2 tiles tall_16: 2068667118
+      wall-8 - 2 tiles tall_17: -1271295808
+      wall-8 - 2 tiles tall_18: 250498640
+      wall-8 - 2 tiles tall_19: -490480847
+      wall-8 - 2 tiles tall_2: 726031054
+      wall-8 - 2 tiles tall_20: -1271787983
+      wall-8 - 2 tiles tall_21: 2129586032
+      wall-8 - 2 tiles tall_22: 629743576
+      wall-8 - 2 tiles tall_23: -1854438373
+      wall-8 - 2 tiles tall_24: 1078758739
+      wall-8 - 2 tiles tall_25: -1640548939
+      wall-8 - 2 tiles tall_26: -167639318
+      wall-8 - 2 tiles tall_27: -1634717367
+      wall-8 - 2 tiles tall_28: 984542946
+      wall-8 - 2 tiles tall_29: 10905072
+      wall-8 - 2 tiles tall_3: 1762757134
+      wall-8 - 2 tiles tall_30: -608133246
+      wall-8 - 2 tiles tall_31: -2090541500
+      wall-8 - 2 tiles tall_32: 606093853
+      wall-8 - 2 tiles tall_33: -75341272
+      wall-8 - 2 tiles tall_34: 487592410
+      wall-8 - 2 tiles tall_35: 32732244
+      wall-8 - 2 tiles tall_36: -246610593
+      wall-8 - 2 tiles tall_37: -129947256
+      wall-8 - 2 tiles tall_38: -812892290
+      wall-8 - 2 tiles tall_39: 2064417929
+      wall-8 - 2 tiles tall_4: 154081670
+      wall-8 - 2 tiles tall_40: 1500714708
+      wall-8 - 2 tiles tall_41: -996393888
+      wall-8 - 2 tiles tall_42: -232981988
+      wall-8 - 2 tiles tall_43: 1683527784
+      wall-8 - 2 tiles tall_44: -450082181
+      wall-8 - 2 tiles tall_45: -301250869
+      wall-8 - 2 tiles tall_46: 1662186088
+      wall-8 - 2 tiles tall_47: -1309029499
+      wall-8 - 2 tiles tall_48: 876831313
+      wall-8 - 2 tiles tall_49: -1932852626
+      wall-8 - 2 tiles tall_5: -539753482
+      wall-8 - 2 tiles tall_50: 1244635894
+      wall-8 - 2 tiles tall_51: 729689514
+      wall-8 - 2 tiles tall_52: 1317126215
+      wall-8 - 2 tiles tall_53: -141038778
+      wall-8 - 2 tiles tall_54: 1221480180
+      wall-8 - 2 tiles tall_55: 1674673497
+      wall-8 - 2 tiles tall_56: -862911422
+      wall-8 - 2 tiles tall_57: -1113613690
+      wall-8 - 2 tiles tall_58: 360612315
+      wall-8 - 2 tiles tall_59: -2066588704
+      wall-8 - 2 tiles tall_6: 215727694
+      wall-8 - 2 tiles tall_60: -793535966
+      wall-8 - 2 tiles tall_61: -918942248
+      wall-8 - 2 tiles tall_62: -1949556741
+      wall-8 - 2 tiles tall_63: -1517620014
+      wall-8 - 2 tiles tall_64: 1249218630
+      wall-8 - 2 tiles tall_65: -128602358
+      wall-8 - 2 tiles tall_66: -881914800
+      wall-8 - 2 tiles tall_67: 311845549
+      wall-8 - 2 tiles tall_68: -1402605389
+      wall-8 - 2 tiles tall_69: 950667895
+      wall-8 - 2 tiles tall_7: 658265193
+      wall-8 - 2 tiles tall_70: 1774475165
+      wall-8 - 2 tiles tall_71: 1116882941
+      wall-8 - 2 tiles tall_72: -1272563443
+      wall-8 - 2 tiles tall_73: 896250714
+      wall-8 - 2 tiles tall_74: -368297882
+      wall-8 - 2 tiles tall_75: 1690148485
+      wall-8 - 2 tiles tall_76: 136598555
+      wall-8 - 2 tiles tall_77: -163828596
+      wall-8 - 2 tiles tall_78: -1610015123
+      wall-8 - 2 tiles tall_79: -4517229
+      wall-8 - 2 tiles tall_8: -307471516
+      wall-8 - 2 tiles tall_80: 1135108656
+      wall-8 - 2 tiles tall_81: -1803577745
+      wall-8 - 2 tiles tall_82: 767274568
+      wall-8 - 2 tiles tall_83: 1286831031
+      wall-8 - 2 tiles tall_84: -111874475
+      wall-8 - 2 tiles tall_85: -39606980
+      wall-8 - 2 tiles tall_86: 957584255
+      wall-8 - 2 tiles tall_87: -238748136
+      wall-8 - 2 tiles tall_88: -1980202224
+      wall-8 - 2 tiles tall_89: 1985982190
+      wall-8 - 2 tiles tall_9: 1894441239
+      wall-8 - 2 tiles tall_90: -1587896489
+      wall-8 - 2 tiles tall_91: -1678347019
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
