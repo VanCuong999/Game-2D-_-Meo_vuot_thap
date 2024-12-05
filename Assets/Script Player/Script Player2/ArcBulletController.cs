@@ -47,5 +47,13 @@ public class ArcBulletController : MonoBehaviour
             EnemyShoot.Instance.TakeDamge(50);
             Destroy(gameObject);
         }
+        if (other.CompareTag("EnemyGolem"))
+        {
+            GolemEnemy enemy = other.GetComponent<GolemEnemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDangage(50);                
+            }
+        }
     }
 }
