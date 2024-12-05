@@ -12,9 +12,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject overbanner;
     [SerializeField] private GameObject victorybanner;
 
-    
 
-    private void Awake()
     {
         Intance = this;
     }
@@ -22,7 +20,6 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        
 
     }
     public void ActiveOver()

@@ -45,6 +45,10 @@ public class ArcBulletController : MonoBehaviour
             GameObject Blood = Instantiate(bloodParticlePrefab, other.transform.position, Quaternion.identity);
             Destroy(Blood, 1f);
             EnemyShoot.Instance.TakeDamge(50);
+            if (EnemyShoot.Instance.HeathEnemy <= 0)
+            {
+                Destroy(other.gameObject);
+            }
             Destroy(gameObject);
         }
         if (other.CompareTag("EnemyGolem"))

@@ -41,7 +41,7 @@ public class BulletEnemy : MonoBehaviour
             Destroy(gameObject);
             HeathPlayer.Intance.TakeHeath(20);
         }
-        if (other.CompareTag("Ground"))
+        if (other.CompareTag("Groundd"))
         {
             Destroy(gameObject);
         }
