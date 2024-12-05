@@ -17,10 +17,10 @@ public class EnemyShooter : MonoBehaviour
     private bool isAttacking = false;
     public Transform shootPoint;  // Vị trí bắn chưởng
     public float projectileSpeed = 5f;  // Tốc độ viên đạn
-    public float attackRange = 5;  // Tầm bắn chưởng
+    public float attackRange = 10;  // Tầm bắn chưởng
     private Animator animator;
 
-    public GameObject explosionEffectPrefab;  // Prefab cho hiệu ứng nổ
+    
     void Start()
     {
         animator = GetComponent<Animator>();

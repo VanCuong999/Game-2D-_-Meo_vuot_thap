@@ -717,6 +717,7 @@ GameObject:
   - component: {fileID: 1965006226}
   - component: {fileID: 1965006225}
   - component: {fileID: 1965006228}
+  - component: {fileID: 1965006229}
   m_Layer: 0
   m_Name: ' genie_Enemy'
   m_TagString: Untagged
@@ -833,64 +834,41 @@ MonoBehaviour:
   shootPoint: {fileID: 683377845}
   projectileSpeed: 5
   attackRange: 5
-  explosionEffectPrefab: {fileID: 0}
---- !u!1001 &4340751754659829074
-PrefabInstance:
+--- !u!70 &1965006229
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.353458
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.0717945
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.042452917
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 464963108247202146, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6489459907883757888, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
-      propertyPath: m_Name
-      value: GameObject
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8ae03f0c7782c8c40a5497aef624e3b6, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965006224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.36113548, y: -0.16551977}
+  m_Size: {x: 0.9348893, y: 1.5668765}
+  m_Direction: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -899,4 +877,3 @@ SceneRoots:
   - {fileID: 696490256}
   - {fileID: 1232088687}
   - {fileID: 1965006227}
-  - {fileID: 4340751754659829074}

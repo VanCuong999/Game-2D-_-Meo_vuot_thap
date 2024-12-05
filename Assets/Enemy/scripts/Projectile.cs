@@ -4,30 +4,27 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public float damage = 1f;
-    public GameObject explosionEffectPrefab;  // Prefab cho hiệu ứng nổ
+    public GameObject explosionEffectPrefab; // Prefab hiệu ứng vụ nổ
+    public int damage = 10; // Sát thương gây ra
 
-    // Khi viên đạn va chạm với một đối tượng
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        GameObject explosion = Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
-        Animator explosionAnimator = explosion.GetComponent<Animator>();
-        if (explosionAnimator != null)
+        // Kiểm tra nếu viên đạn trúng Player
+        if (collision.CompareTag("Player"))
         {
-            explosionAnimator.SetTrigger("Explode"); // Gọi trigger để phát animation nổ
-        }
+            // Gây sát thương cho Player
+            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(damage);
+            }
 
-        // Kiểm tra xem viên đạn có va chạm với người chơi không
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            // Xử lý sát thương cho người chơi
-            //collision.gameObject.GetComponent<Player>().TakeDamage(damage);
-            Destroy(gameObject); // Hủy viên đạn sau khi va chạm
+            // Sinh ra hiệu ứng vụ nổ tại vị trí viên đạn
+            Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
+
+            // Hủy viên đạn sau khi va chạm
+            Destroy(gameObject);
         }
-        else if (collision.gameObject.CompareTag("Wall"))
-        {
-            Destroy(gameObject); // Hủy viên đạn khi va chạm với tường
-        }
+      
     }
 }
