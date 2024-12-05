@@ -162,7 +162,7 @@ MonoBehaviour:
   attackRange: 1.75
   playerLayer:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   entityFX: {fileID: 2647763076711262249}
 --- !u!61 &8386770675701907813
 BoxCollider2D:
