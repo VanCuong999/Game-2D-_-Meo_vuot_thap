@@ -33,6 +33,10 @@ public class SwordProjectile : MonoBehaviour
         {
             GolemEnemy.Intance.TakeDangage(40);
         }
+        if (collision.CompareTag("enemy3"))
+        {
+            enemy3tancong.Intance.TakeDamage(40);
+        }
     }
    
 

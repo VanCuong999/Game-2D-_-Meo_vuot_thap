@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class enemy3tancong : MonoBehaviour
 {
+    public static enemy3tancong Intance;
     public GameObject laserPrefab; // Prefab của tia laser
     public Transform firePoint; // Vị trí xuất phát của tia laser
     public float fireDelay = 1f; // Thời gian chờ giữa các lần bắn
