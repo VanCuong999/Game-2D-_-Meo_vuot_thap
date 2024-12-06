@@ -52,19 +52,35 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        xInput = Input.GetAxisRaw("Horizontal");
-        yInput = Input.GetAxisRaw("Vertical"); 
-
-        FlipControler(xInput);
-        if(xInput != 0 || yInput!= 0)
+        Vector2 dir = Vector2.zero;
+        if (Input.GetKey(KeyCode.A))
         {
-            anim.SetBool("move",true);
-        }else anim.SetBool("move",false);
+            dir.x = -1;
+
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            dir.x = 1;
+
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            dir.y = 1;
+
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            dir.y = -1;
+
+        }
+
+        dir.Normalize();
 
 
-        rb.velocity = new Vector2(xInput * moveSpeed, yInput * moveSpeed);
+        GetComponent<Rigidbody2D>().velocity = moveSpeed * dir;
 
-        
+
     }
 
     public void KichHoatTanCong()
