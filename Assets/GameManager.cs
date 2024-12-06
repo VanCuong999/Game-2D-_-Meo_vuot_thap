@@ -12,7 +12,14 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI CoinTMP;
     public TextMeshProUGUI HuyHieuTMP;
 
+    [Header("Shop")]
+    [SerializeField] private TextMeshProUGUI sovangkhoidauTMP;
+    [SerializeField] private TextMeshProUGUI sovangtieptheoTMP;
+    [SerializeField] private TextMeshProUGUI sovangnangcaTMP;
 
+    [SerializeField] private TextMeshProUGUI sodamagekhoidauTMP;
+    [SerializeField] private TextMeshProUGUI sodamagetieptheoTMP;
+    [SerializeField] private TextMeshProUGUI sodamagenangcapTMP;
     private float NangLuong;
     private float Coin;
     private float HuyHieu;
@@ -35,7 +42,13 @@ public class GameManager : MonoBehaviour
         CoinTMP.text = "" + Coin;
         HuyHieuTMP.text = "" + HuyHieu;
         
-        
+        sovangkhoidauTMP.text = " " + staft.sovangkhoidau;
+        sovangtieptheoTMP.text = " " + staft.sovangtieptheo;
+        sovangnangcaTMP.text = " " + staft.sovangnangcap;
+
+        sodamagekhoidauTMP.text = "" + staft.sodamgagekhoidau;
+        sodamagetieptheoTMP.text = " " + staft.sodamgagetieptheo;
+        sodamagenangcapTMP.text = " " + staft.sodamgagenangcap;
     }
 
     public void UpdateManager(float nangluong, float coin, float huyhieu)
@@ -47,5 +60,21 @@ public class GameManager : MonoBehaviour
     public void LoadLevelMenu()
     {
         SceneManager.LoadScene("Level SelecetMenu");
+    }
+
+    public void btnshopcoin()
+    {
+        staft.sovangkhoidau += 2;
+        staft.sovangtieptheo = staft.sovangkhoidau + 2;
+        staft.sovangnangcap += Random.Range(50,100);
+        staft.Coin -= staft.sodamgagenangcap;
+    }
+    
+    public void btnShopDamage()
+    {
+        staft.sodamgagekhoidau += 5;
+        staft.sodamgagetieptheo = staft.sodamgagekhoidau + 5;
+        staft.sodamgagenangcap += Random.Range(50,100);
+        staft.Coin -= staft.sodamgagenangcap;
     }
 }

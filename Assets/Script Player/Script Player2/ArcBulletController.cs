@@ -44,10 +44,10 @@ public class ArcBulletController : MonoBehaviour
             Debug.Log("Đã chạm vào " + other.name);
             GameObject Blood = Instantiate(bloodParticlePrefab, other.transform.position, Quaternion.identity);
             Destroy(Blood, 1f);
-            EnemyShoot.Instance.TakeDamge(50);
-            if (EnemyShoot.Instance.HeathEnemy <= 0)
+            EnemyShoot enemyShoot = other.GetComponent<EnemyShoot>();
+            if (enemyShoot != null)
             {
-                Destroy(other.gameObject);
+                enemyShoot.TakeDamge(50);
             }
             Destroy(gameObject);
         }

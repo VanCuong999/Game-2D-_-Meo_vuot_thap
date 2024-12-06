@@ -64,7 +64,10 @@ public class Character : MonoBehaviour
 
         rb.velocity = new Vector2(xInput * moveSpeed, yInput * moveSpeed);
 
-        
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Shoot();
+        }
     }
 
     public void KichHoatTanCong()
@@ -126,6 +129,7 @@ public class Character : MonoBehaviour
             Debug.Log("We hit " + enemy.name);
             enemy.GetComponent<Enemy>()?.TakeDamage();
             enemy.GetComponent<GolemEnemy>()?.TakeDangage(50);
+            enemy.GetComponent<enemy3tancong>()?.TakeDamage(20);
         }
     }
 
