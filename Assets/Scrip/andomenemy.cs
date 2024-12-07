@@ -4,25 +4,53 @@ using UnityEngine;
 
 public class andomenemy : MonoBehaviour
 {
-    public GameObject enemyPrefab; // Prefab của kẻ thù
-    public float spawnRange = 10f;  // Khu vực spawn
-    public float spawnInterval = 5f; // Thời gian giữa các lần spawn (đã sửa thành 5 giây)
+    [SerializeField]
+    private GameObject EnemyFrefab;  // Prefab của quái vật
 
-    private void Start()
+    [SerializeField]
+    private float _MinimunSpawnTime = 3f;  // Thời gian tối thiểu giữa các lần spawn
+    [SerializeField]
+    private float _MaximunSpawnTime = 3f;  // Thời gian tối đa giữa các lần spawn (để đảm bảo spawn mỗi 3 giây)
+
+    [SerializeField]
+    private float mapWidth = 80f;  // Chiều rộng của bản đồ
+    [SerializeField]
+    private float mapLength = 160f; // Chiều dài của bản đồ
+
+    private float _TimeUnilSpawn;
+
+    // Start is called before the first frame update
+    void Start()
     {
-        InvokeRepeating("SpawnEnemy", 0f, spawnInterval);
+        setTimeUntilSpawn();  // Thiết lập thời gian cho lần spawn đầu tiên
     }
 
-    void SpawnEnemy()
+    // Update is called once per frame
+    void Update()
     {
-        // Tạo vị trí spawn ngẫu nhiên
+        _TimeUnilSpawn -= Time.deltaTime;
+        if (_TimeUnilSpawn <= 0)
+        {
+            SpawnEnemy();  // Gọi phương thức spawn quái vật
+            setTimeUntilSpawn();  // Thiết lập lại thời gian cho lần spawn tiếp theo
+        }
+    }
+
+    private void SpawnEnemy()
+    {
+        // Tạo một vị trí ngẫu nhiên trong phạm vi của bản đồ
         Vector3 spawnPosition = new Vector3(
-            Random.Range(-spawnRange, spawnRange),
-            0f, // Giữ cho kẻ thù không xuất hiện trên mặt đất
-            Random.Range(-spawnRange, spawnRange)
+            Random.Range(-mapWidth / 2f, mapWidth / 2f),  // Random X trong phạm vi chiều rộng bản đồ
+            0f,  // Giữ cho quái vật ở mặt đất (Y = 0)
+            Random.Range(-mapLength / 4f, mapLength / 4f) // Random Z trong phạm vi chiều dài bản đồ
         );
 
-        // Spawn kẻ thù
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        // Spawn quái vật tại vị trí ngẫu nhiên
+        Instantiate(EnemyFrefab, spawnPosition, Quaternion.identity);
+    }
+
+    private void setTimeUntilSpawn()
+    {
+        _TimeUnilSpawn = Random.Range(_MinimunSpawnTime, _MaximunSpawnTime);  // Cập nhật thời gian spawn ngẫu nhiên
     }
 }

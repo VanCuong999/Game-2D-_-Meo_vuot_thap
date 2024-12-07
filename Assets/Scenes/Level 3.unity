@@ -189,6 +189,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5381006007598442897, guid: 77e4dd4872c42ab49a2c185fa671676c, type: 3}
+      propertyPath: EnemyFrefab
+      value: 
+      objectReference: {fileID: 7676944941506048536, guid: 36ba1238e908f034ba45f6874fdbc0d5, type: 3}
+    - target: {fileID: 5381006007598442897, guid: 77e4dd4872c42ab49a2c185fa671676c, type: 3}
+      propertyPath: _MaximunSpawnTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5381006007598442897, guid: 77e4dd4872c42ab49a2c185fa671676c, type: 3}
+      propertyPath: _MinimunSpawnTime
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

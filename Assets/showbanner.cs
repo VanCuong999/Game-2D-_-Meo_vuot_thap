@@ -12,6 +12,7 @@ public class showbanner : MonoBehaviour
     public GameObject bannerThanhTuu;
     public GameObject bannerShop;
     public GameObject bannerSetting;
+    public GameObject bannerSkill;
 
     public TextMeshProUGUI textcoin;
     public TextMeshProUGUI textHuyHieu;
@@ -101,6 +102,7 @@ public class showbanner : MonoBehaviour
         bannerThanhTuu.SetActive(false);
         bannerShop.SetActive(false);
         bannerSetting.SetActive(false);
+        bannerSkill.SetActive(false);
     }
 
     public void btnNhanCoin()
@@ -141,5 +143,9 @@ public class showbanner : MonoBehaviour
     public void ShowSetting()
     {
         bannerSetting.SetActive(true);
+    }
+    public void ShowSkill()
+    {
+        bannerSkill.SetActive(true);
     }
 }

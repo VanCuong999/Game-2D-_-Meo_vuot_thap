@@ -27,6 +27,12 @@ public class enemy3tancong : MonoBehaviour
     {
         if (player == null) return; // Kiểm tra nếu không tìm thấy player
 
+        // Nếu enemy đã chết, không làm gì nữa
+        if (health <= 0)
+        {
+            return; // Dừng tất cả hành động nếu máu <= 0
+        }
+
         // Tăng thời gian đếm ngược cho việc bắn laser
         fireTimer += Time.deltaTime;
 
@@ -64,6 +70,12 @@ public class enemy3tancong : MonoBehaviour
 
     void ShootLaser()
     {
+        // Nếu enemy đã chết, không bắn laser nữa
+        if (health <= 0)
+        {
+            return; // Dừng việc bắn laser nếu máu <= 0
+        }
+
         // Kích hoạt animation bắn
         if (animator != null)
         {
@@ -137,5 +149,6 @@ public class enemy3tancong : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
+    
 
 }
