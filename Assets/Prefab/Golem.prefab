@@ -130,7 +130,7 @@ Animator:
   m_GameObject: {fileID: 5982724495673821560}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 32fc7057547eaca4fbfc1328e73f64c1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1fd82f52092302d43aa7ba1be6ba1cfe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -162,7 +162,7 @@ MonoBehaviour:
   attackRange: 1.75
   playerLayer:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   entityFX: {fileID: 2647763076711262249}
 --- !u!61 &8386770675701907813
 BoxCollider2D:

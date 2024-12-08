@@ -16,7 +16,7 @@ public class playControler : MonoBehaviour
     private void Awake()
     {
         // Tìm đối tượng Player trong scene
-        _player = FindObjectOfType<Player>()?.transform;
+        _player = FindObjectOfType<Character>()?.transform;
 
         if (_player == null)
         {

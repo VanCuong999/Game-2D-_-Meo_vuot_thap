@@ -62,7 +62,7 @@ public class GolemEnemy : MonoBehaviour
         foreach (Collider2D playerr in hitPlayer)
         {
             Debug.Log("We hit " + player);
-            HeathPlayer.Intance .TakeHeath(20);
+            HeathPlayer.Intance .TakeHeath(10);
 
         }
     }

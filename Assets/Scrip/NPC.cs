@@ -13,10 +13,7 @@ public class NPC : MonoBehaviour
 
     [Header("Dialogue Content")]
     public string[] dialogues = {
-     "Hello! I need your help.",
-     "There are some monsters in the area.",
-     "Thank you so much for your help! Here's your reward.",
-     "Good luck on your next journey!"
+    
 };
     private int dialogueIndex = 0; // Vị trí hiện tại trong hội thoại
 
@@ -24,19 +21,19 @@ public class NPC : MonoBehaviour
     private bool isDialogueActive = false; // Trạng thái hội thoại đang diễn ra
 
 
-    [Header("Quest System")]
-    public int requiredKills = 3; // Số lượng quái cần tiêu diệt
-    private int currentKills = 0; // Số lượng quái đã tiêu diệt
-    private bool questCompleted = false; // Trạng thái nhiệm vụ
-    private bool rewardGiven = false; // Kiểm tra đã nhận thưởng hay chưa
+   // [Header("Quest System")]
+   /// public int requiredKills = 3; // Số lượng quái cần tiêu diệt
+    //private int currentKills = 0; // Số lượng quái đã tiêu diệt
+    //private bool questCompleted = false; // Trạng thái nhiệm vụ
+    //private bool rewardGiven = false; // Kiểm tra đã nhận thưởng hay chưa
 
-    [Header("Quest Guidance")]
-    public Transform enemyArea; // Vị trí quái vật
-    public GameObject arrow; // Mũi tên hướng dẫn (được gắn trên Player)
-    public float detectionRadius = 2f; // Bán kính để tắt mũi tên khi gần khu vực quái vật
+    //[Header("Quest Guidance")]
+    //public Transform enemyArea; // Vị trí quái vật
+    //public GameObject arrow; // Mũi tên hướng dẫn (được gắn trên Player)
+    //public float detectionRadius = 2f; // Bán kính để tắt mũi tên khi gần khu vực quái vật
 
-    [Header("Rewards")]
-    public int rewardAmount = 100; // Phần thưởng (ví dụ: vàng, điểm kinh nghiệm)
+    //[Header("Rewards")]
+    //public int rewardAmount = 100; // Phần thưởng (ví dụ: vàng, điểm kinh nghiệm)
 
     void Start()
     {
@@ -44,7 +41,7 @@ public class NPC : MonoBehaviour
         interactText.gameObject.SetActive(false);
         dialoguePanel.SetActive(false); // Ẩn panel hội thoại khi bắt đầu
         dialogueBackground.SetActive(false); // Ẩn khung nền hội thoại
-        arrow.SetActive(false); // Ẩn mũi tên ban đầu
+        //arrow.SetActive(false); // Ẩn mũi tên ban đầu
     }
 
     void Update()
@@ -54,11 +51,11 @@ public class NPC : MonoBehaviour
         {
             TriggerDialogue();
         }
-        if (arrow.activeSelf)
+      /*  if (arrow.activeSelf)
         {
             UpdateArrowDirection();
             CheckProximityToEnemyArea(); // Kiểm tra nếu Player đã gần khu vực quái
-        }
+        }*/
     }
 
     void TriggerDialogue()
@@ -101,13 +98,13 @@ public class NPC : MonoBehaviour
         dialogueIndex++;
         if (dialogueIndex < dialogues.Length)
         {
-            if (dialogueIndex == 1 && !questCompleted)
-            {
-                arrow.SetActive(true); // Hiển thị mũi tên hướng dẫn
-            }
+            //if (dialogueIndex == 1 && !questCompleted)
+            //{
+               // arrow.SetActive(true); // Hiển thị mũi tên hướng dẫn
+            //}
 
             // Kiểm tra nếu chưa hoàn thành nhiệm vụ
-            if (dialogueIndex == 2 && !questCompleted)
+            /*if (dialogueIndex == 2 && !questCompleted)
             {
                 dialogueText.text = "ban chua hoan thanh nhiem vu";
                 dialogueIndex--; // Giữ lại hội thoại hiện tại (không chuyển tiếp)
@@ -131,7 +128,7 @@ public class NPC : MonoBehaviour
             else
             {
                 dialogueText.text = dialogues[dialogueIndex];
-            }
+            }*/
         }
         else
         {
@@ -175,7 +172,7 @@ public class NPC : MonoBehaviour
             EndDialogue();
         }
     }
-    public void UpdateQuestProgress()
+   /* public void UpdateQuestProgress()
     {
         currentKills++;
         Debug.Log($"Quái vật đã tiêu diệt: {currentKills}/{requiredKills}");
@@ -186,8 +183,8 @@ public class NPC : MonoBehaviour
             Debug.Log("Nhiệm vụ hoàn thành! Hãy quay lại gặp NPC để nhận thưởng.");
             arrow.SetActive(false);
         }
-    }
-    void GiveReward()
+    }*/
+   /* void GiveReward()
     {
         Debug.Log($"Bạn đã nhận được {rewardAmount} vàng!");
         // Thêm logic trao phần thưởng ở đây (ví dụ: cập nhật tiền, kinh nghiệm, v.v.)
@@ -206,5 +203,5 @@ public class NPC : MonoBehaviour
             arrow.SetActive(false); // Tắt mũi tên khi đến gần khu vực quái
             Debug.Log("Bạn đã đến khu vực đánh quái.");
         }
-    }
+    }*/
 }
