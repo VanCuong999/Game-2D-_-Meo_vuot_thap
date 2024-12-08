@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Cainos/Pixel Art Top Down - Basic/Prefab/Plant/PF Plant - Bush 02.prefab.meta
+guid: c1f798c785f8eb348b2acaba45811963
+========
 guid: f5bc48427fa6ef041bc24b39c869b786
+>>>>>>>> main:Assets/Assets_TON/Prefab_NPC/NPC_2.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
