@@ -579,7 +579,6 @@ GameObject:
   - component: {fileID: 3954738115128432198}
   - component: {fileID: 2639928239368000765}
   - component: {fileID: 730485620539120745}
-  - component: {fileID: 474898308129303533}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -655,7 +654,8 @@ MonoBehaviour:
   fasingDir: 1
   DashSpeed: 20
   dashTime: 0
-  dashPrefab: {fileID: 6863650148035139843, guid: 66b718106e5aefc4e978f5e20c7a5aeb, type: 3}
+  dashPrefab: {fileID: 6863650148035139843, guid: 66b718106e5aefc4e978f5e20c7a5aeb,
+    type: 3}
   dashcheck: {fileID: 6888760803163711810}
   speedBoostAmount: 7
   speedBoostDuration: 5
@@ -665,6 +665,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   DiePrefabs: {fileID: 0}
+  arcBulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
 --- !u!50 &2639928239368000765
 Rigidbody2D:
   serializedVersion: 4
@@ -737,22 +739,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0168037, y: 3.8130543}
   m_EdgeRadius: 0
---- !u!114 &474898308129303533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5167810631862743315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84a68195af6a42c4592bc46d0178deb8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8399327029414574818, guid: f414c69bdfca32f4083ef7aa87bd7f82, type: 3}
-  bulletSpeed: 10
-  ImageCoolDown: {fileID: 0}
-  coolDown: 2
 --- !u!1 &5898439990695608388
 GameObject:
   m_ObjectHideFlags: 0

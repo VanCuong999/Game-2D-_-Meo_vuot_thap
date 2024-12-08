@@ -13,12 +13,30 @@ public class NPC : MonoBehaviour
 
     [Header("Dialogue Content")]
     public string[] dialogues = {
-        
-    };
+     "Hello! I need your help.",
+     "There are some monsters in the area.",
+     "Thank you so much for your help! Here's your reward.",
+     "Good luck on your next journey!"
+};
     private int dialogueIndex = 0; // Vị trí hiện tại trong hội thoại
 
     private bool isPlayerNearby = false; // Kiểm tra người chơi có gần NPC không
     private bool isDialogueActive = false; // Trạng thái hội thoại đang diễn ra
+
+
+    [Header("Quest System")]
+    public int requiredKills = 3; // Số lượng quái cần tiêu diệt
+    private int currentKills = 0; // Số lượng quái đã tiêu diệt
+    private bool questCompleted = false; // Trạng thái nhiệm vụ
+    private bool rewardGiven = false; // Kiểm tra đã nhận thưởng hay chưa
+
+    [Header("Quest Guidance")]
+    public Transform enemyArea; // Vị trí quái vật
+    public GameObject arrow; // Mũi tên hướng dẫn (được gắn trên Player)
+    public float detectionRadius = 2f; // Bán kính để tắt mũi tên khi gần khu vực quái vật
+
+    [Header("Rewards")]
+    public int rewardAmount = 100; // Phần thưởng (ví dụ: vàng, điểm kinh nghiệm)
 
     void Start()
     {
@@ -26,6 +44,7 @@ public class NPC : MonoBehaviour
         interactText.gameObject.SetActive(false);
         dialoguePanel.SetActive(false); // Ẩn panel hội thoại khi bắt đầu
         dialogueBackground.SetActive(false); // Ẩn khung nền hội thoại
+        arrow.SetActive(false); // Ẩn mũi tên ban đầu
     }
 
     void Update()
@@ -34,6 +53,11 @@ public class NPC : MonoBehaviour
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
         {
             TriggerDialogue();
+        }
+        if (arrow.activeSelf)
+        {
+            UpdateArrowDirection();
+            CheckProximityToEnemyArea(); // Kiểm tra nếu Player đã gần khu vực quái
         }
     }
 
@@ -77,11 +101,41 @@ public class NPC : MonoBehaviour
         dialogueIndex++;
         if (dialogueIndex < dialogues.Length)
         {
-            dialogueText.text = dialogues[dialogueIndex]; // Hiển thị câu thoại tiếp theo
+            if (dialogueIndex == 1 && !questCompleted)
+            {
+                arrow.SetActive(true); // Hiển thị mũi tên hướng dẫn
+            }
+
+            // Kiểm tra nếu chưa hoàn thành nhiệm vụ
+            if (dialogueIndex == 2 && !questCompleted)
+            {
+                dialogueText.text = "ban chua hoan thanh nhiem vu";
+                dialogueIndex--; // Giữ lại hội thoại hiện tại (không chuyển tiếp)
+                return;
+            }
+
+            // Kiểm tra nếu đã hoàn thành nhưng chưa nhận thưởng
+            if (dialogueIndex == 2 && questCompleted && !rewardGiven)
+            {
+                dialogueText.text = dialogues[2]; // Hiển thị lời cảm ơn
+                GiveReward(); // Trao thưởng
+                rewardGiven = true; // Đánh dấu đã nhận thưởng
+                return;
+            }
+
+            // Hiển thị lời chào sau khi trả nhiệm vụ
+            if (dialogueIndex == 3 && rewardGiven)
+            {
+                dialogueText.text = dialogues[3];
+            }
+            else
+            {
+                dialogueText.text = dialogues[dialogueIndex];
+            }
         }
         else
         {
-            EndDialogue(); // Kết thúc nếu hết hội thoại
+            EndDialogue(); // Kết thúc hội thoại
         }
     }
 
@@ -119,6 +173,38 @@ public class NPC : MonoBehaviour
             interactText.gameObject.SetActive(false);
             Debug.Log("Người chơi đã rời xa NPC.");
             EndDialogue();
+        }
+    }
+    public void UpdateQuestProgress()
+    {
+        currentKills++;
+        Debug.Log($"Quái vật đã tiêu diệt: {currentKills}/{requiredKills}");
+
+        if (currentKills >= requiredKills)
+        {
+            questCompleted = true;
+            Debug.Log("Nhiệm vụ hoàn thành! Hãy quay lại gặp NPC để nhận thưởng.");
+            arrow.SetActive(false);
+        }
+    }
+    void GiveReward()
+    {
+        Debug.Log($"Bạn đã nhận được {rewardAmount} vàng!");
+        // Thêm logic trao phần thưởng ở đây (ví dụ: cập nhật tiền, kinh nghiệm, v.v.)
+    }
+    void UpdateArrowDirection()
+    {
+        Vector3 direction = (enemyArea.position - arrow.transform.position).normalized;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        arrow.transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+    void CheckProximityToEnemyArea()
+    {
+        float distanceToEnemyArea = Vector3.Distance(transform.position, enemyArea.position);
+        if (distanceToEnemyArea <= detectionRadius)
+        {
+            arrow.SetActive(false); // Tắt mũi tên khi đến gần khu vực quái
+            Debug.Log("Bạn đã đến khu vực đánh quái.");
         }
     }
 }
