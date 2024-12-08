@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Cainos.meta
 guid: 852294cd03fb5cc47b22d74b7948675b
+========
+guid: 30b16c1b1d03bd74ead7054d2c5abe2b
+>>>>>>>> main:Assets/Assets_TON/asset_NPC_0/assets_NPC.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

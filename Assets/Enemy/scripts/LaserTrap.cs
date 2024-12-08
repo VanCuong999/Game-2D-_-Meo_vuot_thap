@@ -37,11 +37,12 @@ public class LaserTrap : MonoBehaviour
     {
         if (isActive && collision.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage);
-            }
+            // PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+            // if (playerHealth != null)
+            // {
+            //     playerHealth.TakeDamage(damage);
+            // }
+            HeathPlayer.Intance.TakeHeath(damage);
         }
     }
 }

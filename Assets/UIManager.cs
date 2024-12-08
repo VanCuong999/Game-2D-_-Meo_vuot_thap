@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,18 +12,18 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject victorybanner;
 
     [SerializeField] private TextMeshProUGUI coinTMP;
-    [SerializeField] private TextMeshProUGUI huyhieuTMP;
+    [SerializeField] private TextMeshProUGUI HuyHieuTMP;
 
-    private void Awake() 
-    {
-        Intance = this;    
+    private void Awake() {
+        Intance = this;
     }
     
 
+
     void Update()
     {
-        coinTMP.text = "" + staft.Coin;
-        huyhieuTMP.text = "" + staft.HuyHieu;
+        coinTMP.text = " " + staft.Coin;
+        HuyHieuTMP.text = " " + staft.HuyHieu;
     }
     public void ActiveOver()
     {
@@ -45,8 +44,8 @@ public class UIManager : MonoBehaviour
     }
     public void NextLevel()
     {
-        staft.unlocedLevel +=1;
-        
+        staft.unlocedLevel += 1;
+
         SceneManager.LoadScene("Level SelecetMenu");
     }
 }

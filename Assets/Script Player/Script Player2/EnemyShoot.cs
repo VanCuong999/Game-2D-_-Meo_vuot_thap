@@ -47,7 +47,10 @@ public class EnemyShoot : MonoBehaviour
     public void TakeDamge(float damge)
     {
         HeathEnemy -= damge;
-        
+        if (HeathEnemy <= 0)
+        {
+            Destroy(gameObject);
+        }
         UpdateHeathUFO(HeathEnemy);
     }
     private void OnDrawGizmosSelected()

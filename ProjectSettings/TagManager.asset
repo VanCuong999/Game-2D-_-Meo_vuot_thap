@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Enemy
+  - enemy3
+  - EnemyGolem
+  - EnemyDoi
+  - Ground
+  - ItemVictory
+  - ItemSpeed
+  - ItemHeath
+  - Groundd
+>>>>>>> main
   layers:
   - Default
   - TransparentFX
@@ -11,6 +24,12 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
+=======
+  - Enemy
+  - 
+  - 
+>>>>>>> main
   - 
   - 
   - 
@@ -41,6 +60,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Layer 1
     uniqueID: 2425651459
     locked: 0
@@ -49,4 +69,41 @@ TagManager:
     locked: 0
   - name: Layer 3
     uniqueID: 4189426099
+=======
+  - name: tai
+    uniqueID: 62116081
+    locked: 0
+  - name: tay phai
+    uniqueID: 3273366207
+    locked: 0
+  - name: vai right
+    uniqueID: 1082038271
+    locked: 0
+  - name: dau
+    uniqueID: 3404125109
+    locked: 0
+  - name: mat
+    uniqueID: 558161301
+    locked: 0
+  - name: than
+    uniqueID: 1949927081
+    locked: 0
+  - name: chan left
+    uniqueID: 2579696517
+    locked: 0
+  - name: hong
+    uniqueID: 198288243
+    locked: 0
+  - name: chan right
+    uniqueID: 2262426421
+    locked: 0
+  - name: kiem
+    uniqueID: 4244223539
+    locked: 0
+  - name: tay trai
+    uniqueID: 112852143
+    locked: 0
+  - name: vai trai
+    uniqueID: 1731179327
+>>>>>>> main
     locked: 0
