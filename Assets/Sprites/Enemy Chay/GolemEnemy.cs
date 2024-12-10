@@ -59,10 +59,10 @@ public class GolemEnemy : MonoBehaviour
     {
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange,playerLayer);
 
-        foreach (Collider2D playerr in hitPlayer)
+        foreach (Collider2D player in hitPlayer)
         {
             Debug.Log("We hit " + player);
-            HeathPlayer.Intance .TakeHeath(10);
+            HeathPlayer.Intance.TakeHeath(10);
 
         }
     }
