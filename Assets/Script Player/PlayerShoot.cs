@@ -30,6 +30,11 @@ public class PlayerShoot : MonoBehaviour
                 isCoolDown = false; // Kết thúc hồi chiêu
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            CreateBullets();
+        }
     }
 
     public void CreateBullets()

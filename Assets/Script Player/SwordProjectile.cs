@@ -27,7 +27,7 @@ public class SwordProjectile : MonoBehaviour
             {
                 Debug.LogWarning("Enemy script not found on: " + collision.gameObject.name);
             }
-            Destroy(gameObject);
+            
         }
         if (collision.CompareTag("EnemyGolem"))
         {
