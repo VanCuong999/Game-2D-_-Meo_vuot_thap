@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1046163616200",
+    "firebase_url": "https://game-2dmeo-vuot-thap-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "game-2dmeo-vuot-thap",
+    "storage_bucket": "game-2dmeo-vuot-thap.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1046163616200:android:5e0761e418ef39bfed50fd",
+        "android_client_info": {
+          "package_name": "com.meovuotthap.game2d"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGK3HqztTLGPr2J_OEDB1wt47oF5l3rVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
