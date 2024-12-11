@@ -11,6 +11,7 @@ public class GolemEnemy : MonoBehaviour
     [SerializeField] private float Speed;
     [SerializeField] private float lineOfSize;
     [SerializeField] private float shootingRange;
+    [SerializeField] private float avoidDistance = 1.0f;
     private Animator anim;
     private Transform player;
     private float timer;
@@ -18,6 +19,7 @@ public class GolemEnemy : MonoBehaviour
     public float attackRange;
     public LayerMask playerLayer;
     public EntityFX entityFX;
+    
 
     private void Awake() 
     {
@@ -39,7 +41,10 @@ public class GolemEnemy : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         if (distanceFromPlayer < lineOfSize && distanceFromPlayer > shootingRange)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
+            Vector2 direction = (player.position - transform.position).normalized;
+          GetComponent<Rigidbody2D>().velocity = direction * Speed;
+
+            //transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
             FacePlayer();
             anim.SetBool("wall",true);
         }
@@ -124,5 +129,23 @@ public class GolemEnemy : MonoBehaviour
     public void UpdateHeath(float health)
     {
         HeathGolem = health;
+    }
+    private bool IsObstacleAhead()
+    {
+        Vector2 direction = FashingRight ? Vector2.right : Vector2.left;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, avoidDistance);
+        return hit.collider != null && hit.collider.CompareTag("Obstacle");
+    }
+
+    private void AvoidObstacle()
+    {
+        Debug.Log("Avoiding obstacle");
+        Vector2 avoidDirection = Vector2.up;
+        RaycastHit2D hitAbove = Physics2D.Raycast(transform.position, Vector2.up, avoidDistance);
+        if (hitAbove.collider != null && hitAbove.collider.CompareTag("Obstacle"))
+        {
+            avoidDirection = Vector2.down;
+        }
+        GetComponent<Rigidbody2D>().velocity = avoidDirection * Speed;
     }
 }
