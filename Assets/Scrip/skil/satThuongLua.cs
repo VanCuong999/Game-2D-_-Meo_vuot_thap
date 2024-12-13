@@ -38,5 +38,17 @@ public class satThuongLua : MonoBehaviour
             // Hủy quả cầu lửa sau khi gây sát thương cho một quái
             Destroy(gameObject);
         }
+        // Kiểm tra nếu đối tượng va chạm là enemy và chưa gây sát thương
+        if (!hasHit && collision.CompareTag("EnemyGolem"))
+        {
+            // Gây sát thương cho enemy
+            collision.GetComponent<GolemEnemy>()?.TakeDangage(damage);
+
+            // Đánh dấu là đã gây sát thương, không gây sát thương nữa
+            hasHit = true;
+
+            // Hủy quả cầu lửa sau khi gây sát thương cho một quái
+            Destroy(gameObject);
+        }
     }
 }

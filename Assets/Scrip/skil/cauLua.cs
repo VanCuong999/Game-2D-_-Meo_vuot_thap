@@ -5,9 +5,10 @@ using UnityEngine;
 public class cauLua : MonoBehaviour
 {
     public GameObject fireballPrefab; // Prefab quả cầu lửa
-    public Transform spawnPoint;     // Vị trí tạo quả cầu lửa
-    public float speed = 5f;         // Tốc độ quả cầu lửa
+    public Transform spawnPoint;      // Vị trí tạo quả cầu lửa
+    public float speed = 5f;          // Tốc độ quả cầu lửa
     public float skillRange = 10f;    // Bán kính phạm vi chiêu
+    public LayerMask enemyLayer;      // Lớp của kẻ thù để phát hiện
 
     void Update()
     {
@@ -40,27 +41,37 @@ public class cauLua : MonoBehaviour
         }
     }
 
-    // Kiểm tra xem có ít nhất một enemy nào trong phạm vi chiêu không
+    // Kiểm tra xem có ít nhất một enemy nào trong phạm vi chiêu không và thuộc lớp enemyLayer
     private bool IsEnemyInRange()
     {
         GameObject[] enemies = FindEnemiesInRange(skillRange);
         return enemies.Length > 0; // Trả về true nếu có ít nhất một enemy trong phạm vi
     }
 
-    // Tìm các enemy trong phạm vi skillRange
+    // Tìm các enemy trong phạm vi skillRange và thuộc lớp enemyLayer
     private GameObject[] FindEnemiesInRange(float range)
     {
+        // Tìm tất cả các kẻ thù với tag "Enemy" và "EnemyGolem"
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        List<GameObject> enemiesInRange = new List<GameObject>();
+        GameObject[] golems = GameObject.FindGameObjectsWithTag("EnemyGolem");
 
-        foreach (GameObject enemy in enemies)
+        // Kết hợp hai mảng lại
+        List<GameObject> enemiesInRange = new List<GameObject>();
+        enemiesInRange.AddRange(enemies);
+        enemiesInRange.AddRange(golems);
+
+        // Loại bỏ các kẻ thù không trong phạm vi và không thuộc lớp enemyLayer
+        List<GameObject> enemiesInRangeFiltered = new List<GameObject>();
+
+        foreach (GameObject enemy in enemiesInRange)
         {
-            if (Vector3.Distance(transform.position, enemy.transform.position) <= range)
+            if (Vector3.Distance(transform.position, enemy.transform.position) <= range &&
+                ((1 << enemy.layer) & enemyLayer) != 0)
             {
-                enemiesInRange.Add(enemy); // Thêm enemy vào danh sách nếu trong phạm vi
+                enemiesInRangeFiltered.Add(enemy); // Thêm enemy vào danh sách nếu trong phạm vi và thuộc lớp
             }
         }
-
-        return enemiesInRange.ToArray(); // Trả về các enemy trong phạm vi
+            
+        return enemiesInRangeFiltered.ToArray(); // Trả về các enemy trong phạm vi
     }
 }
