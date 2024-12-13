@@ -13,91 +13,111 @@ public class GolemEnemy : MonoBehaviour
     [SerializeField] private float shootingRange;
     private Animator anim;
     private Transform player;
+    private Transform npc; // Biến lưu trữ NPC
     private float timer;
     public Transform attackPoint;
     public float attackRange;
     public LayerMask playerLayer;
+    public LayerMask npcLayer; // Layer cho NPC
     public EntityFX entityFX;
 
-    private void Awake() 
+    private void Awake()
     {
-        Intance = this;    
+        Intance = this;
     }
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        npc = GameObject.FindGameObjectWithTag("NPC")?.transform; // Tìm NPC, nếu có
         anim = GetComponent<Animator>();
         if (player == null) return;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (player == null) return;
+        if (player == null && npc == null) return;
         timer += Time.deltaTime;
 
-        float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
-        if (distanceFromPlayer < lineOfSize && distanceFromPlayer > shootingRange)
+        float distanceFromPlayer = player != null ? Vector2.Distance(player.position, transform.position) : float.MaxValue;
+        float distanceFromNPC = npc != null ? Vector2.Distance(npc.position, transform.position) : float.MaxValue;
+
+        Transform target = null;
+
+        // Xác định mục tiêu gần nhất
+        if (distanceFromPlayer < lineOfSize && distanceFromPlayer <= distanceFromNPC)
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
-            FacePlayer();
-            anim.SetBool("wall",true);
+            target = player; // Tấn công người chơi nếu gần hơn hoặc bằng
         }
-        else if (distanceFromPlayer <= shootingRange && timer > 2)
+        else if (distanceFromNPC < lineOfSize && distanceFromNPC < distanceFromPlayer)
         {
-            timer = 0;
-            Debug.Log("da cham player");
-            if (player == null) return;
-            anim.SetTrigger("attack");
-        }else
-        {
-            anim.SetBool("wall",false);
+            target = npc; // Tấn công NPC nếu gần hơn
         }
-        
+
+        if (target != null)
+        {
+            transform.position = Vector2.MoveTowards(this.transform.position, target.position, Speed * Time.deltaTime);
+            FaceTarget(target);
+            anim.SetBool("wall", true);
+
+            if (Vector2.Distance(target.position, transform.position) <= shootingRange && timer > 2)
+            {
+                timer = 0;
+                anim.SetTrigger("attack");
+            }
+        }
+        else
+        {
+            anim.SetBool("wall", false);
+        }
     }
+
     public void EnemyAttack()
     {
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange,playerLayer);
+        Collider2D[] hitTargets = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayer | npcLayer);
 
-        foreach (Collider2D playerr in hitPlayer)
+        foreach (Collider2D target in hitTargets)
         {
-            Debug.Log("We hit " + player);
-            HeathPlayer.Intance .TakeHeath(10);
-
+            if (target.CompareTag("Player"))
+            {
+                Debug.Log("Đánh trúng người chơi");
+                HeathPlayer.Intance.TakeHeath(10);
+            }
+            else if (target.CompareTag("NPC"))
+            {
+                Debug.Log("Đánh trúng NPC");
+                HeathNPC_Follow.Instance.TakeDamage(10); // Thay thế bằng phương thức sát thương của NPC
+            }
         }
     }
 
-    public void TakeDangage(float damgae)
+    public void TakeDangage(float damage)
     {
         if (gameObject != null)
         {
             entityFX.StartCoroutine("FlashFX");
         }
-        HeathGolem -= damgae;
+        HeathGolem -= damage;
 
-        if(HeathGolem <= 0)
+        if (HeathGolem <= 0)
         {
             Destroy(gameObject);
             Exp.Intance.TakeExp(Exp.Intance.exp);
             expPlayer.Intancs.GainExperience(20);
         }
-        UpdateHeath(HeathGolem);
+        UpdateHealth(HeathGolem);
     }
 
-
-    private void FacePlayer()
+    private void FaceTarget(Transform target)
     {
-        // Xác định hướng mà kẻ địch nên quay đầu
-        if (player.position.x > transform.position.x && !FashingRight)
+        if (target.position.x > transform.position.x && !FashingRight)
         {
             Flip();
         }
-
-        else if (player.position.x < transform.position.x && FashingRight)
+        else if (target.position.x < transform.position.x && FashingRight)
         {
             Flip();
         }
-
     }
 
     private void OnDrawGizmosSelected()
@@ -107,21 +127,15 @@ public class GolemEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, shootingRange);
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+
     public void Flip()
     {
-        fasingDir = fasingDir * -1;
+        fasingDir *= -1;
         FashingRight = !FashingRight;
         transform.Rotate(0, 180, 0);
     }
-    public void FlipControler(float x)
-    {
-        if (x > 0 && !FashingRight)
-            Flip();
-        else if (x < 0 && FashingRight)
-            Flip();
-    }
 
-    public void UpdateHeath(float health)
+    public void UpdateHealth(float health)
     {
         HeathGolem = health;
     }

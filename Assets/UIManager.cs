@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager Intance;
     [SerializeField] private GameObject overbanner;
     [SerializeField] private GameObject victorybanner;
+    [SerializeField] private GameObject pausebanner;
 
     [SerializeField] private TextMeshProUGUI coinTMP;
     [SerializeField] private TextMeshProUGUI HuyHieuTMP;
@@ -47,5 +48,17 @@ public class UIManager : MonoBehaviour
         staft.unlocedLevel += 1;
 
         SceneManager.LoadScene("Level SelecetMenu");
+    }
+
+    public void BtnPause()
+    {
+        Time.timeScale = 0;
+        pausebanner.SetActive(true);
+    }
+
+    public void Btncontinue()
+    {
+        Time.timeScale = 1;
+        pausebanner.SetActive(false);
     }
 }
