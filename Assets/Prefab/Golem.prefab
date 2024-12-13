@@ -163,6 +163,9 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 256
   entityFX: {fileID: 2647763076711262249}
 --- !u!61 &8386770675701907813
 BoxCollider2D:
