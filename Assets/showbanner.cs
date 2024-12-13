@@ -10,6 +10,7 @@ public class showbanner : MonoBehaviour
     public GameObject banner2; // Kéo thả Banner2 vào đây
 
     public GameObject bannerThanhTuu;
+    public GameObject bannerSkill;
 
     public TextMeshProUGUI textcoin;
     public TextMeshProUGUI textHuyHieu;
@@ -97,6 +98,7 @@ public class showbanner : MonoBehaviour
         banner1.SetActive(false);
         banner2.SetActive(false);
         bannerThanhTuu.SetActive(false);
+        bannerSkill.SetActive(false);
     }
 
     public void btnNhanCoin()
@@ -128,5 +130,9 @@ public class showbanner : MonoBehaviour
     public void ShowThanhTuu()
     {
         bannerThanhTuu.SetActive(true);
+    }
+    public void ShowSkill()
+    {
+        bannerSkill.SetActive(true);
     }
 }
