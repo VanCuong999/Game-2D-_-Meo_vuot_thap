@@ -41,10 +41,10 @@ public class GolemEnemy : MonoBehaviour
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         if (distanceFromPlayer < lineOfSize && distanceFromPlayer > shootingRange)
         {
-            Vector2 direction = (player.position - transform.position).normalized;
-          GetComponent<Rigidbody2D>().velocity = direction * Speed;
+            //Vector2 direction = (player.position - transform.position).normalized;
+         // GetComponent<Rigidbody2D>().velocity = direction * Speed;
 
-            //transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(this.transform.position, player.position, Speed * Time.deltaTime);
             FacePlayer();
             anim.SetBool("wall",true);
         }

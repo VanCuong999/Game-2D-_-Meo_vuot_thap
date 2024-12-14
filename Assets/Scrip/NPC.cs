@@ -30,11 +30,17 @@ public class NPC : MonoBehaviour
     public int requiredKills = 3; // Số quái cần tiêu diệt
     private int currentKills = 0; // Số quái đã tiêu diệt
 
+    [Header("Reward UI")]
+    public GameObject rewardButton;
+    public TextMeshProUGUI rewardAmountText;
+    public int rewardAmount = 100;
+
     void Start()
     {
         interactText.gameObject.SetActive(false);
         dialoguePanel.SetActive(false);
         dialogueBackground.SetActive(false);
+        rewardButton.SetActive(false); // Ẩn nút phần thưởng
     }
 
     void Update()
@@ -145,7 +151,15 @@ public class NPC : MonoBehaviour
         {
             questCompleted = true; // Đánh dấu nhiệm vụ hoàn thành
             Debug.Log("Nhiệm vụ hoàn thành!");
+            rewardButton.SetActive(true);
+            rewardAmountText.text = "+" + rewardAmount + " vàng";
         }
+    }
+    public void ClaimReward()
+    {
+        GameManager.Intance.AddCoin(rewardAmount);
+        rewardButton.SetActive(false);
+        Debug.Log("Bạn đã nhận được " + rewardAmount + " vàng!");
     }
 
 }

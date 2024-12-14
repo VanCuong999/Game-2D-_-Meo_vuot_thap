@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI NangLuongTMP;
     public TextMeshProUGUI CoinTMP;
     public TextMeshProUGUI HuyHieuTMP;
+   
 
     [Header("Shop")]
     [SerializeField] private TextMeshProUGUI sovangkhoidauTMP;
@@ -82,4 +83,5 @@ public class GameManager : MonoBehaviour
         Coin += amount; // Tăng vàng cho người chơi
         UpdateManager(NangLuong, Coin, HuyHieu); // Cập nhật lại UI
     }
+   
 }
