@@ -13,7 +13,13 @@ TagManager:
   - enemy3
   - Enemy
   - Ground
+
   - Obstacle
+
+  - NPC
+  - boss
+  - ItemVictorry2
+
   layers:
   - Default
   - TransparentFX
@@ -23,7 +29,7 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
+  - NPC
   - 
   - 
   - 
