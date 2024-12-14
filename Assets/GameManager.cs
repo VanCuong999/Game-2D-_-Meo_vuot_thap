@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI NangLuongTMP;
     public TextMeshProUGUI CoinTMP;
     public TextMeshProUGUI HuyHieuTMP;
+   
 
     [Header("Shop")]
     [SerializeField] private TextMeshProUGUI sovangkhoidauTMP;
@@ -77,4 +78,10 @@ public class GameManager : MonoBehaviour
         staft.sodamgagenangcap += Random.Range(50,100);
         staft.Coin -= staft.sodamgagenangcap;
     }
+    public void AddCoin(int amount)
+    {
+        Coin += amount; // Tăng vàng cho người chơi
+        UpdateManager(NangLuong, Coin, HuyHieu); // Cập nhật lại UI
+    }
+   
 }

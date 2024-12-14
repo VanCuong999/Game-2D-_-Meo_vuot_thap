@@ -53,11 +53,11 @@ public class ArcBulletController : MonoBehaviour
         }
         if (other.CompareTag("EnemyGolem"))
         {
-            GolemEnemy enemy = other.GetComponent<GolemEnemy>();
-            if (enemy != null)
-            {
-                enemy.TakeDangage(50);                
-            }
+            //GolemEnemy enemy = other.GetComponent<GolemEnemy>();
+            //if (enemy != null)
+            //{
+             //   enemy.TakeDangage(50);                
+            //}
         }
     }
 }

@@ -24,15 +24,23 @@ public class NPC : MonoBehaviour
     private bool questAccepted = false; // Kiểm tra người chơi đã nhận nhiệm vụ chưa
     private bool questCompleted = false; // Kiểm tra nhiệm vụ đã hoàn thành chưa
 
+    private int dialogueIndex = 0; // Để theo dõi chỉ số của câu thoại hiện tại
+
     [Header("Quest System")]
     public int requiredKills = 3; // Số quái cần tiêu diệt
     private int currentKills = 0; // Số quái đã tiêu diệt
+
+    [Header("Reward UI")]
+    public GameObject rewardButton;
+    public TextMeshProUGUI rewardAmountText;
+    public int rewardAmount = 100;
 
     void Start()
     {
         interactText.gameObject.SetActive(false);
         dialoguePanel.SetActive(false);
         dialogueBackground.SetActive(false);
+        rewardButton.SetActive(false); // Ẩn nút phần thưởng
     }
 
     void Update()
@@ -65,12 +73,14 @@ public class NPC : MonoBehaviour
 
         if (!questAccepted) // Nếu người chơi chưa nhận nhiệm vụ
         {
-            dialogueText.text = dialogues[0] + "\n" + dialogues[1]; // Hiển thị câu 1 và câu 2
+            dialogueText.text = dialogues[0]; // Hiển thị câu 1
+            dialogueIndex = 1; // Chuyển chỉ số câu thoại sang 1
             questAccepted = true; // Đánh dấu nhiệm vụ đã được nhận
         }
         else if (!questCompleted) // Nếu nhiệm vụ chưa hoàn thành
         {
             dialogueText.text = dialogues[2]; // Hiển thị câu "Bạn chưa hoàn thành nhiệm vụ."
+            dialogueIndex = 3; // Chuyển chỉ số câu thoại sang 3
         }
         else // Nếu nhiệm vụ đã hoàn thành
         {
@@ -82,7 +92,15 @@ public class NPC : MonoBehaviour
 
     void ContinueDialogue()
     {
-        isDialogueActive = false; // Đánh dấu hội thoại kết thúc
+        if (dialogueIndex == 1) // Nếu đang ở câu 1
+        {
+            dialogueText.text = dialogues[1]; // Hiển thị câu 2
+            dialogueIndex = 2; // Chuyển chỉ số câu thoại sang 2
+        }
+        else if (dialogueIndex == 2) // Nếu đang ở câu 2
+        {
+            EndDialogue();
+        }
     }
 
     void EndDialogue()
@@ -133,6 +151,15 @@ public class NPC : MonoBehaviour
         {
             questCompleted = true; // Đánh dấu nhiệm vụ hoàn thành
             Debug.Log("Nhiệm vụ hoàn thành!");
+            rewardButton.SetActive(true);
+            rewardAmountText.text = "+" + rewardAmount + " vàng";
         }
     }
+    public void ClaimReward()
+    {
+        GameManager.Intance.AddCoin(rewardAmount);
+        rewardButton.SetActive(false);
+        Debug.Log("Bạn đã nhận được " + rewardAmount + " vàng!");
+    }
+
 }
