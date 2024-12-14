@@ -126,7 +126,7 @@ MonoBehaviour:
   explosionDistance: 1
   playerLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
 --- !u!58 &9021853893077117248
 CircleCollider2D:
   m_ObjectHideFlags: 0
