@@ -4,26 +4,21 @@ using UnityEngine;
 
 public class dongBang : MonoBehaviour
 {
-    private bool isFrozen = false;
+    private bool isFrozen = false; // Trạng thái đóng băng
     private float originalSpeed;
-    public float speed = 2f;
-
     private Animator animator; // Animator để quản lý animation
 
     private void Start()
     {
-        originalSpeed = speed;
-        animator = GetComponent<Animator>(); // Lấy Animator trên đối tượng
+        animator = GetComponent<Animator>(); // Lấy Animator của kẻ thù
     }
 
     void Update()
     {
-        if (!isFrozen)
-        {
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
-        }
+        
     }
 
+    // Hàm đóng băng kẻ thù trong thời gian cho trước
     public void Freeze(float duration)
     {
         if (!isFrozen)
@@ -32,22 +27,22 @@ public class dongBang : MonoBehaviour
         }
     }
 
+    // Coroutine đóng băng kẻ thù
     private IEnumerator FreezeCoroutine(float duration)
     {
         isFrozen = true;
-        speed = 0f;
 
-        // Kích hoạt animation đóng băng
+
+        // Kích hoạt animation đóng băng (nếu có)
         if (animator != null)
         {
             animator.SetTrigger("Freeze");
         }
 
+        // Chờ thời gian đóng băng
         yield return new WaitForSeconds(duration);
 
+        // Phục hồi trạng thái ban đầu
         isFrozen = false;
-        speed = originalSpeed;
-
-        // Nếu cần, thêm logic phục hồi trạng thái
     }
 }

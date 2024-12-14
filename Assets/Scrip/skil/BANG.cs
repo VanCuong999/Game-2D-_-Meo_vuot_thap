@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class BANG : MonoBehaviour
 {
-    public float freezeRadius = 10f; // Bán kính ảnh hưởng
+    public float freezeRadius = 5f; // Bán kính vùng đóng băng
     public float freezeDuration = 2f; // Thời gian đóng băng
-    public LayerMask enemyLayer; // Lớp của kẻ thù để phát hiện
+    public LayerMask enemyLayer; // Lớp của kẻ thù (để phát hiện)
 
     void Update()
     {
-        // Kích hoạt kỹ năng bằng phím F
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F)) // Nhấn phím F để kích hoạt kỹ năng đóng băng
         {
             FreezeEnemies();
         }
@@ -19,29 +18,27 @@ public class BANG : MonoBehaviour
 
     void FreezeEnemies()
     {
-        // Lấy tất cả các đối tượng trong bán kính ảnh hưởng
+        Debug.Log("Đang kiểm tra vùng đóng băng...");
         Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, freezeRadius, enemyLayer);
 
         foreach (Collider2D enemy in enemies)
         {
-            // Kiểm tra nếu đối tượng có tag "Enemy"
             if (enemy.CompareTag("Enemy"))
             {
-                // Lấy script quản lý hành vi của kẻ thù
-                dongBang enemyBehavior = enemy.GetComponent<dongBang>();
-
-                if (enemyBehavior != null)
+                Debug.Log("Enemy phát hiện trong vùng đóng băng!");
+                enemy3tancong enemyAI = enemy.GetComponent<enemy3tancong>();
+                if (enemyAI != null)
                 {
-                    enemyBehavior.Freeze(freezeDuration); // Gọi hàm đóng băng từ script của kẻ thù
+                    enemyAI.Freeze(freezeDuration);
                 }
             }
         }
     }
 
-    // Vẽ bán kính ảnh hưởng trong Scene View
+    // Hiển thị bán kính ảnh hưởng trong Scene View (dùng cho mục đích debug)
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.cyan; // Màu của vùng ảnh hưởng
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, freezeRadius);
     }
 }

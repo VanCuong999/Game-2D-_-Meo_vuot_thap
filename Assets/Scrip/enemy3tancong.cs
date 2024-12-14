@@ -15,24 +15,29 @@ public class enemy3tancong : MonoBehaviour
     private bool isPlayerInRange = false; // Kiểm tra xem player có trong vùng xanh hay không
     private float fireTimer = 0f; // Đếm ngược thời gian bắn
     private bool facingRight = true; // Biến theo dõi hướng quay của enemy
-    private Animator animator; // Biến điều khiển animation
+    private Animator animator; // Biến điều khiển animations
+    private bool isFrozen = false; // Trạng thái đóng băng
+    private Rigidbody2D rb; // Lưu trữ Rigidbody2D của enemy
+    private MonoBehaviour attackController; // Điều khiển logic tấn công
     void Start()
     {
         // Tìm player khi script được khởi tạo
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>(); // Lấy Animator từ enemy
+        rb = GetComponent<Rigidbody2D>();
+        attackController = this; // Trường hợp tạm thời dùng chính script này làm logic tấn công
     }
 
     void Update()
     {
-        if (player == null) return; // Kiểm tra nếu không tìm thấy player
+        if (player == null || isFrozen) return; // Kiểm tra nếu không tìm thấy player
 
         // Tăng thời gian đếm ngược cho việc bắn laser
         fireTimer += Time.deltaTime;
 
         // Tính khoảng cách giữa enemy và player
         float distance = Vector2.Distance(transform.position, player.transform.position);
-
+        isPlayerInRange = distance <= detectionRange;
         // Kiểm tra nếu player vào trong phạm vi tấn công (detectionRange)
         if (distance <= detectionRange)
         {
@@ -42,6 +47,7 @@ public class enemy3tancong : MonoBehaviour
         {
             isPlayerInRange = false; // Player ra ngoài vùng xanh, không tấn công
         }
+
 
         if (isPlayerInRange)
         {
@@ -60,6 +66,7 @@ public class enemy3tancong : MonoBehaviour
             // Nếu player ra ngoài vùng xanh, enemy không làm gì
             // Không di chuyển, không tấn công
         }
+
     }
 
     void ShootLaser()
@@ -138,4 +145,30 @@ public class enemy3tancong : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
 
+    public void Freeze(float duration)
+    {
+        if (isFrozen)
+        {
+            Debug.Log("Enemy đã bị đóng băng!"); // Kiểm tra trạng thái đóng băng
+            return;
+        }
+
+        isFrozen = true;
+        Debug.Log("Enemy bắt đầu bị đóng băng!");
+
+        if (rb != null) rb.velocity = Vector2.zero; // Dừng chuyển động
+        if (animator != null) animator.enabled = false; // Tắt animation
+        if (attackController != null) attackController.enabled = false; // Dừng tấn công
+
+        StartCoroutine(ThawOut(duration));
+    }
+
+    private IEnumerator ThawOut(float duration)
+    {
+        yield return new WaitForSeconds(duration); // Chờ hết thời gian đóng băng
+        isFrozen = false;
+
+        if (animator != null) animator.enabled = true; // Bật lại animation
+        if (attackController != null) attackController.enabled = true; // Bật lại tấn công
+    }
 }
