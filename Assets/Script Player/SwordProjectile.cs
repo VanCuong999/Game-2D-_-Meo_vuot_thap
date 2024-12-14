@@ -21,7 +21,7 @@ public class SwordProjectile : MonoBehaviour
             if (enemy != null)
             {
                 Debug.Log("Enemy script found on: " + collision.gameObject.name);
-                enemy.TakeDamage();
+               // enemy.TakeDamage(10);
             }
             else
             {
