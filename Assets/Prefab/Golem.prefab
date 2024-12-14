@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 3012346478216607863}
   - component: {fileID: 782644144849304537}
   - component: {fileID: 2762582685090796205}
-  - component: {fileID: 6475217401569143290}
   - component: {fileID: 8386770675701907813}
   - component: {fileID: 2647763076711262249}
+  - component: {fileID: -8555595251107916644}
   m_Layer: 7
   m_Name: Golem
   m_TagString: EnemyGolem
@@ -141,32 +141,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6475217401569143290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5982724495673821560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fee82923aa4d6e44b24e82885975509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HeathGolem: 100
-  fasingDir: 1
-  Speed: 2
-  lineOfSize: 7.18
-  shootingRange: 1.75
-  attackPoint: {fileID: 5078351451037630779}
-  attackRange: 1.75
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  npcLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  entityFX: {fileID: 2647763076711262249}
 --- !u!61 &8386770675701907813
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -226,3 +200,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 55c70c51c426cac4e8b39e81b607fb53, type: 2}
   flashDursion: 0.1
+--- !u!114 &-8555595251107916644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5982724495673821560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1839b40fd62424483a12ccb7cf8ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeathGolem: 100
+  fasingDir: 1
+  Speed: 2
+  lineOfSize: 7.18
+  shootingRange: 1.75
+  attackPoint: {fileID: 5078351451037630779}
+  attackRange: 1.75
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  npcLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  entityFX: {fileID: 2647763076711262249}

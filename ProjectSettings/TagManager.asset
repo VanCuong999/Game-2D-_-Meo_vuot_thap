@@ -13,13 +13,7 @@ TagManager:
   - enemy3
   - Enemy
   - Ground
-
   - Obstacle
-
-  - NPC
-  - boss
-  - ItemVictorry2
-
   layers:
   - Default
   - TransparentFX
@@ -27,9 +21,12 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
-  - Enemy
+  - 
+  - 
+  - 
+  - 
   - NPC
+  - Player
   - 
   - 
   - 
@@ -41,9 +38,6 @@ TagManager:
   - 
   - 
   - 
-  - Layer 1
-  - Layer 2
-  - Layer 3
   - 
   - 
   - 
@@ -56,13 +50,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Layer 1
-    uniqueID: 1713741299
-    locked: 0
-  - name: Layer 2
-    uniqueID: 3535453719
-    locked: 0
-  - name: Layer 3
-    uniqueID: 3133746607
     locked: 0
