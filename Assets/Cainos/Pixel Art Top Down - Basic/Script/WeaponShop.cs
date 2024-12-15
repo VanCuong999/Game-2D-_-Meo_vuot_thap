@@ -14,18 +14,13 @@ public class WeaponShop : MonoBehaviour
     private bool[] weaponPurchased; // Trạng thái đã mua của từng vũ khí
     private int activeWeaponIndex = -1; // Chỉ số vũ khí đang được sử dụng (-1 là chưa sử dụng vũ khí nào)
     public Transform weaponHolder; // Vị trí giữ vũ khí trên Player
-    //public GameObject[] weaponPrefabs; // Danh sách Prefab của các vũ khí
-    public Sprite[] weaponSprites; // Danh sách Sprite của các vũ khí
-    private SpriteRenderer currentWeaponRenderer; // SpriteRenderer hiện tại của vũ khí
+    public GameObject[] weaponPrefabs; // Danh sách Prefab của các vũ khí
+    private GameObject currentWeaponInstance; // Tham chiếu tới vũ khí hiện tại
+    private GameObject currentWeapon; // Vũ khí đang sử dụng
 
 
     void Start()
     {
-        currentWeaponRenderer = weaponHolder.GetComponent<SpriteRenderer>();
-        if (currentWeaponRenderer == null)
-        {
-            Debug.LogError("Không tìm thấy SpriteRenderer trong weaponHolder!");
-        }
         shopUI.SetActive(false);
 
         // Khởi tạo mảng trạng thái vũ khí
@@ -99,40 +94,56 @@ public class WeaponShop : MonoBehaviour
 
     void UseWeapon(int weaponIndex)
     {
+        // Kiểm tra nếu vũ khí đang được chọn đã được sử dụng
         if (activeWeaponIndex == weaponIndex)
         {
             Debug.Log("Vũ khí này đã được sử dụng!");
             return;
         }
 
-        // Cập nhật trạng thái nút vũ khí cũ (nếu có)
-        if (activeWeaponIndex != -1)
+        // Hủy đối tượng vũ khí hiện tại (nếu có)
+        if (currentWeapon != null)
         {
-            UpdateButtonToUse(activeWeaponIndex);
+            Destroy(currentWeapon); // Xóa vũ khí cũ
         }
 
-        // Đặt vũ khí mới làm vũ khí đang sử dụng
+        // Gắn vũ khí mới vào weaponHolder
+        if (weaponPrefabs.Length > weaponIndex && weaponPrefabs[weaponIndex] != null)
+        {
+            currentWeapon = Instantiate(weaponPrefabs[weaponIndex], weaponHolder.position, Quaternion.identity, weaponHolder);
+        }
+
+        // Cập nhật chỉ số vũ khí đang sử dụng
         activeWeaponIndex = weaponIndex;
-        // Thay đổi Sprite vũ khí
-        if (currentWeaponRenderer != null && weaponSprites.Length > weaponIndex)
-        {
-            currentWeaponRenderer.sprite = weaponSprites[weaponIndex];
-        }
-        weaponButtons[weaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "Dang su dung";
-     
 
-        // Lưu trạng thái vũ khí đang sử dụng vào PlayerPrefs
+        // Cập nhật giao diện (UI) cho nút của vũ khí
+        for (int i = 0; i < weaponButtons.Length; i++)
+        {
+            if (i == weaponIndex)
+            {
+                weaponButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = "Đang sử dụng";
+            }
+            else
+            {
+                UpdateButtonToUse(i);
+            }
+        }
+
+        // Lưu trạng thái vào PlayerPrefs
         PlayerPrefs.SetInt("ActiveWeapon", weaponIndex);
         PlayerPrefs.Save();
-        Debug.Log("Đang sử dụng vũ khí: " + weaponIndex);
 
+        Debug.Log("Đang sử dụng vũ khí: " + weaponIndex);
     }
+
+
+
 
     void LoadWeaponStatus()
     {
+        // Tải trạng thái vũ khí đã mua
         for (int i = 0; i < weaponButtons.Length; i++)
         {
-            // Kiểm tra xem vũ khí đã được mua chưa bằng cách sử dụng PlayerPrefs
             if (PlayerPrefs.GetInt("Weapon_" + i, 0) == 1)
             {
                 weaponPurchased[i] = true;
@@ -140,22 +151,38 @@ public class WeaponShop : MonoBehaviour
             }
         }
 
-        // Tải trạng thái vũ khí đang sử dụng
+        // Tải vũ khí đang sử dụng
         activeWeaponIndex = PlayerPrefs.GetInt("ActiveWeapon", -1);
-        if (activeWeaponIndex != -1)
+        if (activeWeaponIndex != -1 && activeWeaponIndex < weaponPrefabs.Length)
         {
-            weaponButtons[activeWeaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "Dang su dung";
+            currentWeapon = Instantiate(weaponPrefabs[activeWeaponIndex], weaponHolder.position, Quaternion.identity, weaponHolder);
+
+            // Cập nhật trạng thái nút UI
+            weaponButtons[activeWeaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "Đang sử dụng";
         }
     }
+
+
 
     void UpdateButtonToUse(int weaponIndex)
     {
         weaponButtons[weaponIndex].interactable = true;
-        weaponButtons[weaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "Su dung";
+        weaponButtons[weaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "Sử dụng";
     }
+
+
 
     void UpdatePlayerGoldUI()
     {
         playerGoldText.text = "Vàng: " + playerStats.Coin;
+    }
+
+    void OnDestroy()
+    {
+        // Xóa vũ khí hiện tại (nếu có) khi thoát ra
+        if (currentWeaponInstance != null)
+        {
+            Destroy(currentWeaponInstance);
+        }
     }
 }

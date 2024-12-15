@@ -5,138 +5,253 @@ using UnityEngine;
 
 public class EnemyShooter : MonoBehaviour
 {
-    public float moveSpeed = 1f;
-    public float health = 5f;
-    public Transform player;
-    public GameObject projectilePrefab;  // Prefab cho viên đạn bắn ra
-    public float shootingInterval = 3f;  // Khoảng thời gian bắn lại (s)
-    private SpriteRenderer spriteRenderer;
-    private Vector2 movement;
+    [Header("Patrol Settings")]
+    public float patrolRadius = 5f; // Bán kính tuần tra
+    public float speed = 2f; // Tốc độ di chuyển
+    public float pauseTime = 2f; // Thời gian dừng giữa các lần di chuyển
 
-    private float lastShotTime;
-    private bool isAttacking = false;
-    public Transform shootPoint;  // Vị trí bắn chưởng
-    public float projectileSpeed = 5f;  // Tốc độ viên đạn
-    public float attackRange = 10;  // Tầm bắn chưởng
-    private Animator animator;
+    [Header("Combat Settings")]
+    public float detectionRadius = 5f; // Bán kính phát hiện người chơi
+    public float attackRange = 5f; // Phạm vi tấn công
+    public float attackCooldown = 3f; // Thời gian chờ giữa các lần tấn công
+    public LayerMask playerLayer; // Lớp người chơi
+    private float attackTimer; // Bộ đếm thời gian tấn công
+    private bool isPlayerDetected = false; // Kiểm tra xem người chơi có bị phát hiện không
 
-    
-    void Start()
+    private Vector2 startPosition; // Vị trí ban đầu
+    private Vector2 targetPosition; // Vị trí mục tiêu tuần tra
+    private bool isPatrolling = true; // Trạng thái tuần tra
+    private bool FashingRight = true;
+    private Transform player; // Tham chiếu tới người chơi
+    private Animator anim;
+
+    [Header("Fireball Settings")]
+    public GameObject fireballPrefab; // Cầu lửa prefab
+    public Transform fireballSpawnPoint; // Vị trí sinh ra cầu lửa
+    public float fireballSpeed = 5f; // Tốc độ cầu lửa
+
+
+    [Header("Respawn Settings")]
+    public float respawnTime = 3f; // Thời gian hồi sinh
+    private bool isDead = false;   // Trạng thái của Enemy
+    private Vector2 respawnPosition; // Vị trí hồi sinh ban đầu
+    private bool isRespawning = false; // Trạng thái đang hồi sinh
+
+
+    private void Start()
     {
-        animator = GetComponent<Animator>();
-        lastShotTime = Time.time;
-        spriteRenderer = GetComponent<SpriteRenderer>(); // Lấy SpriteRenderer của Enemy
+        startPosition = transform.position; // Lưu vị trí ban đầu làm tâm tuần tra
+        startPosition = transform.position;
+        ChooseRandomDirection();
+        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        anim = GetComponent<Animator>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (player == null) return;
-
-        Vector3 direction = player.position - transform.position;
-        float distance = direction.magnitude;  // Tính khoảng cách giữa Enemy và Player
-
-        // Quay mặt Enemy về hướng người chơi
-        FlipSprite(direction.x);
-
-        // Kiểm tra tầm bắn, chỉ bắn nếu Player trong phạm vi tấn công
-        if (distance <= attackRange)
+        if (isRespawning || isDead) return; // Không làm gì khi đang hồi sinh hoặc đã chết
+        if (player != null)
         {
-            // Nếu Player trong phạm vi tầm bắn và đủ thời gian để bắn lại
-            if (Time.time - lastShotTime >= shootingInterval)
+            float distanceToPlayer = Vector2.Distance(player.position, transform.position);
+
+            // Kiểm tra nếu người chơi vào trong phạm vi phát hiện
+            if (distanceToPlayer <= detectionRadius)
             {
-                ShootProjectile();  // Bắn viên đạn từ shootPoint
-                lastShotTime = Time.time;  // Cập nhật thời gian bắn lại
-                Ban();
+                isPlayerDetected = true;
+            }
+            else
+            {
+                isPlayerDetected = false;
+            }
+
+            // Nếu người chơi bị phát hiện và khoảng cách <= attackRange thì dừng lại và bắn cầu lửa
+            if (isPlayerDetected)
+            {
+                if (distanceToPlayer <= attackRange)
+                {
+                    // Dừng lại và tấn công bằng cầu lửa nếu thời gian chờ đủ
+                    if (attackTimer <= 0)
+                    {
+                        AttackPlayerWithFireball();
+                        attackTimer = attackCooldown; // Reset bộ đếm thời gian
+                    }
+                }
+                else
+                {
+                    // Tiến lại gần người chơi nhưng không vượt quá attackRange
+                    ChasePlayer(distanceToPlayer);
+                }
+            }
+            else
+            {
+                Patrol();
             }
         }
-        else
-        {
-            // Nếu Player ra ngoài tầm bắn, ngừng tấn công
-            StopAttack();
-        }
-
-        // Di chuyển Enemy về hướng người chơi nếu không tấn công
-        direction.Normalize();
-        movement = direction;
-
-        // Ngừng tấn công khi Player ra ngoài tầm bắn
-        if (distance > attackRange)
-        {
-            StopAttack();
-        }
-    }
-    public void Ban()
-    {
-        animator.SetTrigger("Attack");
-    }
-    void FixedUpdate()
-    {
-        // Di chuyển Enemy nếu không tấn công
-        if (!isAttacking)
-        {
-            MoveEnemy(movement);
-        }
-    }
-
-    void MoveEnemy(Vector2 direction)
-    {
-        transform.Translate(direction * moveSpeed * Time.fixedDeltaTime);
-    }
-
-    // Quay mặt Enemy về hướng người chơi
-    void FlipSprite(float directionX)
-    {
-        if (directionX > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (directionX < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
-    }
-
-    void StartAttack()
-    {
-        isAttacking = true;
-        // Có thể thêm animation tấn công ở đây (nếu cần)
-    }
-
-    void StopAttack()
-    {
-        isAttacking = false;
-        // Không gọi ShootProjectile nếu không tấn công
-    }
-
-    void ShootProjectile()
-    {
-        // Tạo viên đạn (chưởng) bắn ra từ Enemy
-        GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, Quaternion.identity);
-        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-
-        // Tính hướng từ Enemy đến Player
-        Vector2 direction = (player.position - shootPoint.position).normalized; // Lấy hướng từ Enemy đến Player
-
-        // Đặt tốc độ cho viên đạn theo hướng đã tính toán
-        rb.velocity = direction * projectileSpeed;
-
-        // Quay viên đạn theo hướng mà nó di chuyển
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        projectile.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));  // Quay viên đạn theo hướng
-    }
-
-    public void TakeDamage(float damage)
-    {
-        health -= damage;
-        if (health <= 0)
+        if (Input.GetKeyDown(KeyCode.J))
         {
             Die();
         }
+
+        // Giảm bộ đếm thời gian sau mỗi khung hình
+        attackTimer -= Time.deltaTime;
     }
 
-    void Die()
+    private void Patrol()
     {
-        Destroy(gameObject);
+        if (isPatrolling)
+        {
+            Vector2 direction = targetPosition - (Vector2)transform.position; // Lấy hướng di chuyển
+            Flip(direction); // Lật mặt theo hướng di chuyển
+
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+
+            // Kiểm tra nếu đến gần vị trí mục tiêu
+            if (Vector2.Distance(transform.position, targetPosition) < 0.1f)
+            {
+                isPatrolling = false;
+                StartCoroutine(PauseBeforeMoving());
+            }
+        }
     }
+
+
+    private IEnumerator PauseBeforeMoving()
+    {
+        yield return new WaitForSeconds(pauseTime);
+        ChooseRandomDirection();
+        isPatrolling = true;
+    }
+
+    private void ChooseRandomDirection()
+    {
+        // Chọn một trong bốn hướng ngẫu nhiên (trên, dưới, trái, phải)
+        Vector2[] directions = { Vector2.up, Vector2.down, Vector2.left, Vector2.right };
+        Vector2 randomDirection = directions[Random.Range(0, directions.Length)];
+
+        // Tính toán vị trí mục tiêu mới trong bán kính tuần tra
+        targetPosition = startPosition + randomDirection * patrolRadius;
+
+        // Kiểm tra nếu vị trí vượt ra ngoài bán kính tuần tra thì điều chỉnh lại
+        if (Vector2.Distance(startPosition, targetPosition) > patrolRadius)
+        {
+            targetPosition = startPosition + randomDirection * patrolRadius * 0.8f;
+        }
+
+        // Lật mặt theo hướng di chuyển
+        Flip(randomDirection);
+    }
+
+    private void ChasePlayer(float distanceToPlayer)
+    {
+        if (distanceToPlayer > attackRange)
+        {
+            Vector2 direction = player.position - transform.position; // Hướng tới Player
+            Flip(direction); // Lật mặt theo hướng người chơi
+            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+        }
+    }
+
+
+    private void AttackPlayerWithFireball()
+    {
+        if (fireballPrefab != null && fireballSpawnPoint != null)
+        {
+            // Sinh ra cầu lửa tại vị trí spawn
+            GameObject fireball = Instantiate(fireballPrefab, fireballSpawnPoint.position, Quaternion.identity);
+            Vector2 direction = (player.position - fireballSpawnPoint.position).normalized;
+
+            // Lật mặt Enemy theo hướng người chơi
+            Flip(direction);
+
+            // Tốc độ di chuyển của cầu lửa
+            fireball.GetComponent<Rigidbody2D>().velocity = direction * fireballSpeed;
+        }
+    }
+
+    private void Flip(Vector2 direction)
+    {
+        // Nếu hướng đi sang phải và không phải là đang nhìn phải
+        if (direction.x > 0 && !FashingRight)
+        {
+            FashingRight = true;
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        // Nếu hướng đi sang trái và đang nhìn phải
+        else if (direction.x < 0 && FashingRight)
+        {
+            FashingRight = false;
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+
+    private void OnDrawGizmosSelected()
+    {
+        // Vẽ bán kính tuần tra và phát hiện
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(startPosition, patrolRadius);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, detectionRadius);
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+    private void Die()
+    {
+        if (isDead) return;
+
+        isDead = true;
+
+        // Vô hiệu hóa các chức năng chính
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+
+        // Ẩn hình ảnh
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (sprite != null) sprite.enabled = false;
+
+        // Hiệu ứng chết (nếu có)
+        if (anim != null)
+        {
+            anim.SetTrigger("die");
+        }
+
+        // Kích hoạt hồi sinh
+        StartCoroutine(Respawn());
+    }
+
+
+    private IEnumerator Respawn()
+    {
+        isRespawning = true;
+
+        yield return new WaitForSeconds(respawnTime);
+
+        // Reset trạng thái
+        isDead = false;
+
+        // Di chuyển về vị trí trung tâm của tuần tra
+        transform.position = startPosition;
+
+        // Hiển thị lại hình ảnh và kích hoạt collider
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (sprite != null) sprite.enabled = true;
+
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<Rigidbody2D>().simulated = true;
+
+        // Hoạt ảnh hồi sinh (nếu có)
+        if (anim != null)
+        {
+            anim.SetTrigger("respawn");
+        }
+
+        // Chờ một khoảng ngắn trước khi Enemy bắt đầu hoạt động bình thường
+        yield return new WaitForSeconds(1f);
+
+        isRespawning = false; // Enemy đã hồi sinh xong
+    }
+
 
 }
