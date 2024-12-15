@@ -16,6 +16,7 @@ TagManager:
   - Obstacle
   - boss
   - NPC
+  - ItemVictorry2
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - 
   - NPC
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 

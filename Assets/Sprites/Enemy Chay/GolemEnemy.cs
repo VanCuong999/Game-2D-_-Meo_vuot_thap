@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GolemEnemy : MonoBehaviour
 {
     public static GolemEnemy Intance;
     public float HeathGolem;
+    private float currentHeath;
     public float fasingDir = 1;
     private bool FashingRight = true;
     [SerializeField] private float Speed;
@@ -21,13 +23,22 @@ public class GolemEnemy : MonoBehaviour
     public LayerMask npcLayer; // Layer cho NPC
     public EntityFX entityFX;
 
+    [SerializeField] private Image _heathBarFill;
+    [SerializeField] private Transform _healthBarTranForm;
+    private Camera _camera;
+    private  Color fullHealthColor = Color.green;
+    private Color lowHealthColor = Color.yellow;
+    private Color menimumHealthColor = Color.red;
+
     private void Awake()
     {
         Intance = this;
+        _camera = Camera.main;
     }
 
     void Start()
     {
+        currentHeath = HeathGolem;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         npc = GameObject.FindGameObjectWithTag("NPC")?.transform; // Tìm NPC, nếu có
         anim = GetComponent<Animator>();
@@ -36,6 +47,7 @@ public class GolemEnemy : MonoBehaviour
 
     void Update()
     {
+        _healthBarTranForm.rotation = _camera.transform.rotation;
         if (player == null && npc == null) return;
         timer += Time.deltaTime;
 
@@ -97,9 +109,9 @@ public class GolemEnemy : MonoBehaviour
         {
             entityFX.StartCoroutine("FlashFX");
         }
-        HeathGolem -= damage;
+        currentHeath -= damage;
 
-        if (HeathGolem <= 0)
+        if (currentHeath <= 0)
         {
             Destroy(gameObject);
             Exp.Intance.TakeExp(Exp.Intance.exp);
@@ -138,5 +150,25 @@ public class GolemEnemy : MonoBehaviour
     public void UpdateHealth(float health)
     {
         HeathGolem = health;
+        _heathBarFill.fillAmount = currentHeath / HeathGolem;
+        UpdateHealthColor();
+    }
+
+    public virtual void UpdateHealthColor()
+    {
+        float healthPercentage = currentHeath / HeathGolem;
+
+        if (healthPercentage <= 0.3f) // Dưới 30%
+        {
+            _heathBarFill.color = menimumHealthColor;
+        }
+        else if (healthPercentage <= 0.7f) // Dưới 70%
+        {
+            _heathBarFill.color = lowHealthColor;
+        }
+        else // Trên 70%
+        {
+            _heathBarFill.color = fullHealthColor;
+        }
     }
 }
