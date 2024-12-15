@@ -29,8 +29,17 @@ public class Enemy : MonoBehaviour
     public Transform fireballSpawnPoint; // Vị trí sinh ra cầu lửa
     public float fireballSpeed = 5f; // Tốc độ cầu lửa
 
+
+    [Header("Respawn Settings")]
+    public float respawnTime = 3f; // Thời gian hồi sinh
+    private bool isDead = false;   // Trạng thái của Enemy
+    private Vector2 respawnPosition; // Vị trí hồi sinh ban đầu
+    private bool isRespawning = false; // Trạng thái đang hồi sinh
+
+
     private void Start()
     {
+        startPosition = transform.position; // Lưu vị trí ban đầu làm tâm tuần tra
         startPosition = transform.position;
         ChooseRandomDirection();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
@@ -39,6 +48,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (isRespawning || isDead) return; // Không làm gì khi đang hồi sinh hoặc đã chết
         if (player != null)
         {
             float distanceToPlayer = Vector2.Distance(player.position, transform.position);
@@ -76,6 +86,10 @@ public class Enemy : MonoBehaviour
                 Patrol();
             }
         }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            Die();
+        }
 
         // Giảm bộ đếm thời gian sau mỗi khung hình
         attackTimer -= Time.deltaTime;
@@ -85,6 +99,9 @@ public class Enemy : MonoBehaviour
     {
         if (isPatrolling)
         {
+            Vector2 direction = targetPosition - (Vector2)transform.position; // Lấy hướng di chuyển
+            Flip(direction); // Lật mặt theo hướng di chuyển
+
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
             // Kiểm tra nếu đến gần vị trí mục tiêu
@@ -95,6 +112,7 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+
 
     private IEnumerator PauseBeforeMoving()
     {
@@ -126,13 +144,12 @@ public class Enemy : MonoBehaviour
     {
         if (distanceToPlayer > attackRange)
         {
+            Vector2 direction = player.position - transform.position; // Hướng tới Player
+            Flip(direction); // Lật mặt theo hướng người chơi
             transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
         }
-
-        // Lật mặt theo hướng người chơi
-        Vector2 direction = player.position - transform.position;
-        Flip(direction);
     }
+
 
     private void AttackPlayerWithFireball()
     {
@@ -179,4 +196,63 @@ public class Enemy : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, attackRange);
     }
+    private void Die()
+    {
+        if (isDead) return;
+
+        isDead = true;
+
+        // Vô hiệu hóa các chức năng chính
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+
+        // Ẩn hình ảnh
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (sprite != null) sprite.enabled = false;
+
+        // Hiệu ứng chết (nếu có)
+        if (anim != null)
+        {
+            anim.SetTrigger("die");
+        }
+
+        // Kích hoạt hồi sinh
+        StartCoroutine(Respawn());
+    }
+
+
+    private IEnumerator Respawn()
+    {
+        isRespawning = true;
+
+        yield return new WaitForSeconds(respawnTime);
+
+        // Reset trạng thái
+        isDead = false;
+
+        // Di chuyển về vị trí trung tâm của tuần tra
+        transform.position = startPosition;
+
+        // Hiển thị lại hình ảnh và kích hoạt collider
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (sprite != null) sprite.enabled = true;
+
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<Rigidbody2D>().simulated = true;
+
+        // Hoạt ảnh hồi sinh (nếu có)
+        if (anim != null)
+        {
+            anim.SetTrigger("respawn");
+        }
+
+        // Chờ một khoảng ngắn trước khi Enemy bắt đầu hoạt động bình thường
+        yield return new WaitForSeconds(1f);
+
+        isRespawning = false; // Enemy đã hồi sinh xong
+    }
+
+
+
+
 }
