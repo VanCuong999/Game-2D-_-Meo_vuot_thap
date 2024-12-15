@@ -128,7 +128,7 @@ public class Character : MonoBehaviour
         {
             Debug.Log("We hit " + enemy.name);
             //enemy.GetComponent<Enemy>()?.TakeDamage(10);
-            //enemy.GetComponent<GolemEnemy>()?.TakeDangage(50);
+            enemy.GetComponent<GolemEnemy>()?.TakeDangage(50);
             enemy.GetComponent<enemy3tancong>()?.TakeDamage(20);
         }
     }
