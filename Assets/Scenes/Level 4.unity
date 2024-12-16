@@ -5290,6 +5290,7 @@ MonoBehaviour:
   staft: {fileID: 11400000, guid: c95f3d51205f14f4fa1c8438d65febd8, type: 2}
   overbanner: {fileID: 12137216}
   victorybanner: {fileID: 1431568260}
+  pausebanner: {fileID: 0}
   coinTMP: {fileID: 470259644}
   HuyHieuTMP: {fileID: 78919871}
 --- !u!114 &169018288
@@ -14226,6 +14227,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439614170867429403, guid: b00366198fb884e46b2ae5591acb07d1,
+        type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4347099536173618361, guid: b00366198fb884e46b2ae5591acb07d1,
         type: 3}

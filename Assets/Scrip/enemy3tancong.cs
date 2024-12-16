@@ -16,22 +16,27 @@ public class enemy3tancong : MonoBehaviour
     private float fireTimer = 0f; // Đếm ngược thời gian bắn
     private bool facingRight = true; // Biến theo dõi hướng quay của enemy
     private Animator animator; // Biến điều khiển animation
+    private bool isAttacking = false; // Trạng thái đang tấn công
+
+    private bool isFrozen = false; // Trạng thái đóng băng
+    private Rigidbody2D rb; // Rigidbody2D của enemy (Thêm vào để dừng chuyển động khi đóng băng)
+    public GameObject freezeEffectPrefab; // Prefab hiệu ứng băng
+    private GameObject currentFreezeEffect; // Hiệu ứng băng đang được sử dụng
+
     void Start()
     {
         // Tìm player khi script được khởi tạo
         player = GameObject.FindGameObjectWithTag("Player");
         animator = GetComponent<Animator>(); // Lấy Animator từ enemy
+        rb = GetComponent<Rigidbody2D>(); // Lấy Rigidbody2D từ enemy
     }
 
     void Update()
     {
-        if (player == null) return; // Kiểm tra nếu không tìm thấy player
+        if (player == null || isFrozen) return; // Nếu enemy bị đóng băng hoặc không tìm thấy player
 
         // Nếu enemy đã chết, không làm gì nữa
-        if (health <= 0)
-        {
-            return; // Dừng tất cả hành động nếu máu <= 0
-        }
+        if (health <= 0) return;
 
         // Tăng thời gian đếm ngược cho việc bắn laser
         fireTimer += Time.deltaTime;
@@ -39,60 +44,58 @@ public class enemy3tancong : MonoBehaviour
         // Tính khoảng cách giữa enemy và player
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        // Kiểm tra nếu player vào trong phạm vi tấn công (detectionRange)
+        // Kiểm tra nếu player trong phạm vi tấn công
         if (distance <= detectionRange)
         {
-            isPlayerInRange = true; // Player trong vùng xanh, enemy có thể tấn công
-        }
-        else
-        {
-            isPlayerInRange = false; // Player ra ngoài vùng xanh, không tấn công
-        }
+            isPlayerInRange = true; // Player trong vùng xanh
+            RotateTowardsPlayer();  // Quay về phía player
 
-        if (isPlayerInRange)
-        {
-            // Nếu player trong vùng xanh, enemy sẽ tấn công
-            if (fireTimer >= fireDelay)
+            if (fireTimer >= fireDelay && !isAttacking)
             {
-                ShootLaser();
-                fireTimer = 0f; // Reset thời gian chờ bắn
+                fireTimer = 0f;          // Reset thời gian chờ
+                isAttacking = true;      // Bắt đầu tấn công
+                if (animator != null)
+                {
+                    animator.SetTrigger("tancong"); // Kích hoạt animation tấn công
+                    ShootLaser();  // Gọi hàm bắn laser
+                }
             }
-
-            // Quay enemy về hướng player
-            RotateTowardsPlayer();
         }
         else
         {
-            // Nếu player ra ngoài vùng xanh, enemy không làm gì
-            // Không di chuyển, không tấn công
+            isPlayerInRange = false; // Player ra ngoài vùng xanh
+            StopAttack();           // Dừng tấn công
         }
     }
 
     void ShootLaser()
     {
-        // Nếu enemy đã chết, không bắn laser nữa
-        if (health <= 0)
-        {
-            return; // Dừng việc bắn laser nếu máu <= 0
-        }
+        if (!isPlayerInRange || health <= 0) return; // Không bắn nếu player ra khỏi vùng hoặc enemy đã chết
 
-        // Kích hoạt animation bắn
-        if (animator != null)
-        {
-            animator.SetTrigger("tancong");
-        }
-        // Tạo tia laser tại vị trí firePoint và hướng về phía player
+        // Tạo tia laser tại vị trí firePoint
         GameObject laser = Instantiate(laserPrefab, firePoint.position, Quaternion.identity);
         Vector2 direction = (player.transform.position - firePoint.position).normalized;
 
-        // Gán vận tốc cho tia laser (nếu dùng Rigidbody2D)
-        Rigidbody2D rb = laser.GetComponent<Rigidbody2D>();
-        if (rb != null)
+        Rigidbody2D laserRb = laser.GetComponent<Rigidbody2D>();
+        if (laserRb != null)
         {
-            rb.velocity = direction * 10f; // Tốc độ của tia laser
+            laserRb.velocity = direction * 10f; // Tốc độ tia laser
         }
 
-        Debug.Log("Enemy bắn laser về phía Player!");
+        Debug.Log("Enemy đã bắn laser vào player!");
+    }
+
+    void StopAttack()
+    {
+        if (isAttacking)
+        {
+            isAttacking = false; // Reset trạng thái tấn công
+            if (animator != null)
+            {
+                animator.ResetTrigger("tancong"); // Dừng animation tấn công
+                animator.SetTrigger("dungim");    // Kích hoạt trạng thái đứng im
+            }
+        }
     }
 
     void RotateTowardsPlayer()
@@ -131,16 +134,16 @@ public class enemy3tancong : MonoBehaviour
 
     void Die()
     {
-            Debug.Log("Enemy đã chết!");
+        Debug.Log("Enemy đã chết!");
 
-            // Kích hoạt trạng thái chết trong Animator
-            if (animator != null)
-            {
-                animator.SetTrigger("chet"); // Kích hoạt trigger Die
-            }
+        // Kích hoạt trạng thái chết trong Animator
+        if (animator != null)
+        {
+            animator.SetTrigger("chet"); // Kích hoạt trigger Die
+        }
 
-            // Hủy đối tượng sau animation chết
-            Destroy(gameObject, 1.5f); // Delay để animation kịp chạy
+        // Hủy đối tượng sau animation chết
+        Destroy(gameObject, 1.5f); // Delay để animation kịp chạy
     }
 
     private void OnDrawGizmosSelected()
@@ -149,6 +152,48 @@ public class enemy3tancong : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
-    
+
+    public void Freeze(float duration)
+    {
+        if (isFrozen)
+        {
+            Debug.Log("Enemy đã bị đóng băng!"); // Kiểm tra trạng thái đóng băng
+            return;
+        }
+
+        isFrozen = true; // Đóng băng enemy
+        Debug.Log("Enemy bắt đầu bị đóng băng!");
+
+        // Dừng chuyển động
+        if (rb != null) rb.velocity = Vector2.zero;
+
+        // Tắt animation
+        if (animator != null) animator.enabled = false;
+
+        // Tạo hiệu ứng băng dưới chân enemy
+        if (freezeEffectPrefab != null)
+        {
+            currentFreezeEffect = Instantiate(freezeEffectPrefab, transform.position, Quaternion.identity);
+            currentFreezeEffect.transform.SetParent(transform); // Gắn hiệu ứng vào enemy
+        }
+
+        StartCoroutine(ThawOut(duration)); // Đặt thời gian chờ để đóng băng
+    }
+
+    private IEnumerator ThawOut(float duration)
+    {
+        yield return new WaitForSeconds(duration); // Chờ hết thời gian đóng băng
+        isFrozen = false; // Khôi phục trạng thái bình thường
+
+        // Bật lại animation
+        if (animator != null) animator.enabled = true;
+
+        // Xóa hiệu ứng băng
+        if (currentFreezeEffect != null)
+        {
+            Destroy(currentFreezeEffect);
+            currentFreezeEffect = null;
+        }
+    }
 
 }
