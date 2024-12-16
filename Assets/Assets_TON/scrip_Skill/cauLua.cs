@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class cauLua : MonoBehaviour
 {
@@ -10,12 +11,13 @@ public class cauLua : MonoBehaviour
     public float skillRange = 10f;    // Bán kính ph?m vi chiêu
     public LayerMask enemyLayer;      // L?p c?a k? thù ?? phát hi?n
 
-    void Update()
+    public Button fireballButton;     // Button dùng ?? kích ho?t k? n?ng
+
+    void Start()
     {
-        // Ki?m tra khi nh?n phím "T" và có ít nh?t m?t enemy trong ph?m vi
-        if (Input.GetKeyDown(KeyCode.T) && IsEnemyInRange())
+        if (fireballButton != null)
         {
-            CastFireballSkill(); // Kích ho?t chiêu khi nh?n phím "T"
+            fireballButton.onClick.AddListener(CastFireballSkill);
         }
     }
 

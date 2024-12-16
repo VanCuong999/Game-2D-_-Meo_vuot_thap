@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BANG : MonoBehaviour
 {
@@ -8,11 +9,13 @@ public class BANG : MonoBehaviour
     public float freezeDuration = 2f; // Thời gian đóng băng
     public LayerMask enemyLayer; // Lớp của kẻ thù (để phát hiện)
 
-    void Update()
+    public Button fireballButton;     // Button dùng để kích hoạt kỹ năng
+
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // Nhấn phím F để kích hoạt kỹ năng đóng băng
+        if (fireballButton != null)
         {
-            FreezeEnemies();
+            fireballButton.onClick.AddListener(FreezeEnemies);
         }
     }
 
