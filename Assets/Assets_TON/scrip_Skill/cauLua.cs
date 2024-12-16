@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,18 +12,43 @@ public class cauLua : MonoBehaviour
     public float skillRange = 10f;    // Bán kính ph?m vi chiêu
     public LayerMask enemyLayer;      // L?p c?a k? thù ?? phát hi?n
 
-    public Button fireballButton;     // Button dùng ?? kích ho?t k? n?ng
+    public Image ImageCoolDown;
+    public float coolDown = 2.5f; // Thay ??i giá tr? này ?? ?i?u ch?nh th?i gian h?i chiêu
+    private bool isCoolDown;
+
 
     void Start()
     {
-        if (fireballButton != null)
+        ImageCoolDown.enabled = true; // ??m b?o hình ?nh ???c b?t
+        ImageCoolDown.fillAmount = 0; // FillAmount ban ??u là 0 (tr?ng)
+    }
+    void Update()
+    {
+        // C?p nh?t hình ?nh h?i chiêu n?u ?ang trong tr?ng thái h?i chiêu
+        if (isCoolDown)
         {
-            fireballButton.onClick.AddListener(CastFireballSkill);
+            ImageCoolDown.fillAmount -= 1 / coolDown * Time.deltaTime;
+            Debug.Log("Fill Amount: " + ImageCoolDown.fillAmount);
+            // ??m b?o Image không b? ?n
+
+            if (ImageCoolDown.fillAmount <= 0)
+            {
+                ImageCoolDown.fillAmount = 1;
+                isCoolDown = false; // K?t thúc h?i chiêu
+            }
         }
     }
 
+
     public void CastFireballSkill()
     {
+        // Ki?m tra xem có ?ang trong th?i gian h?i chiêu không
+        if (isCoolDown) return;
+
+        // B?t ??u h?i chiêu
+        isCoolDown = true;
+        ImageCoolDown.fillAmount = 1; // B?t ??u t? ??y (hi?n th? h?i chiêu)
+
         // L?y danh sách các enemy trong ph?m vi
         GameObject[] targets = FindEnemiesInRange(skillRange);
 
@@ -42,6 +68,8 @@ public class cauLua : MonoBehaviour
             fireball.GetComponent<Rigidbody2D>().velocity = direction * speed;
         }
     }
+
+
 
     // Ki?m tra xem có ít nh?t m?t enemy nào trong ph?m vi chiêu không và thu?c l?p enemyLayer
     private bool IsEnemyInRange()
