@@ -124,6 +124,8 @@ MonoBehaviour:
   damage: 60
   speed: 5
   lifetime: 5
+  explosionEffectPrefab: {fileID: 8223294321194142092, guid: 6e5c9cd9809149d42a98f599877801dc,
+    type: 3}
 --- !u!50 &4283005028492493875
 Rigidbody2D:
   serializedVersion: 4

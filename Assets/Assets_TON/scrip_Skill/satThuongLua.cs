@@ -10,6 +10,8 @@ public class satThuongLua : MonoBehaviour
     private bool hasHit = false;        // Ki?m tra n?u qu? c?u ?ã gây sát th??ng
     private Rigidbody2D rb;             // Thêm Rigidbody2D ?? s? d?ng v?t lý di chuy?n
 
+    public GameObject explosionEffectPrefab; // Prefab hi?u ?ng n?
+
     void Start()
     {
         // T? h?y qu? c?u sau th?i gian lifetime n?u không va ch?m
@@ -33,37 +35,52 @@ public class satThuongLua : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Ki?m tra n?u ??i t??ng va ch?m là enemy và ch?a gây sát th??ng
         if (!hasHit && collision.CompareTag("Enemy"))
         {
             // Gây sát th??ng cho enemy
             collision.GetComponent<enemy3tancong>()?.TakeDamage(damage);
 
-            // ?ánh d?u là ?ã gây sát th??ng, không gây sát th??ng n?a
+            // G?i hi?u ?ng n?
+            CreateExplosion();
+
+            // ?ánh d?u là ?ã gây sát th??ng
             hasHit = true;
 
-            // H?y qu? c?u l?a sau khi gây sát th??ng cho quái
+            // H?y qu? c?u l?a sau khi gây sát th??ng
             Destroy(gameObject);
         }
 
-        // Ki?m tra n?u ??i t??ng va ch?m là EnemyGolem và ch?a gây sát th??ng
         if (!hasHit && collision.CompareTag("EnemyGolem"))
         {
             // Gây sát th??ng cho enemy
             collision.GetComponent<GolemEnemy>()?.TakeDangage(damage);
 
-            // ?ánh d?u là ?ã gây sát th??ng, không gây sát th??ng n?a
+            // G?i hi?u ?ng n?
+            CreateExplosion();
+
+            // ?ánh d?u là ?ã gây sát th??ng
             hasHit = true;
 
-            // H?y qu? c?u l?a sau khi gây sát th??ng cho quái
+            // H?y qu? c?u l?a sau khi gây sát th??ng
             Destroy(gameObject);
         }
 
-        // N?u c?u l?a va ch?m v?i b?t k? v?t c?n nào khác (Obstacle)
         if (!hasHit && collision.CompareTag("Obstacle"))
         {
+            // G?i hi?u ?ng n?
+            CreateExplosion();
+
             // H?y qu? c?u l?a khi va ch?m v?i v?t c?n
             Destroy(gameObject);
+        }
+    }
+
+    private void CreateExplosion()
+    {
+        if (explosionEffectPrefab != null)
+        {
+            // T?o hi?u ?ng n? t?i v? trí c?a qu? c?u l?a
+            Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
         }
     }
 

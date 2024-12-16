@@ -20,6 +20,8 @@ public class enemy3tancong : MonoBehaviour
 
     private bool isFrozen = false; // Trạng thái đóng băng
     private Rigidbody2D rb; // Rigidbody2D của enemy (Thêm vào để dừng chuyển động khi đóng băng)
+    public GameObject freezeEffectPrefab; // Prefab hiệu ứng băng
+    private GameObject currentFreezeEffect; // Hiệu ứng băng đang được sử dụng
 
     void Start()
     {
@@ -162,8 +164,18 @@ public class enemy3tancong : MonoBehaviour
         isFrozen = true; // Đóng băng enemy
         Debug.Log("Enemy bắt đầu bị đóng băng!");
 
-        if (rb != null) rb.velocity = Vector2.zero; // Dừng chuyển động
-        if (animator != null) animator.enabled = false; // Tắt animation
+        // Dừng chuyển động
+        if (rb != null) rb.velocity = Vector2.zero;
+
+        // Tắt animation
+        if (animator != null) animator.enabled = false;
+
+        // Tạo hiệu ứng băng dưới chân enemy
+        if (freezeEffectPrefab != null)
+        {
+            currentFreezeEffect = Instantiate(freezeEffectPrefab, transform.position, Quaternion.identity);
+            currentFreezeEffect.transform.SetParent(transform); // Gắn hiệu ứng vào enemy
+        }
 
         StartCoroutine(ThawOut(duration)); // Đặt thời gian chờ để đóng băng
     }
@@ -173,7 +185,15 @@ public class enemy3tancong : MonoBehaviour
         yield return new WaitForSeconds(duration); // Chờ hết thời gian đóng băng
         isFrozen = false; // Khôi phục trạng thái bình thường
 
-        if (animator != null) animator.enabled = true; // Bật lại animation
+        // Bật lại animation
+        if (animator != null) animator.enabled = true;
+
+        // Xóa hiệu ứng băng
+        if (currentFreezeEffect != null)
+        {
+            Destroy(currentFreezeEffect);
+            currentFreezeEffect = null;
+        }
     }
 
 }
