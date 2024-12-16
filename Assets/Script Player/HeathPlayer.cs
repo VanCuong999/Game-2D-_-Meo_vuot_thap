@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class HeathPlayer : MonoBehaviour
 {
     public static HeathPlayer Intance;
+    public Staft staft;
     public float minHeath;
     public float maxHeath;
 
@@ -22,6 +23,7 @@ public class HeathPlayer : MonoBehaviour
     private void Start() 
     {
         Heath = minHeath;
+        InvokeRepeating(nameof(TuDongHoiHeath),1,1);
         UPdateHeath(Heath,maxHeath);    
     }
     private void Update() 
@@ -67,6 +69,15 @@ public class HeathPlayer : MonoBehaviour
         UPdateHeath(Heath,maxHeath);
     }
 
+
+    public void TuDongHoiHeath()
+    {
+        if (Heath > 0 && Heath< maxHeath)
+        {
+            Heath += staft.soMauStart;
+            UPdateHeath(Heath,maxHeath);
+        }
+    }
     public void UPdateHeath(float minHeaths, float maxHeaths)
     {
         minHeath = minHeaths;
