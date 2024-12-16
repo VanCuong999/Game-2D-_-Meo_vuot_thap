@@ -130,6 +130,7 @@ public class Character : MonoBehaviour
             //enemy.GetComponent<Enemy>()?.TakeDamage(10);
             enemy.GetComponent<GolemEnemy>()?.TakeDangage(50);
             enemy.GetComponent<enemy3tancong>()?.TakeDamage(20);
+            enemy.GetComponent<EnemyMove>()?.TakeDangage(20f);
         }
     }
 

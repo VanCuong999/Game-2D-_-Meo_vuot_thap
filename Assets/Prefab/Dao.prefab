@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3622804563276569421}
   - component: {fileID: 4499253529301755933}
+  - component: {fileID: 2617524269350065994}
   m_Layer: 7
   m_Name: Dao
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2617524269350065994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6135288860606499542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 042c42a6b1976714f93715f6adf510d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

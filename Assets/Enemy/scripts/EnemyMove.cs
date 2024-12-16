@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,9 @@ public class EnemyMove : MonoBehaviour
     public float attackRange = 2f;
     public float attackCooldown = 2f;
     public LayerMask playerLayer;
-
+    public Transform attackPoint;
+    //[SerializeField] private float damageMin = 5f;
+   // [SerializeField] private float damageMax = 15f;
     private float attackTimer;
     private bool isPlayerDetected = false;
 
@@ -34,8 +37,16 @@ public class EnemyMove : MonoBehaviour
     private bool isDead = false;
     private bool isRespawning = false;
 
-    
-   
+    [Header("Heath Enemy")]
+    [SerializeField] private Image _heathBarFill;
+    [SerializeField] private Transform _healthBarTranForm;
+    public float HeathEnemy = 100;
+    private float currentHeath;
+    private Camera _camera;
+    private Color fullHealthColor = Color.green;
+    private Color lowHealthColor = Color.yellow;
+    private Color menimumHealthColor = Color.red;
+
 
     private void Start()
     {
@@ -45,8 +56,12 @@ public class EnemyMove : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
-   
 
+    private void Awake()
+    {
+     
+        _camera = Camera.main;
+    }
     private void Update()
     {
         if (isRespawning || isDead) return;
@@ -178,9 +193,47 @@ public class EnemyMove : MonoBehaviour
             anim.SetFloat("moveY", Mathf.Round(directionToPlayer.y));
         }
     }
-  
-    
 
-    
+   
+    public void UpdateHealth(float health)
+    {
+        HeathEnemy = health;
+        _heathBarFill.fillAmount = currentHeath / HeathEnemy;
+        UpdateHealthColor();
+    }
 
+    public virtual void UpdateHealthColor()
+    {
+        float healthPercentage = currentHeath / HeathEnemy;
+
+        if (healthPercentage <= 0.3f) // Dưới 30%
+        {
+            _heathBarFill.color = menimumHealthColor;
+        }
+        else if (healthPercentage <= 0.7f) // Dưới 70%
+        {
+            _heathBarFill.color = lowHealthColor;
+        }
+        else // Trên 70%
+        {
+            _heathBarFill.color = fullHealthColor;
+        }
+    }
+ 
+    public void TakeDangage(float damage)
+    {
+        if (gameObject != null)
+        {
+            //entityFX.StartCoroutine("FlashFX");
+        }
+        currentHeath -= damage;
+
+        if (currentHeath <= 0)
+        {
+            Destroy(gameObject);
+            //Exp.Intance.TakeExp(Exp.Intance.exp);
+            //expPlayer.Intancs.GainExperience(20);
+        }
+        UpdateHealth(HeathEnemy);
+    }
 }

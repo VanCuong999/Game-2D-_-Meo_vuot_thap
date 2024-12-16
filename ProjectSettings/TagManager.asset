@@ -17,6 +17,7 @@ TagManager:
   - boss
   - NPC
   - ItemVictorry2
+  - Weapon
   layers:
   - Default
   - TransparentFX

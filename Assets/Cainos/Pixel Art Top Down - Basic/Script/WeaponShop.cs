@@ -121,7 +121,7 @@ public class WeaponShop : MonoBehaviour
         {
             if (i == weaponIndex)
             {
-                weaponButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = "Đang sử dụng";
+                weaponButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = "dang su dung";
             }
             else
             {
@@ -158,7 +158,7 @@ public class WeaponShop : MonoBehaviour
             currentWeapon = Instantiate(weaponPrefabs[activeWeaponIndex], weaponHolder.position, Quaternion.identity, weaponHolder);
 
             // Cập nhật trạng thái nút UI
-            weaponButtons[activeWeaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "Đang sử dụng";
+            weaponButtons[activeWeaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "dang su dung";
         }
     }
 
@@ -167,7 +167,7 @@ public class WeaponShop : MonoBehaviour
     void UpdateButtonToUse(int weaponIndex)
     {
         weaponButtons[weaponIndex].interactable = true;
-        weaponButtons[weaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "Sử dụng";
+        weaponButtons[weaponIndex].GetComponentInChildren<TextMeshProUGUI>().text = "su dung";
     }
 
 
