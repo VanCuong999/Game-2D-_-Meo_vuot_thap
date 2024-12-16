@@ -74,9 +74,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1097899865
+  m_SortingLayer: 1
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: b6c2d2b5073345c458a1087125cfd163, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -172,7 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc71c7e320954214aa0e3accb30348c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffectPrefab: {fileID: 2819492271352833018, guid: 66c6767fe43cc5e4782cdb3e7a9ce83b, type: 3}
+  explosionEffectPrefab: {fileID: 2819492271352833018, guid: 66c6767fe43cc5e4782cdb3e7a9ce83b,
+    type: 3}
   damage: 1
 --- !u!95 &3850956719466871197
 Animator:

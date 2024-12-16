@@ -5267,6 +5267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3877ca1ddb277949a01e733ba801053, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  staft: {fileID: 11400000, guid: c95f3d51205f14f4fa1c8438d65febd8, type: 2}
   minHeath: 100
   maxHeath: 100
   heathImage: {fileID: 8451657442294510372}
