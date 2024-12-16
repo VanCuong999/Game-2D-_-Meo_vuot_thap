@@ -22,6 +22,20 @@ public class Staft : ScriptableObject
     [Header("Damgage")]
     public float sodamgagekhoidau;
     public float sodamgagetieptheo;
-    public float sodamgagenangcap;    
+    public float sodamgagenangcap;
+
+    [Header("Số máu hồi phục")]
+    public float soMauStart;
+    public float soMauNext;
+    public float soCoinUPdateMau;
+
+    [Header("--------Skill-----------")]
+    [Header("Skill Cầu Lửa")]
+    public float soHHmuaCauLua;
+    public float solansudungCauLua;
+
+    [Header("Skill Băng")]
+    public float soHHmuaSkillBang;
+    public float solansudungSkillBang;
 
 }

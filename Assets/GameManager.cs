@@ -21,6 +21,18 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI sodamagekhoidauTMP;
     [SerializeField] private TextMeshProUGUI sodamagetieptheoTMP;
     [SerializeField] private TextMeshProUGUI sodamagenangcapTMP;
+
+    [SerializeField] private TextMeshProUGUI soMauStart;
+    [SerializeField] private TextMeshProUGUI soMauNext;
+    [SerializeField] private TextMeshProUGUI soCoinUPdateMau;
+
+    [Header("Skill")]
+    [SerializeField] private TextMeshProUGUI soHHmuaSkillCauLua;
+    [SerializeField] private TextMeshProUGUI solansudungSkillCauLua;
+    [SerializeField] private TextMeshProUGUI soHHmuaSkillBang;
+    [SerializeField] private TextMeshProUGUI solansudungSkillBang;
+
+
     private float NangLuong;
     private float Coin;
     private float HuyHieu;
@@ -50,6 +62,16 @@ public class GameManager : MonoBehaviour
         sodamagekhoidauTMP.text = "" + staft.sodamgagekhoidau;
         sodamagetieptheoTMP.text = " " + staft.sodamgagetieptheo;
         sodamagenangcapTMP.text = " " + staft.sodamgagenangcap;
+
+        soMauStart.text = "" +staft.soMauStart;
+        soMauNext.text = "" +staft.soMauNext;
+        soCoinUPdateMau.text = "" +staft.soCoinUPdateMau;
+
+
+        soHHmuaSkillCauLua.text = "" +staft.soHHmuaCauLua;
+        soHHmuaSkillBang.text = "" + staft.soHHmuaSkillBang;
+        solansudungSkillCauLua.text = "x" + staft.solansudungCauLua;
+        solansudungSkillBang.text = "x" + staft.solansudungSkillBang;
     }
 
     public void UpdateManager(float nangluong, float coin, float huyhieu)
@@ -78,10 +100,27 @@ public class GameManager : MonoBehaviour
         staft.sodamgagenangcap += Random.Range(50,100);
         staft.Coin -= staft.sodamgagenangcap;
     }
+    public void btnShopMau()
+    {
+        staft.soMauStart += 1;
+        staft.soMauNext = staft.soMauNext + 1;
+        staft.soCoinUPdateMau += Random.Range(150,200);
+        staft.Coin -= staft.soCoinUPdateMau;
+    }
     public void AddCoin(int amount)
     {
         Coin += amount; // Tăng vàng cho người chơi
         UpdateManager(NangLuong, Coin, HuyHieu); // Cập nhật lại UI
     }
    
+    public void BtnMuaSkillCauLua()
+    {
+        staft.solansudungCauLua += 1;
+        staft.HuyHieu -= staft.soHHmuaCauLua;
+    }
+    public void BtnMuaSkillBang()
+    {
+        staft.solansudungSkillBang += 1;
+        staft.HuyHieu -= staft.soHHmuaSkillBang;
+    }
 }

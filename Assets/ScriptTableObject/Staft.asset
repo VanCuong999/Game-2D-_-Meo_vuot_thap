@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Staft
   m_EditorClassIdentifier: 
   NangLuong: 1
-  Coin: 570
-  HuyHieu: 820
+
   totalLevel: 4
   unlocedLevel: 4
   sovangkhoidau: 8
@@ -23,3 +22,10 @@ MonoBehaviour:
   sodamgagekhoidau: 17
   sodamgagetieptheo: 22
   sodamgagenangcap: 350
+  soMauStart: 4
+  soMauNext: 5
+  soCoinUPdateMau: 1268
+  soHHmuaCauLua: 200
+  solansudungCauLua: 0
+  soHHmuaSkillBang: 200
+  solansudungSkillBang: 0
