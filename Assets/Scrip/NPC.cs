@@ -11,13 +11,15 @@ public class NPC : MonoBehaviour
     public TextMeshProUGUI interactText; // Text để hiển thị thông báo "Nhấn E"
     public GameObject dialogueBackground; // Nền của hội thoại
 
-    [Header("Dialogue Content")]
-    public string[] dialogues = {
-        "Chào bạn, tôi cần bạn giúp tôi tiêu diệt quái vật.", // Câu 1
-        "Hãy cố gắng hoàn thành nhiệm vụ nhé!", // Câu 2
-        "Bạn chưa hoàn thành nhiệm vụ.", // Câu 3
-        "Cảm ơn bạn đã hoàn thành nhiệm vụ." // Câu 4
-    };
+
+
+    [System.Serializable]
+    public class Dialogue
+    {
+        public string[] dialogueLines; // Các câu thoại cho mỗi nhiệm vụ
+    }
+
+    public List<Dialogue> dialogues = new List<Dialogue>(); // Danh sách hội thoại cho mỗi nhiệm vụ
 
     private bool isPlayerNearby = false; // Kiểm tra nếu người chơi gần NPC
     private bool isDialogueActive = false; // Trạng thái hội thoại đang diễn ra
@@ -26,14 +28,25 @@ public class NPC : MonoBehaviour
 
     private int dialogueIndex = 0; // Để theo dõi chỉ số của câu thoại hiện tại
 
-    [Header("Quest System")]
-    public int requiredKills = 3; // Số quái cần tiêu diệt
+
+    [System.Serializable]
+    public class Quest
+    {
+        public string questName;
+        public int requiredKills; // Số quái cần tiêu diệt cho nhiệm vụ này
+        public int rewardAmount; // Phần thưởng vàng cho nhiệm vụ này
+        public int dialogueIndex; // Chỉ số câu thoại đầu tiên cho nhiệm vụ này
+    }
+
+    public List<Quest> quests = new List<Quest>(); // Danh sách các nhiệm vụ
+    private int currentQuestIndex = 0; // Chỉ số nhiệm vụ hiện tại
     private int currentKills = 0; // Số quái đã tiêu diệt
 
     [Header("Reward UI")]
     public GameObject rewardButton;
     public TextMeshProUGUI rewardAmountText;
-    public int rewardAmount = 100;
+
+    public Staft staft;
 
     void Start()
     {
@@ -48,6 +61,10 @@ public class NPC : MonoBehaviour
         if (isPlayerNearby && Input.GetKeyDown(KeyCode.E))
         {
             TriggerDialogue();
+        }
+        if (isPlayerNearby && Input.GetKeyDown(KeyCode.O))
+        {
+            UpdateQuestProgress();
         }
     }
 
@@ -71,20 +88,24 @@ public class NPC : MonoBehaviour
         // Ẩn thông báo "Nhấn E" khi hội thoại bắt đầu
         interactText.gameObject.SetActive(false);
 
-        if (!questAccepted) // Nếu người chơi chưa nhận nhiệm vụ
+        // Nếu nhiệm vụ chưa được nhận
+        if (!questAccepted)
         {
-            dialogueText.text = dialogues[0]; // Hiển thị câu 1
+            dialogueText.text = dialogues[currentQuestIndex].dialogueLines[0]; // Hiển thị câu đầu tiên của nhiệm vụ
             dialogueIndex = 1; // Chuyển chỉ số câu thoại sang 1
             questAccepted = true; // Đánh dấu nhiệm vụ đã được nhận
         }
         else if (!questCompleted) // Nếu nhiệm vụ chưa hoàn thành
         {
-            dialogueText.text = dialogues[2]; // Hiển thị câu "Bạn chưa hoàn thành nhiệm vụ."
+            dialogueText.text = dialogues[currentQuestIndex].dialogueLines[1]; // Hiển thị câu "Bạn chưa hoàn thành nhiệm vụ."
             dialogueIndex = 3; // Chuyển chỉ số câu thoại sang 3
         }
         else // Nếu nhiệm vụ đã hoàn thành
         {
-            dialogueText.text = dialogues[3]; // Hiển thị câu "Cảm ơn bạn đã hoàn thành nhiệm vụ."
+            dialogueText.text = dialogues[currentQuestIndex].dialogueLines[2]; // Hiển thị câu "Cảm ơn bạn đã hoàn thành nhiệm vụ."
+            currentQuestIndex++; // Chuyển sang nhiệm vụ tiếp theo
+            questAccepted = false;
+            questCompleted = true;
         }
 
         isDialogueActive = true;
@@ -92,14 +113,14 @@ public class NPC : MonoBehaviour
 
     void ContinueDialogue()
     {
-        if (dialogueIndex == 1) // Nếu đang ở câu 1
+        if (dialogueIndex < dialogues[currentQuestIndex].dialogueLines.Length - 1) // Nếu còn câu thoại
         {
-            dialogueText.text = dialogues[1]; // Hiển thị câu 2
-            dialogueIndex = 2; // Chuyển chỉ số câu thoại sang 2
+            dialogueText.text = dialogues[currentQuestIndex].dialogueLines[dialogueIndex]; // Hiển thị câu tiếp theo
+            dialogueIndex++; // Tiến đến câu thoại tiếp theo
         }
-        else if (dialogueIndex == 2) // Nếu đang ở câu 2
+        else
         {
-            EndDialogue();
+            EndDialogue(); // Nếu không còn câu thoại, kết thúc hội thoại
         }
     }
 
@@ -131,6 +152,12 @@ public class NPC : MonoBehaviour
                 interactText.gameObject.SetActive(true);
                 interactText.text = "Nhấn E để nói chuyện";
             }
+
+            // Hiển thị nhiệm vụ tiếp theo nếu nhiệm vụ trước đã hoàn thành
+            if (questCompleted && currentQuestIndex < quests.Count)
+            {
+                interactText.text = "Nhấn E để nhận nhiệm vụ mới!";
+            }
         }
     }
 
@@ -146,20 +173,39 @@ public class NPC : MonoBehaviour
 
     public void UpdateQuestProgress()
     {
-        currentKills++;
-        if (currentKills >= requiredKills)
+        // Kiểm tra nếu chỉ số nhiệm vụ còn hợp lệ
+        if (currentQuestIndex >= quests.Count)
         {
-            questCompleted = true; // Đánh dấu nhiệm vụ hoàn thành
+            Debug.LogWarning("Chỉ số nhiệm vụ vượt quá phạm vi. Không thể cập nhật tiến độ nhiệm vụ.");
+            return; // Dừng lại nếu không có nhiệm vụ hợp lệ
+        }
+
+        currentKills++;
+        // Kiểm tra nếu người chơi đã tiêu diệt đủ số quái
+        if (currentKills >= quests[currentQuestIndex].requiredKills)
+        {
+            questCompleted = true; // Đánh dấu nhiệm vụ đã hoàn thành
             Debug.Log("Nhiệm vụ hoàn thành!");
+
+            // Hiển thị nút nhận thưởng
             rewardButton.SetActive(true);
-            rewardAmountText.text = "+" + rewardAmount + " vàng";
+            rewardAmountText.text = "+" + quests[currentQuestIndex].rewardAmount + " vàng";
         }
     }
+
+
     public void ClaimReward()
     {
-        GameManager.Intance.AddCoin(rewardAmount);
-        rewardButton.SetActive(false);
-        Debug.Log("Bạn đã nhận được " + rewardAmount + " vàng!");
+        if (staft != null && questCompleted)
+        {
+            staft.Coin += quests[currentQuestIndex].rewardAmount; // Cộng vàng vào tài khoản người chơi
+            rewardButton.SetActive(false); // Ẩn nút nhận thưởng
+            Debug.Log("Bạn đã nhận được " + quests[currentQuestIndex].rewardAmount + " vàng!");
+        }
+        else
+        {
+            Debug.LogError("Staft is null or quest not completed!");
+        }
     }
 
 }

@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Staft
   m_EditorClassIdentifier: 
   NangLuong: 1
-  Coin: 93512
-  HuyHieu: 99999
+
   totalLevel: 4
   unlocedLevel: 4
   sovangkhoidau: 8

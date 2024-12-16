@@ -196,7 +196,8 @@ PrefabInstance:
       propertyPath: playerLayer.m_Bits
       value: 2048
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8930908938398139298, guid: 2df652c9e4c81684b9922eb27453a113, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -788,6 +789,7 @@ GameObject:
   - component: {fileID: 1965006225}
   - component: {fileID: 1965006228}
   - component: {fileID: 1965006229}
+  - component: {fileID: 1965006230}
   m_Layer: 0
   m_Name: ' genie_Enemy'
   m_TagString: NPC
@@ -896,15 +898,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3890678d3e29a42a29af30721306ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
-  health: 5
-  player: {fileID: 0}
-  projectilePrefab: {fileID: 2829082600621834565, guid: 2a98761dd2fe3e749aa44841ab8e248c,
-    type: 3}
-  shootingInterval: 4
-  shootPoint: {fileID: 683377845}
-  projectileSpeed: 5
+  patrolRadius: 5
+  speed: 2
+  pauseTime: 2
+  detectionRadius: 5
   attackRange: 5
+  attackCooldown: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 2048
+  fireballPrefab: {fileID: 2829082600621834565, guid: 2a98761dd2fe3e749aa44841ab8e248c,
+    type: 3}
+  fireballSpawnPoint: {fileID: 683377845}
+  fireballSpeed: 5
+  respawnTime: 3
 --- !u!70 &1965006229
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -940,6 +947,33 @@ CapsuleCollider2D:
   m_Offset: {x: -0.36113548, y: -0.16551977}
   m_Size: {x: 0.9348893, y: 1.5668765}
   m_Direction: 0
+--- !u!50 &1965006230
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965006224}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1001 &5413818106641777543
 PrefabInstance:
   m_ObjectHideFlags: 0
