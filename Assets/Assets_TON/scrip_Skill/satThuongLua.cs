@@ -49,6 +49,20 @@ public class satThuongLua : MonoBehaviour
             // H?y qu? c?u l?a sau khi gây sát th??ng
             Destroy(gameObject);
         }
+        if (!hasHit && collision.CompareTag("Enemy"))
+        {
+            // Gây sát th??ng cho enemy
+            collision.GetComponent<EnemyMove>()?.TakeDangage(damage);
+
+            // G?i hi?u ?ng n?
+            CreateExplosion();
+
+            // ?ánh d?u là ?ã gây sát th??ng
+            hasHit = true;
+
+            // H?y qu? c?u l?a sau khi gây sát th??ng
+            Destroy(gameObject);
+        }
 
         if (!hasHit && collision.CompareTag("EnemyGolem"))
         {

@@ -32,7 +32,7 @@ public class EnemyMove : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 movement; // Thêm vector di chuyển
-
+    public EntityFX entityFX;
     [Header("Respawn Settings")]
     public float respawnTime = 3f;
     private bool isDead = false;
@@ -206,15 +206,15 @@ public class EnemyMove : MonoBehaviour
     {
         if (gameObject != null)
         {
-            //entityFX.StartCoroutine("FlashFX");
+            entityFX.StartCoroutine("FlashFX");
         }
         currentHeath -= damage;
 
         if (currentHeath <= 0)
         {
             Die();
-            //Exp.Intance.TakeExp(Exp.Intance.exp);
-            //expPlayer.Intancs.GainExperience(20);
+            Exp.Intance.TakeExp(Exp.Intance.exp);
+            expPlayer.Intancs.GainExperience(20);
         }
         UpdateHealth(HeathEnemy);
     }
