@@ -50,6 +50,7 @@ public class EnemyMove : MonoBehaviour
 
     private void Start()
     {
+        currentHeath = HeathEnemy;
         startPosition = transform.position;
         ChooseRandomDirection();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;

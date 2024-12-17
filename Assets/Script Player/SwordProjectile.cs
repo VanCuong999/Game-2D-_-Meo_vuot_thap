@@ -31,7 +31,8 @@ public class SwordProjectile : MonoBehaviour
         }
         if (collision.CompareTag("EnemyGolem"))
         {
-           // GolemEnemy.Intance.TakeDangage(40);
+            GolemEnemy golemEnemy = collision.GetComponent<GolemEnemy>();
+            golemEnemy.TakeDangage(30);
         }
     }
    

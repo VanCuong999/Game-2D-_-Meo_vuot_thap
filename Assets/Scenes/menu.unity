@@ -383,7 +383,7 @@ MonoBehaviour:
   bannerThanhTuu: {fileID: 1180603964}
   bannerShop: {fileID: 1499898362}
   bannerSetting: {fileID: 607401499}
-  bannerSkill: {fileID: 0}
+  bannerSkill: {fileID: 1628384363}
   textcoin: {fileID: 1776396009}
   textHuyHieu: {fileID: 1664235204}
   countdownText: {fileID: 1525429229}
@@ -2046,6 +2046,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7919550777024193309, guid: e3efbeec4d9994140a4f0e14672f96ed,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ec960a98d85b7c4da7851cc14b678dc,
+        type: 3}
     - target: {fileID: 9018406067198690526, guid: e3efbeec4d9994140a4f0e14672f96ed,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3488,6 +3494,41 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1170588059969962066, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170588059969962066, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170588059969962066, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 21589822}
+    - target: {fileID: 1170588059969962066, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170588059969962066, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HideBanners
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170588059969962066, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: showbanner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170588059969962066, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3431860925878773742, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4357,6 +4398,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -29
       objectReference: {fileID: 0}
+    - target: {fileID: 3245167739482890729, guid: 9a6f19e5b365725489147966a0f88963,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4058146559651068704, guid: 9a6f19e5b365725489147966a0f88963,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4502,6 +4548,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8651102554011194637, guid: 9a6f19e5b365725489147966a0f88963,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ab4075d5f86a4545ac4ea99027bd904,
+        type: 3}
     - target: {fileID: 8953169576564355008, guid: 9a6f19e5b365725489147966a0f88963,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5074,6 +5126,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620984042}
   m_CullTransparentMesh: 1
+--- !u!1 &1628384363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5160953969449220797, guid: 1b68c36a8d40a5a4e89c5731a8ee86a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1176918497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1629402413
 GameObject:
   m_ObjectHideFlags: 0

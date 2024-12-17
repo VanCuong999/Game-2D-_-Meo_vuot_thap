@@ -6,35 +6,36 @@ using UnityEngine.UI;
 
 public class cauLua : MonoBehaviour
 {
+    public Staft staft;
     public GameObject fireballPrefab; // Prefab qu? c?u l?a
-    public Transform spawnPoint;      // V? trí t?o qu? c?u l?a
+    public Transform spawnPoint;      // V? trï¿½ t?o qu? c?u l?a
     public float speed = 5f;          // T?c ?? qu? c?u l?a
-    public float skillRange = 10f;    // Bán kính ph?m vi chiêu
-    public LayerMask enemyLayer;      // L?p c?a k? thù ?? phát hi?n
+    public float skillRange = 10f;    // Bï¿½n kï¿½nh ph?m vi chiï¿½u
+    public LayerMask enemyLayer;      // L?p c?a k? thï¿½ ?? phï¿½t hi?n
 
     public Image ImageCoolDown;
-    public float coolDown = 2.5f; // Thay ??i giá tr? này ?? ?i?u ch?nh th?i gian h?i chiêu
+    public float coolDown = 2.5f; // Thay ??i giï¿½ tr? nï¿½y ?? ?i?u ch?nh th?i gian h?i chiï¿½u
     private bool isCoolDown;
 
 
     void Start()
     {
-        ImageCoolDown.enabled = true; // ??m b?o hình ?nh ???c b?t
-        ImageCoolDown.fillAmount = 0; // FillAmount ban ??u là 0 (tr?ng)
+        ImageCoolDown.enabled = true; // ??m b?o hï¿½nh ?nh ???c b?t
+        ImageCoolDown.fillAmount = 0; // FillAmount ban ??u lï¿½ 0 (tr?ng)
     }
     void Update()
     {
-        // C?p nh?t hình ?nh h?i chiêu n?u ?ang trong tr?ng thái h?i chiêu
+        // C?p nh?t hï¿½nh ?nh h?i chiï¿½u n?u ?ang trong tr?ng thï¿½i h?i chiï¿½u
         if (isCoolDown)
         {
             ImageCoolDown.fillAmount -= 1 / coolDown * Time.deltaTime;
             Debug.Log("Fill Amount: " + ImageCoolDown.fillAmount);
-            // ??m b?o Image không b? ?n
+            // ??m b?o Image khï¿½ng b? ?n
 
             if (ImageCoolDown.fillAmount <= 0)
             {
                 ImageCoolDown.fillAmount = 1;
-                isCoolDown = false; // K?t thúc h?i chiêu
+                isCoolDown = false; // K?t thï¿½c h?i chiï¿½u
             }
         }
     }
@@ -42,46 +43,49 @@ public class cauLua : MonoBehaviour
 
     public void CastFireballSkill()
     {
-        // Ki?m tra xem có ?ang trong th?i gian h?i chiêu không
+        
+        // Ki?m tra xem cï¿½ ?ang trong th?i gian h?i chiï¿½u khï¿½ng
         if (isCoolDown) return;
 
-        // B?t ??u h?i chiêu
+        // B?t ??u h?i chiï¿½u
         isCoolDown = true;
-        ImageCoolDown.fillAmount = 1; // B?t ??u t? ??y (hi?n th? h?i chiêu)
+        ImageCoolDown.fillAmount = 1; // B?t ??u t? ??y (hi?n th? h?i chiï¿½u)
 
-        // L?y danh sách các enemy trong ph?m vi
+        // L?y danh sï¿½ch cï¿½c enemy trong ph?m vi
         GameObject[] targets = FindEnemiesInRange(skillRange);
 
-        // N?u có ít nh?t m?t k? thù trong ph?m vi
+        // N?u cï¿½ ï¿½t nh?t m?t k? thï¿½ trong ph?m vi
         if (targets.Length > 0)
         {
-            // Ch?n k? thù g?n nh?t
+            // Ch?n k? thï¿½ g?n nh?t
             GameObject target = targets[0];
 
-            // Quay spawnPoint v? h??ng c?a k? thù
+            // Quay spawnPoint v? h??ng c?a k? thï¿½
             Vector3 direction = (target.transform.position - spawnPoint.position).normalized;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
             spawnPoint.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
 
-            // T?o m?t qu? c?u l?a và nh?m vào m?c tiêu
+            // T?o m?t qu? c?u l?a vï¿½ nh?m vï¿½o m?c tiï¿½u
             GameObject fireball = Instantiate(fireballPrefab, spawnPoint.position, spawnPoint.rotation);
             fireball.GetComponent<Rigidbody2D>().velocity = direction * speed;
         }
+
+        staft.solansudungCauLua -= 1;
     }
 
 
 
-    // Ki?m tra xem có ít nh?t m?t enemy nào trong ph?m vi chiêu không và thu?c l?p enemyLayer
+    // Ki?m tra xem cï¿½ ï¿½t nh?t m?t enemy nï¿½o trong ph?m vi chiï¿½u khï¿½ng vï¿½ thu?c l?p enemyLayer
     private bool IsEnemyInRange()
     {
         GameObject[] enemies = FindEnemiesInRange(skillRange);
-        return enemies.Length > 0; // Tr? v? true n?u có ít nh?t m?t enemy trong ph?m vi
+        return enemies.Length > 0; // Tr? v? true n?u cï¿½ ï¿½t nh?t m?t enemy trong ph?m vi
     }
 
-    // Tìm các enemy trong ph?m vi skillRange và thu?c l?p enemyLayer
+    // Tï¿½m cï¿½c enemy trong ph?m vi skillRange vï¿½ thu?c l?p enemyLayer
     private GameObject[] FindEnemiesInRange(float range)
     {
-        // Tìm t?t c? các k? thù v?i tag "Enemy" và "EnemyGolem"
+        // Tï¿½m t?t c? cï¿½c k? thï¿½ v?i tag "Enemy" vï¿½ "EnemyGolem"
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] golems = GameObject.FindGameObjectsWithTag("EnemyGolem");
 
@@ -90,7 +94,7 @@ public class cauLua : MonoBehaviour
         enemiesInRange.AddRange(enemies);
         enemiesInRange.AddRange(golems);
 
-        // Lo?i b? các k? thù không trong ph?m vi và không thu?c l?p enemyLayer
+        // Lo?i b? cï¿½c k? thï¿½ khï¿½ng trong ph?m vi vï¿½ khï¿½ng thu?c l?p enemyLayer
         List<GameObject> enemiesInRangeFiltered = new List<GameObject>();
 
         foreach (GameObject enemy in enemiesInRange)
@@ -98,11 +102,11 @@ public class cauLua : MonoBehaviour
             if (Vector3.Distance(transform.position, enemy.transform.position) <= range &&
                 ((1 << enemy.layer) & enemyLayer) != 0)
             {
-                enemiesInRangeFiltered.Add(enemy); // Thêm enemy vào danh sách n?u trong ph?m vi và thu?c l?p
+                enemiesInRangeFiltered.Add(enemy); // Thï¿½m enemy vï¿½o danh sï¿½ch n?u trong ph?m vi vï¿½ thu?c l?p
             }
         }
 
-        return enemiesInRangeFiltered.ToArray(); // Tr? v? các enemy trong ph?m vi
+        return enemiesInRangeFiltered.ToArray(); // Tr? v? cï¿½c enemy trong ph?m vi
     }
 
 }

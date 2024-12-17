@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class BANG : MonoBehaviour
 {
+    public Staft staft;
     public float freezeRadius = 5f; // Bán kính vùng đóng băng
     public float freezeDuration = 2f; // Thời gian đóng băng
     public LayerMask enemyLayer; // Lớp của kẻ thù (để phát hiện)
@@ -50,6 +51,7 @@ public class BANG : MonoBehaviour
 
     public void FreezeEnemies()
     {
+        
         // Kiểm tra xem có đang trong thời gian hồi chiêu không
         if (isCoolDown) return;
 
@@ -72,6 +74,8 @@ public class BANG : MonoBehaviour
                 }
             }
         }
+
+        staft.solansudungSkillBang -= 1;
     }
 
     // Hiển thị bán kính ảnh hưởng trong Scene View (dùng cho mục đích debug)

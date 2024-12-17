@@ -470,7 +470,7 @@ MonoBehaviour:
   HeathGolem: 100
   fasingDir: 1
   Speed: 2
-  lineOfSize: 7.18
+  lineOfSize: 15.15
   shootingRange: 1.75
   attackPoint: {fileID: 5078351451037630779}
   attackRange: 1.75

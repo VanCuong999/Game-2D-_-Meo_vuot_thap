@@ -15,16 +15,48 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI coinTMP;
     [SerializeField] private TextMeshProUGUI HuyHieuTMP;
 
-    private void Awake() {
+    [SerializeField] private GameObject btnCauLua;
+    [SerializeField] private GameObject btnSkillBang;
+
+
+    private void Awake()
+    {
         Intance = this;
     }
-    
+
 
 
     void Update()
     {
         coinTMP.text = " " + staft.Coin;
         HuyHieuTMP.text = " " + staft.HuyHieu;
+
+        CheckDKSkillCauLua();
+        CheckDKSkillBang();
+    }
+
+    public void CheckDKSkillCauLua()
+    {
+        if (staft.solansudungCauLua > 0)
+        {
+            btnCauLua.SetActive(true);
+        }
+        else
+        {
+            btnCauLua.SetActive(false);
+        }
+    }
+
+    public void CheckDKSkillBang()
+    {
+        if (staft.solansudungSkillBang > 0)
+        {
+            btnSkillBang.SetActive(true);
+        }
+        else
+        {
+            btnSkillBang.SetActive(false);
+        }
     }
     public void ActiveOver()
     {
