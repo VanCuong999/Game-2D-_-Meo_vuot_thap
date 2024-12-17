@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 5752666122218428474}
   m_Layer: 12
   m_Name: genie_Enemy
-  m_TagString: NPC
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -349,6 +349,8 @@ MonoBehaviour:
   _heathBarFill: {fileID: 278434077697493462}
   _healthBarTranForm: {fileID: 2424610047859826552}
   HeathEnemy: 100
+  freezeEffectPrefab: {fileID: 3962928530995743746, guid: 7bbfb9f63b81916438c2e486a502b898,
+    type: 3}
 --- !u!70 &2714890710721327906
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -159,6 +159,8 @@ MonoBehaviour:
   fireDelay: 1
   detectionRange: 5
   health: 100
+  freezeEffectPrefab: {fileID: 3962928530995743746, guid: 7bbfb9f63b81916438c2e486a502b898,
+    type: 3}
 --- !u!114 &5238637181479681301
 MonoBehaviour:
   m_ObjectHideFlags: 0

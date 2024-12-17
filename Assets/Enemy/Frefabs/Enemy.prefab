@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2496949617079350582}
   - component: {fileID: 5471749180325526654}
   - component: {fileID: 4383404757410920574}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: Enemy
   m_TagString: EnemyDoi
   m_Icon: {fileID: 0}
@@ -227,6 +227,8 @@ MonoBehaviour:
   fireballSpawnPoint: {fileID: 4494895581431741099}
   fireballSpeed: 5
   respawnTime: 3
+  freezeEffectPrefab: {fileID: 3962928530995743746, guid: 7bbfb9f63b81916438c2e486a502b898,
+    type: 3}
 --- !u!1 &4283119171042680820
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4494895581431741099}
-  m_Layer: 6
+  m_Layer: 12
   m_Name: vitri
   m_TagString: Untagged
   m_Icon: {fileID: 0}

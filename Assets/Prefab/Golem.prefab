@@ -483,6 +483,8 @@ MonoBehaviour:
   entityFX: {fileID: 2647763076711262249}
   _heathBarFill: {fileID: 2976484401377222037}
   _healthBarTranForm: {fileID: 5645783542527926235}
+  freezeEffectPrefab: {fileID: 3962928530995743746, guid: 7bbfb9f63b81916438c2e486a502b898,
+    type: 3}
 --- !u!50 &6303085580489057026
 Rigidbody2D:
   serializedVersion: 4

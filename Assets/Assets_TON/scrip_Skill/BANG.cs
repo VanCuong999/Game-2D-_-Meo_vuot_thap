@@ -73,6 +73,43 @@ public class BANG : MonoBehaviour
                     enemyAI.Freeze(freezeDuration);
                 }
             }
+            if (enemy.CompareTag("EnemyGolem"))
+            {
+                Debug.Log("Enemy phát hiện trong vùng đóng băng!");
+                GolemEnemy enemyAI = enemy.GetComponent<GolemEnemy>();
+                if (enemyAI != null)
+                {
+                    enemyAI.Freeze(freezeDuration);
+                }
+            }
+            if (enemy.CompareTag("Enemy"))
+            {
+                Debug.Log("Enemy phát hiện trong vùng đóng băng!");
+                EnemyMove enemyAI = enemy.GetComponent<EnemyMove>();
+                if (enemyAI != null)
+                {
+                    enemyAI.Freeze(freezeDuration);
+                }
+            }
+
+            if (enemy.CompareTag("EnemyDoi"))
+            {
+                Debug.Log("Enemy phát hiện trong vùng đóng băng!");
+                Enemy enemyAI = enemy.GetComponent<Enemy>();
+                if (enemyAI != null)
+                {
+                    enemyAI.Freeze(freezeDuration);
+                }
+            }
+            if (enemy.CompareTag("Enemy"))
+            {
+                Debug.Log("Enemy phát hiện trong vùng đóng băng!");
+                EnemyShooter enemyAI = enemy.GetComponent<EnemyShooter>();
+                if (enemyAI != null)
+                {
+                    enemyAI.Freeze(freezeDuration);
+                }
+            }
         }
 
         staft.solansudungSkillBang -= 1;

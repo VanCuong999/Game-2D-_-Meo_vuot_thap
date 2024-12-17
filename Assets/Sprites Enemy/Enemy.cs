@@ -36,6 +36,11 @@ public class Enemy : MonoBehaviour
     private Vector2 respawnPosition; // Vị trí hồi sinh ban đầu
     private bool isRespawning = false; // Trạng thái đang hồi sinh
 
+    private bool isFrozen = false; // Trạng thái đóng băng
+    private Rigidbody2D rb;
+    public GameObject freezeEffectPrefab; // Prefab hiệu ứng băng
+    private GameObject currentFreezeEffect; // Hiệu ứng băng đang được sử dụng
+
 
     private void Start()
     {
@@ -48,7 +53,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (isRespawning || isDead) return; // Không làm gì khi đang hồi sinh hoặc đã chết
+        if (isRespawning || isDead || isFrozen) return; // Không làm gì khi đang hồi sinh hoặc đã chết
         if (player != null)
         {
             float distanceToPlayer = Vector2.Distance(player.position, transform.position);
@@ -252,7 +257,48 @@ public class Enemy : MonoBehaviour
         isRespawning = false; // Enemy đã hồi sinh xong
     }
 
+    public void Freeze(float duration)
+    {
+        if (isFrozen)
+        {
+            Debug.Log("Enemy đã bị đóng băng!"); // Kiểm tra trạng thái đóng băng
+            return;
+        }
 
+        isFrozen = true; // Đóng băng enemy
+        Debug.Log("Enemy bắt đầu bị đóng băng!");
+
+        // Dừng chuyển động
+        if (rb != null) rb.velocity = Vector2.zero;
+
+        // Tắt animation
+        if (anim != null) anim.enabled = false;
+
+        // Tạo hiệu ứng băng dưới chân enemy
+        if (freezeEffectPrefab != null)
+        {
+            currentFreezeEffect = Instantiate(freezeEffectPrefab, transform.position, Quaternion.identity);
+            currentFreezeEffect.transform.SetParent(transform); // Gắn hiệu ứng vào enemy
+        }
+
+        StartCoroutine(ThawOut(duration)); // Đặt thời gian chờ để đóng băng
+    }
+
+    private IEnumerator ThawOut(float duration)
+    {
+        yield return new WaitForSeconds(duration); // Chờ hết thời gian đóng băng
+        isFrozen = false; // Khôi phục trạng thái bình thường
+
+        // Bật lại animation
+        if (anim != null) anim.enabled = true;
+
+        // Xóa hiệu ứng băng
+        if (currentFreezeEffect != null)
+        {
+            Destroy(currentFreezeEffect);
+            currentFreezeEffect = null;
+        }
+    }
 
 
 }

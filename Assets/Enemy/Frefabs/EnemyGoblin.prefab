@@ -253,6 +253,8 @@ MonoBehaviour:
   _heathBarFill: {fileID: 4644877739743142430}
   _healthBarTranForm: {fileID: 5734760946086419146}
   HeathEnemy: 1000
+  freezeEffectPrefab: {fileID: 3962928530995743746, guid: 7bbfb9f63b81916438c2e486a502b898,
+    type: 3}
 --- !u!95 &1390294724814426271
 Animator:
   serializedVersion: 5

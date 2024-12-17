@@ -26,9 +26,14 @@ public class GolemEnemy : MonoBehaviour
     [SerializeField] private Image _heathBarFill;
     [SerializeField] private Transform _healthBarTranForm;
     private Camera _camera;
-    private  Color fullHealthColor = Color.green;
+    private Color fullHealthColor = Color.green;
     private Color lowHealthColor = Color.yellow;
     private Color menimumHealthColor = Color.red;
+
+    private bool isFrozen = false; // Trạng thái đóng băng
+    private Rigidbody2D rb; // Rigidbody2D của enemy (Thêm vào để dừng chuyển động khi đóng băng)
+    public GameObject freezeEffectPrefab; // Prefab hiệu ứng băng
+    private GameObject currentFreezeEffect; // Hiệu ứng băng đang được sử dụng
 
     private void Awake()
     {
@@ -47,6 +52,7 @@ public class GolemEnemy : MonoBehaviour
 
     void Update()
     {
+        if (isFrozen) return;
         _healthBarTranForm.rotation = _camera.transform.rotation;
         if (player == null && npc == null) return;
         timer += Time.deltaTime;
@@ -77,7 +83,7 @@ public class GolemEnemy : MonoBehaviour
                 timer = 0;
                 anim.SetTrigger("attack");
             }
-         
+
         }
         else
         {
@@ -170,6 +176,49 @@ public class GolemEnemy : MonoBehaviour
         else // Trên 70%
         {
             _heathBarFill.color = fullHealthColor;
+        }
+    }
+
+    public void Freeze(float duration)
+    {
+        if (isFrozen)
+        {
+            Debug.Log("Enemy đã bị đóng băng!"); // Kiểm tra trạng thái đóng băng
+            return;
+        }
+
+        isFrozen = true; // Đóng băng enemy
+        Debug.Log("Enemy bắt đầu bị đóng băng!");
+
+        // Dừng chuyển động
+        if (rb != null) rb.velocity = Vector2.zero;
+
+        // Tắt animation
+        if (anim != null) anim.enabled = false;
+
+        // Tạo hiệu ứng băng dưới chân enemy
+        if (freezeEffectPrefab != null)
+        {
+            currentFreezeEffect = Instantiate(freezeEffectPrefab, transform.position, Quaternion.identity);
+            currentFreezeEffect.transform.SetParent(transform); // Gắn hiệu ứng vào enemy
+        }
+
+        StartCoroutine(ThawOut(duration)); // Đặt thời gian chờ để đóng băng
+    }
+
+    private IEnumerator ThawOut(float duration)
+    {
+        yield return new WaitForSeconds(duration); // Chờ hết thời gian đóng băng
+        isFrozen = false; // Khôi phục trạng thái bình thường
+
+        // Bật lại animation
+        if (anim != null) anim.enabled = true;
+
+        // Xóa hiệu ứng băng
+        if (currentFreezeEffect != null)
+        {
+            Destroy(currentFreezeEffect);
+            currentFreezeEffect = null;
         }
     }
 }
