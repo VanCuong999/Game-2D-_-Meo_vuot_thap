@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
+using UnityEngine.UI;
+
 public class EnemyShooter : MonoBehaviour
 {
     [Header("Patrol Settings")]
@@ -38,8 +40,19 @@ public class EnemyShooter : MonoBehaviour
     private bool isRespawning = false; // Trạng thái đang hồi sinh
 
 
+    [Header("Heath Enemy")]
+    [SerializeField] private Image _heathBarFill;
+    [SerializeField] private Transform _healthBarTranForm;
+    public float HeathEnemy = 100;
+    private float currentHeath;
+    private Camera _camera;
+    private Color fullHealthColor = Color.green;
+    private Color lowHealthColor = Color.yellow;
+    private Color menimumHealthColor = Color.red;
+
     private void Start()
     {
+        currentHeath = HeathEnemy;
         startPosition = transform.position; // Lưu vị trí ban đầu làm tâm tuần tra
         startPosition = transform.position;
         ChooseRandomDirection();
@@ -87,10 +100,7 @@ public class EnemyShooter : MonoBehaviour
                 Patrol();
             }
         }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Die();
-        }
+        
 
         // Giảm bộ đếm thời gian sau mỗi khung hình
         attackTimer -= Time.deltaTime;
@@ -216,6 +226,10 @@ public class EnemyShooter : MonoBehaviour
         {
             anim.SetTrigger("die");
         }
+        if (_healthBarTranForm != null)
+        {
+            _healthBarTranForm.gameObject.SetActive(false); // Ẩn thanh máu
+        }
 
         // Kích hoạt hồi sinh
         StartCoroutine(Respawn());
@@ -230,6 +244,9 @@ public class EnemyShooter : MonoBehaviour
 
         // Reset trạng thái
         isDead = false;
+
+        currentHeath = HeathEnemy;
+        UpdateHealth(HeathEnemy);
 
         // Di chuyển về vị trí trung tâm của tuần tra
         transform.position = startPosition;
@@ -246,6 +263,10 @@ public class EnemyShooter : MonoBehaviour
         {
             anim.SetTrigger("respawn");
         }
+        if (_healthBarTranForm != null)
+        {
+            _healthBarTranForm.gameObject.SetActive(true); // Hiện lại thanh máu
+        }
 
         // Chờ một khoảng ngắn trước khi Enemy bắt đầu hoạt động bình thường
         yield return new WaitForSeconds(1f);
@@ -253,5 +274,46 @@ public class EnemyShooter : MonoBehaviour
         isRespawning = false; // Enemy đã hồi sinh xong
     }
 
+    public void UpdateHealth(float health)
+    {
+        HeathEnemy = health;
+        _heathBarFill.fillAmount = currentHeath / HeathEnemy;
+        UpdateHealthColor();
+    }
 
+    public virtual void UpdateHealthColor()
+    {
+        float healthPercentage = currentHeath / HeathEnemy;
+
+        if (healthPercentage <= 0.3f) // Dưới 30%
+        {
+            _heathBarFill.color = menimumHealthColor;
+        }
+        else if (healthPercentage <= 0.7f) // Dưới 70%
+        {
+            _heathBarFill.color = lowHealthColor;
+        }
+        else // Trên 70%
+        {
+            _heathBarFill.color = fullHealthColor;
+        }
+    }
+
+    public void TakeDangage(float damage)
+    {
+        if (gameObject != null)
+        {
+            //entityFX.StartCoroutine("FlashFX");
+        }
+        currentHeath -= damage;
+
+        if (currentHeath <= 0)
+        {
+            Die();
+        
+            //Exp.Intance.TakeExp(Exp.Intance.exp);
+            //expPlayer.Intancs.GainExperience(20);
+        }
+        UpdateHealth(HeathEnemy);
+    }
 }

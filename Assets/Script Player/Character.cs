@@ -131,6 +131,7 @@ public class Character : MonoBehaviour
             enemy.GetComponent<GolemEnemy>()?.TakeDangage(50);
             enemy.GetComponent<enemy3tancong>()?.TakeDamage(20);
             enemy.GetComponent<EnemyMove>()?.TakeDangage(20f);
+            enemy.GetComponent<EnemyShooter>()?.TakeDangage(20f);
         }
     }
 

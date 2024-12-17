@@ -18,7 +18,7 @@ public class EnemyMove : MonoBehaviour
     public LayerMask playerLayer;
     public Transform attackPoint;
     //[SerializeField] private float damageMin = 5f;
-   // [SerializeField] private float damageMax = 15f;
+    // [SerializeField] private float damageMax = 15f;
     private float attackTimer;
     private bool isPlayerDetected = false;
 
@@ -28,6 +28,7 @@ public class EnemyMove : MonoBehaviour
     private bool facingRight = true;
     private Transform player;
 
+    public NPC npc;
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 movement; // Thêm vector di chuyển
@@ -60,14 +61,14 @@ public class EnemyMove : MonoBehaviour
 
     private void Awake()
     {
-     
+
         _camera = Camera.main;
     }
     private void Update()
     {
         if (isRespawning || isDead) return;
 
-        movement = Vector2.zero; // Reset hướng di chuyển mỗi frame
+        movement = Vector2.zero; 
 
         if (player != null)
         {
@@ -130,22 +131,19 @@ public class EnemyMove : MonoBehaviour
     {
         if (attackTimer <= 0)
         {
-            // Tính hướng tấn công
             Vector2 attackDirection = (player.position - transform.position).normalized;
-
-            // Gửi hướng tấn công đến Animator
             anim.SetFloat("attackX", attackDirection.x);
             anim.SetFloat("attackY", attackDirection.y);
 
-            anim.SetTrigger("Attack"); // Kích hoạt Animation Attack
+            anim.SetTrigger("Attack"); 
 
-            attackTimer = attackCooldown; // Reset cooldown
+            attackTimer = attackCooldown; 
         }
     }
- 
+
     public void OnAttackComplete()
     {
-        FacePlayer(); // Quay về hướng Player
+        FacePlayer(); 
     }
 
 
@@ -157,8 +155,6 @@ public class EnemyMove : MonoBehaviour
         // Cập nhật Animator
         anim.SetFloat("moveX", Mathf.Abs(direction.x) > 0 ? Mathf.Sign(direction.x) : 0);
         anim.SetFloat("moveY", direction.y);
-
-        // Xóa phần Flip vì Animator sẽ tự xử lý hướng
     }
 
 
@@ -170,32 +166,17 @@ public class EnemyMove : MonoBehaviour
         targetPosition = startPosition + randomDirection * patrolRadius * 0.8f;
         movement = randomDirection;
     }
-
-    private void Flip(Vector2 direction)
-    {
-        if (direction.x > 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = false; // Không lật
-        }
-        else if (direction.x < 0)
-        {
-            GetComponent<SpriteRenderer>().flipX = true; // Lật sprite theo trục X
-        }
-    }
     private void FacePlayer()
     {
         if (player != null)
         {
-            // Tính hướng từ Enemy đến Player
             Vector2 directionToPlayer = (player.position - transform.position).normalized;
-
-            // Gửi hướng này đến Animator
             anim.SetFloat("moveX", Mathf.Round(directionToPlayer.x));
             anim.SetFloat("moveY", Mathf.Round(directionToPlayer.y));
         }
     }
 
-   
+
     public void UpdateHealth(float health)
     {
         HeathEnemy = health;
@@ -220,7 +201,7 @@ public class EnemyMove : MonoBehaviour
             _heathBarFill.color = fullHealthColor;
         }
     }
- 
+
     public void TakeDangage(float damage)
     {
         if (gameObject != null)
@@ -231,10 +212,55 @@ public class EnemyMove : MonoBehaviour
 
         if (currentHeath <= 0)
         {
-            Destroy(gameObject);
+            Die();
             //Exp.Intance.TakeExp(Exp.Intance.exp);
             //expPlayer.Intancs.GainExperience(20);
         }
         UpdateHealth(HeathEnemy);
     }
+    private void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+      
+           
+            if (npc != null)
+            {
+                npc.UpdateKills(1); 
+                Debug.Log("1");
+            }
+        
+        GetComponent<Collider2D>().enabled = false;
+        GetComponent<Rigidbody2D>().simulated = false;
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (sprite != null) sprite.enabled = false;        
+        if (_healthBarTranForm != null)
+        {
+            _healthBarTranForm.gameObject.SetActive(false); 
+        }
+        
+        StartCoroutine(Respawn());
+    }
+
+
+    private IEnumerator Respawn()
+    {
+        isRespawning = true;
+        yield return new WaitForSeconds(respawnTime);
+        isDead = false;
+        currentHeath = HeathEnemy;
+        UpdateHealth(HeathEnemy);
+        transform.position = startPosition;
+        SpriteRenderer sprite = GetComponent<SpriteRenderer>();
+        if (sprite != null) sprite.enabled = true;
+        GetComponent<Collider2D>().enabled = true;
+        GetComponent<Rigidbody2D>().simulated = true;
+        if (_healthBarTranForm != null)
+        {
+            _healthBarTranForm.gameObject.SetActive(true); 
+        }
+        yield return new WaitForSeconds(1f);
+        isRespawning = false; 
+    }
+
 }

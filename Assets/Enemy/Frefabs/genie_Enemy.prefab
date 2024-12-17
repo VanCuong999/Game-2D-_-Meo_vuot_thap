@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1335131394253708687}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 4317434354870507109}
   - component: {fileID: 2714890710721327906}
   - component: {fileID: 5752666122218428474}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: genie_Enemy
   m_TagString: NPC
   m_Icon: {fileID: 0}
@@ -346,6 +346,9 @@ MonoBehaviour:
   fireballSpawnPoint: {fileID: 1335131394253708687}
   fireballSpeed: 5
   respawnTime: 3
+  _heathBarFill: {fileID: 278434077697493462}
+  _healthBarTranForm: {fileID: 2424610047859826552}
+  HeathEnemy: 100
 --- !u!70 &2714890710721327906
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
