@@ -49,7 +49,7 @@ public class EnemyShooter : MonoBehaviour
     private Color fullHealthColor = Color.green;
     private Color lowHealthColor = Color.yellow;
     private Color menimumHealthColor = Color.red;
-
+    public EntityFX entityFX;
     private bool isFrozen = false; // Trạng thái đóng băng
     private Rigidbody2D rb;
     public GameObject freezeEffectPrefab; // Prefab hiệu ứng băng
@@ -307,16 +307,15 @@ public class EnemyShooter : MonoBehaviour
     {
         if (gameObject != null)
         {
-            //entityFX.StartCoroutine("FlashFX");
+            entityFX.StartCoroutine("FlashFX");
         }
         currentHeath -= damage;
 
         if (currentHeath <= 0)
         {
-            Die();
-        
-            //Exp.Intance.TakeExp(Exp.Intance.exp);
-            //expPlayer.Intancs.GainExperience(20);
+            Destroy(gameObject);
+            Exp.Intance.TakeExp(Exp.Intance.exp);
+            expPlayer.Intancs.GainExperience(20);
         }
         UpdateHealth(HeathEnemy);
     }

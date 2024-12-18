@@ -116,7 +116,20 @@ public class EnemyMove : MonoBehaviour
             }
         }
     }
+    public void EnemyAttack()
+    {
+        Collider2D[] hitTargets = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
+        foreach (Collider2D target in hitTargets)
+        {
+            if (target.CompareTag("Player"))
+            {
+                Debug.Log("Đánh trúng người chơi");
+                HeathPlayer.Intance.TakeHeath(10);
+            }
+           
+        }
+    }
     private IEnumerator PauseBeforeMoving()
     {
         yield return new WaitForSeconds(pauseTime);

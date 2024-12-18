@@ -13,10 +13,10 @@ public class Projectile : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Gây sát thương cho Player
-            PlayerHealth playerHealth = collision.GetComponent<PlayerHealth>();
+            HeathPlayer playerHealth = collision.GetComponent<HeathPlayer>();
             if (playerHealth != null)
             {
-                playerHealth.TakeDamage(damage);
+                playerHealth.TakeHeath(damage);
             }
 
             // Sinh ra hiệu ứng vụ nổ tại vị trí viên đạn

@@ -473,7 +473,7 @@ MonoBehaviour:
   lineOfSize: 15.15
   shootingRange: 1.75
   attackPoint: {fileID: 5078351451037630779}
-  attackRange: 1.75
+  attackRange: 1.9
   playerLayer:
     serializedVersion: 2
     m_Bits: 2048

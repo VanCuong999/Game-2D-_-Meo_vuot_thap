@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 4317434354870507109}
   - component: {fileID: 2714890710721327906}
   - component: {fileID: 5752666122218428474}
+  - component: {fileID: 9190541215209755598}
   m_Layer: 12
   m_Name: genie_Enemy
   m_TagString: Enemy
@@ -349,6 +350,7 @@ MonoBehaviour:
   _heathBarFill: {fileID: 278434077697493462}
   _healthBarTranForm: {fileID: 2424610047859826552}
   HeathEnemy: 100
+  entityFX: {fileID: 9190541215209755598}
   freezeEffectPrefab: {fileID: 3962928530995743746, guid: 7bbfb9f63b81916438c2e486a502b898,
     type: 3}
 --- !u!70 &2714890710721327906
@@ -413,6 +415,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &9190541215209755598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4817213988757818129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6396a406f13a341468781cc4ab94905b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 55c70c51c426cac4e8b39e81b607fb53, type: 2}
+  flashDursion: 0.1
 --- !u!1 &9105488368617571727
 GameObject:
   m_ObjectHideFlags: 0

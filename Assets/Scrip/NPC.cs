@@ -8,19 +8,22 @@ public class NPC : MonoBehaviour
 {
     public GameObject dialoguePanel;
     public TextMeshProUGUI textMesh;
-    public string[] dialogue; // NPC dialogues
-    private int index; // Dialogue index
+    public string[] dialogue; // Câu thoại của NPC
+    private int index; // Chỉ số câu thoại
     public GameObject Button;
     public float wordSpeed;
     public bool playerIsClose;
 
-    // Quest State Management
+    // Quản lý trạng thái nhiệm vụ
     private enum QuestState { NotStarted, InProgress, Completed }
     private QuestState questState = QuestState.NotStarted;
 
-    public int requiredKills = 5; // Required monster kills
-    private int currentKills = 0; // Player's current kills
-    private bool isTyping = false; // Check if text is being typed
+    public int requiredKills = 5; // Số lượng quái vật cần tiêu diệt
+    private int currentKills = 0; // Số lượng quái vật đã tiêu diệt của người chơi
+    private bool isTyping = false; // Kiểm tra xem có đang gõ văn bản hay không
+
+    // Thêm tham chiếu đến văn bản hiển thị số lượng quái vật tiêu diệt
+    public TextMeshProUGUI killsText; // Tham chiếu đến văn bản hiển thị số lượng tiêu diệt
 
     private void Update()
     {
@@ -53,6 +56,7 @@ public class NPC : MonoBehaviour
             case QuestState.InProgress:
                 StartCoroutine(Typing(5, 5)); // Hiển thị câu thoại số 6
                 Button.SetActive(false); // Tắt nút khi chưa hoàn thành nhiệm vụ
+                UpdateKillsUI(); // Cập nhật giao diện hiển thị số lượng tiêu diệt khi nhiệm vụ đang tiến hành
                 break;
 
             case QuestState.Completed:
@@ -61,9 +65,6 @@ public class NPC : MonoBehaviour
                 break;
         }
     }
-
-
-
 
     public void NextLine()
     {
@@ -88,21 +89,21 @@ public class NPC : MonoBehaviour
             {
                 questState = QuestState.InProgress;
                 Debug.Log("Quest Started!");
+                ShowKillNotification(); // Hiển thị thông báo số lượng quái vật cần tiêu diệt ngay khi nhiệm vụ bắt đầu
             }
         }
     }
 
-
     IEnumerator Typing(int startLine, int endLine)
     {
-        isTyping = true; // Mark typing as active
-        textMesh.text = ""; // Clear previous text
+        isTyping = true; // Đánh dấu bắt đầu gõ
+        textMesh.text = ""; // Xóa văn bản cũ
         foreach (char letter in dialogue[startLine].ToCharArray())
         {
             textMesh.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
-        isTyping = false; // Mark typing as finished
+        isTyping = false; // Đánh dấu kết thúc gõ
 
         // Chỉ bật nút khi nhiệm vụ không ở trạng thái "InProgress" hoặc "Completed"
         if (questState != QuestState.InProgress && questState != QuestState.Completed)
@@ -115,7 +116,6 @@ public class NPC : MonoBehaviour
         }
     }
 
-
     void CloseDialogue()
     {
         textMesh.text = "";
@@ -123,7 +123,7 @@ public class NPC : MonoBehaviour
         dialoguePanel.SetActive(false);
     }
 
-    // Simulate updating monster kills
+    // Giả lập cập nhật số lượng quái vật đã tiêu diệt
     public void UpdateKills(int kills)
     {
         currentKills += kills;
@@ -139,10 +139,25 @@ public class NPC : MonoBehaviour
 
         // Log trạng thái questState sau khi cập nhật
         Debug.Log($"Quest State after update: {questState}");
+
+        // Cập nhật giao diện người dùng với số lượng tiêu diệt
+        UpdateKillsUI();
     }
 
+    // Cập nhật giao diện số lượng tiêu diệt
+    void UpdateKillsUI()
+    {
+        if (questState == QuestState.InProgress)
+        {
+            killsText.text = $"Kills: {currentKills}/{requiredKills}"; // Cập nhật số lượng tiêu diệt trên giao diện
+        }
+    }
 
-
+    // Hiển thị thông báo số lượng quái vật cần tiêu diệt khi nhiệm vụ bắt đầu
+    void ShowKillNotification()
+    {
+        killsText.text = $"Mission started! Kill {requiredKills} monsters."; // Hiển thị thông báo khi bắt đầu nhiệm vụ
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
